@@ -19,6 +19,7 @@ For upcoming common-platform work, the normative documents are:
 
 - [`docs/R8_DESIGN_SYSTEM_AND_CUSTOMIZATION.md`](docs/R8_DESIGN_SYSTEM_AND_CUSTOMIZATION.md) — shared Sable design tokens, Follow system/Light/Dark behavior, accent abstraction, persistence, accessibility, and anti-drift rules.
 - [`docs/R9_SABLE_UTILITY_APP_MODEL.md`](docs/R9_SABLE_UTILITY_APP_MODEL.md) — application ownership/permission/testing model and the first native Sable utility direction, beginning with Calculator.
+- [`docs/R9_CALCULATOR_REQUIREMENTS_DRAFT.md`](docs/R9_CALCULATOR_REQUIREMENTS_DRAFT.md) — pre-code Calculator requirements scaffold with unresolved semantics explicitly marked `TBD` so they are decided in documentation rather than invented during implementation.
 
 The current development order is intentionally daily-driver first:
 
