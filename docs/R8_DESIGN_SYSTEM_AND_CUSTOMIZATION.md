@@ -1,10 +1,10 @@
-# R8 — Sable design system and customization foundation
+# R8-A — Sable design system and customization foundation
 
 Status: **normative architecture and product requirements for the shared Sable visual/customization layer.**
 
-R8 follows the daily-driver foundation. It exists before a large family of Sable-owned applications so Sable Start, Calculator, Notes, Clock, Files, and future UI do not each invent their own colors, dimensions, preference keys, and behavior.
+R8-A is the design/customization workstream inside the broader R8 native-application foundation defined by `SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`. It exists before the R8 application family is integrated so Sable Start, Calculator, Convert, Games, Reader, Media, and future UI do not each invent their own colors, dimensions, preference keys, and behavior.
 
-R8 is not permission to redesign every screen or create a broad theming marketplace. The first release should establish a stable shared contract and a small, useful user-facing settings surface.
+R8-A is not permission to redesign every screen or create a broad theming marketplace. The first release should establish a stable shared contract and a small, useful user-facing settings surface.
 
 ## 1. Goal
 
@@ -306,9 +306,9 @@ Basic theme/customization must not require:
 
 If wallpaper-derived color is added later, use the least authority necessary and document data access.
 
-## 16. Definition of R8 done
+## 16. Definition of R8-A done
 
-R8 is done when:
+The R8-A design workstream is done when:
 
 - the common design/theme contract is documented and implemented in common Sable code;
 - Sable Start uses the shared semantic tokens;
@@ -316,7 +316,7 @@ R8 is done when:
 - bounded accent selection works and persists;
 - accessibility checks cover representative token combinations;
 - no device-specific fork owns the common design semantics;
-- the architecture is ready for Calculator and later Sable apps to consume without copying theme constants;
+- the same contract is consumable by the R8 application workstreams without copying theme constants;
 - no unapproved broad customization features were pulled into the milestone.
 
-The next expected product milestone is R9, starting with Sable Calculator as the first deliberate native Sable utility.
+R8-A completion is not the full R8 integration closure. Calculator/Convert, Games, Reader and Media proceed as independently qualified R8 workstreams under `SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`, followed by the deliberate R8 product-integration freeze and image build.
