@@ -1,6 +1,6 @@
 # Sable platform
 
-Common SableOS semantic contracts, shared design/application architecture, release/support policy and bounded Android adapter guidance.
+Common SableOS semantic contracts, shared design/application architecture, security-quality requirements, release/support policy and bounded Android adapter guidance.
 
 This repository sits between Sable-owned application behavior and product/device integration. It must not become a dumping ground for device-specific compatibility code, application implementation source or opaque prebuilt APKs.
 
@@ -14,20 +14,27 @@ This repository sits between Sable-owned application behavior and product/device
 - [`docs/SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`](docs/SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md)
 - [`docs/SABLE_READER_TEXT_ACCESSIBILITY_CAPABILITY.md`](docs/SABLE_READER_TEXT_ACCESSIBILITY_CAPABILITY.md)
 
-Organization-wide direction is maintained in `sableos-project/.github/docs/DEVELOPMENT_RELEASE_PLAN.md` and the requirements index.
+Organization-wide direction is maintained in `sableos-project/.github/docs/DEVELOPMENT_RELEASE_PLAN.md`, the requirements index and `sableos-project/.github/docs/SECURITY_QUALITY_ENGINEERING.md`.
 
 ## Current R8 architecture
 
+The validated Panther baseline is the reference for the next source tranche. Current direction is:
+
 ```text
-R8-A  shared design/test contract
-R8-B  Calculator + Convert
-R8-C  Games: Sudoku / Minesweeper / 2048
-R8-D  Reader publication path via Vaachak Mobile / Readium
-R8-D2 Reader TXT/share/TTS/OCR path via Vaachak Text Reader
-R8-E  Media: local Music + Internet Radio
+R8-A    shared Sable design/test/accessibility/localization contract
+R8-B    Sable Calculator: Standard + Scientific + offline conversion
+R8-C1   Sable Sudoku
+R8-C2   Sable Mines
+R8-C3   Sable 2048
+R8-D    Reader publication path via Vaachak Mobile / Readium
+R8-D2   Reader TXT/share/TTS/OCR path via Vaachak Text Reader
+R8-E    Media: local Music + Internet Radio / Zune-Metro influenced UX
+R8-SHELL Sable Start/Home + system-surface visual integration
 ```
 
-Execution is now:
+A separate Sable Convert APK is no longer the preferred direction; conversion is intended to become part of Calculator. The three game modes are intended to become separate polished applications rather than one diagnostic-style combined Games surface.
+
+Execution remains:
 
 ```text
 A1 disposable GitHub qualification
@@ -41,19 +48,52 @@ A1 disposable GitHub qualification
 
 The Android product tree is an integration environment, not the everyday compiler for independent Rust/Kotlin apps.
 
-## R8-A design baseline
+## Security and engineering assurance
+
+Shared platform/application architecture is constrained by the organization-wide assurance policy rather than defining ad-hoc security rules per app.
+
+Key requirements include:
+
+- OWASP MASVS/MASTG-aligned mobile-security evidence where applicable;
+- least privilege and explicit permission/AppOps/exported-component/network/data-flow review;
+- `RUST_BY_RISK, NOT_RUST_BY_BRANDING`;
+- narrow typed JNI/FFI boundaries with explicit validation, ownership and failure contracts;
+- layered static analysis, dependency/advisory checks, source coverage, property/fuzz testing and runtime/device tests;
+- action/toolchain/dependency provenance and trusted-artifact sealing;
+- measured performance rather than assumptions based on implementation language;
+- accessibility, localization readiness and privacy requirements treated as correctness constraints rather than post-design polish.
+
+The canonical detailed policy is `sableos-project/.github/docs/SECURITY_QUALITY_ENGINEERING.md`. A planned control remains documented as planned until CI/build evidence proves enforcement.
+
+## Rust/Kotlin ownership rule
+
+Rust is preferred for deterministic/high-value domain logic where it materially improves memory safety, state correctness, fuzzability or reuse. Kotlin/Android remains the owner of Activity/service lifecycle, permissions, roles, accessibility, PackageManager/LauncherApps, providers, Media3/MediaSession and other framework-facing integration.
+
+New native boundaries require explicit tests and review. Do not create broad JNI surfaces merely to increase the amount of Rust in the product.
+
+## Performance contract
+
+Platform/app requirements should identify performance dimensions that can materially regress and how they will be measured. Depending on the component this may include startup, frame/jank behavior, input latency, memory, CPU/I/O, power and focused Rust-domain benchmarks.
+
+Panther and Titan 2 measurements are separate evidence. Thresholds should be established from representative baselines and ratcheted rather than invented before measurement.
+
+## R8 design baseline
+
+Sable's visual direction is evolving toward an original Metro-influenced design language using Sable-owned identity, logo-derived color roles, large typography, low-chrome information surfaces and consistent motion/hierarchy.
+
+The design system must remain compatible with:
 
 ```text
-Follow system
-Light
-Dark
-bounded accent
-reset/default
-shared semantic roles
-accessibility/readability requirements
+Follow system / Light / Dark where applicable
+shared semantic color roles
+accessibility/readability
+localization/pseudo-localization
+RTL-safe layout where relevant
+bounded motion
+clear enabled/disabled/focus states
 ```
 
-A theme marketplace, icon packs, grid/density editors, user-selectable corner systems, wallpaper editors and unrelated launcher personalization are not first-R8 requirements unless the product contract changes explicitly.
+Visual influence does not authorize copying Microsoft proprietary assets, fonts or branding.
 
 ## Native/dual-target portability
 
@@ -74,16 +114,14 @@ Network/model-download behavior remains an explicit product/privacy gate.
 
 ## Application-source ownership
 
-This repository owns shared contracts, not substantial application implementation source. Stable app source belongs in app-owned repositories/workspaces. `vendor_sable` owns common product inclusion of exact trusted inputs; device repos own only genuine target adaptation.
+This repository owns shared contracts, not substantial application implementation source. Stable app source belongs in the private canonical application/source repository. `vendor_sable` owns common product inclusion of exact trusted inputs; device repos own only genuine target adaptation.
 
-## Historical filenames
-
-`docs/R9_SABLE_UTILITY_APP_MODEL.md` and `docs/R9_CALCULATOR_REQUIREMENTS_DRAFT.md` predate the consolidated R8 plan. Their old milestone assignment is superseded: Calculator/Convert now belong to R8-B. Unresolved Calculator semantics remain unresolved until documented decisions close them.
+Source, dependency and test ownership must remain clear enough that CodeQL/static analysis, coverage, fuzzing, artifact provenance and later security updates can be traced to one canonical implementation rather than divergent copies.
 
 ## Build/signing direction
 
-`ai-g732` is the intended trusted A2/B1/B2/B3 development builder after storage/source/toolchain migration closes.
+`ai-g732` is the intended trusted A2/B1/B2/B3 development builder after private-source/storage/runner/toolchain hardening closes.
 
-Production AVB/OTA/application signing is deliberately deferred until Panther and Titan 2 development qualification is satisfactory. The ThinkPad P50 is only a future signing-host candidate; it is not yet `sable-signer-01`. OptiPlex is not part of the current signing plan.
+Production AVB/OTA/application signing is deliberately deferred until repeatable Panther and Titan 2 development qualification is satisfactory. The ThinkPad P50 is only a future signing-host candidate; it is not yet `sable-signer-01`. OptiPlex is not part of the current signing plan.
 
-Do not introduce new shared services, privileges, cross-app stores or target-specific behavior solely because they simplify one implementation. Shared platform additions require an actual cross-product semantic requirement.
+Do not introduce new shared services, privileges, cross-app stores or target-specific behavior solely because they simplify one implementation. Shared platform additions require an actual cross-product semantic requirement plus security/test/performance evidence appropriate to the risk.
