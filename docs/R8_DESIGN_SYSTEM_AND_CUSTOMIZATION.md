@@ -2,7 +2,7 @@
 
 Status: **normative architecture and product requirements for the shared Sable visual/customization layer.**
 
-R8-A is the design/customization workstream inside the broader R8 native-application foundation defined by `SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`. It exists before the R8 application family is integrated so Sable Start, Calculator, Convert, Games, Reader, Media, and future UI do not each invent their own colors, dimensions, preference keys, and behavior.
+R8-A is the design/customization workstream inside the broader R8 native-application foundation defined by `SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`. It exists before the R8 application family is integrated so Sable Start, Calculator, Convert, Games, Reader, Media, Sable Hub / Messages, and future UI do not each invent their own colors, dimensions, preference keys, and behavior.
 
 R8-A is not permission to redesign every screen or create a broad theming marketplace. The first release should establish a stable shared contract and a small, useful user-facing settings surface.
 
@@ -319,4 +319,4 @@ The R8-A design workstream is done when:
 - the same contract is consumable by the R8 application workstreams without copying theme constants;
 - no unapproved broad customization features were pulled into the milestone.
 
-R8-A completion is not the full R8 integration closure. Calculator/Convert, Games, Reader and Media proceed as independently qualified R8 workstreams under `SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`, followed by the deliberate R8 product-integration freeze and image build.
+R8-A completion is not the full R8 integration closure. Calculator/Convert, Games, Reader, Media and Sable Hub / Messages proceed as independently qualified R8 workstreams under `SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`, followed by the deliberate R8 product-integration freeze and image build.
