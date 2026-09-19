@@ -114,6 +114,43 @@ Primary source: Vaachak Text Reader. Qualify TXT, Android share/process-text, TT
 
 Network/model-download behavior remains a separate explicit privacy/product gate.
 
+### R8-F — Sable Hub / Messages
+
+Sable Hub is promoted from later product planning into the R8 first-usable common application set.
+
+Stable semantic model:
+
+```text
+ALL
+MESSAGES
+PEOPLE
+SERVICES
+
+provider class:
+  NATIVE_DATA
+  ANDROID_NOTIFICATION
+  SUPPORTED_API
+  WEB
+  UNAVAILABLE
+```
+
+The initial Sable Messages surface uses Android-owned communication capability instead of replacing mature transport solely for branding.
+
+Requirements:
+
+- SMS conversation presentation over Android Telephony provider data;
+- SMS compose/send through supported Android telephony APIs;
+- ContactsProvider person identity;
+- retain existing proven Android transport for MMS/RCS until Sable has complete default-handler coverage;
+- isolated provider sessions for WhatsApp, Instagram, Facebook/Messenger and LinkedIn when web capability is the honest supported path;
+- no provider password database owned by Sable;
+- no private protocol/database scraping;
+- provider web state is not reclassified as native/API state;
+- shared Sable design/accessibility;
+- shared interaction semantics so Panther and Titan 2 consume one app source.
+
+The common architecture must allow Titan 2 to render the same conversation/service semantics with keyboard-first focus/search/compose behavior without a Titan-specific application fork.
+
 ### R8-E — Media
 
 Local Music + Internet Radio. Reuse portable domain/parsing concepts where valuable. Android owns Media3/codec playback, MediaSession, audio focus/routing, lifecycle/background behavior, storage/document access and network behavior.
