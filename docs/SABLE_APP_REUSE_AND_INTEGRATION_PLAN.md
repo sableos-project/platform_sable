@@ -118,6 +118,12 @@ Network/model-download behavior remains a separate explicit privacy/product gate
 
 Local Music + Internet Radio. Reuse portable domain/parsing concepts where valuable. Android owns Media3/codec playback, MediaSession, audio focus/routing, lifecycle/background behavior, storage/document access and network behavior.
 
+### R8-F — Sable Hub / Messages
+
+The common communication surface is `org.sableos.hub` / **Sable Messages** with ALL / MESSAGES / PEOPLE / SERVICES semantics. R8-F may consume Android SMS/Contacts capabilities when authorized and uses isolated WEB provider capsules where no suitable consumer API exists. The proven Android messaging transport remains available for MMS/RCS and fallback. R8-F does not take the default SMS role and does not implement private third-party protocols.
+
+The common semantic architecture must remain suitable for Panther touch-first presentation and later Titan 2 keyboard-first focus/search/compose behavior without a common-app fork.
+
 ## 3. Rust/Kotlin/JNI boundary
 
 Prefer:
