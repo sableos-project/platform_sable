@@ -1,5 +1,8 @@
 # SableOS release model
 
+> **Current execution overlay — 2026-09-20:** R9 is the active development milestone. R8 established the application/design/product-composition foundation; R9 closes Launcher3/Sable Start, fresh Panther build causality and physical Pixel 7 runtime acceptance before Titan 2 keyboard-first portability work. GitHub-hosted build CI is not current release authority; local direct CI is canonical.
+
+
 Status: **normative product release/support identity model.**
 
 SableOS product identity is separate from Android substrate identity, internal development milestones, application qualification status, device support level and production signing state.
