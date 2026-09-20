@@ -26,6 +26,7 @@ This repository sits between Sable-owned application behavior and product/device
 - [`docs/SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`](docs/SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md)
 - [`docs/SABLE_READER_TEXT_ACCESSIBILITY_CAPABILITY.md`](docs/SABLE_READER_TEXT_ACCESSIBILITY_CAPABILITY.md)
 - [`docs/KEYBOARD_DEVICE_TOOLS.md`](docs/KEYBOARD_DEVICE_TOOLS.md)
+- [`docs/CAMERA_ENHANCEMENT_MODEL.md`](docs/CAMERA_ENHANCEMENT_MODEL.md)
 
 Organization-wide direction is maintained in `sableos-project/.github/docs/DEVELOPMENT_RELEASE_PLAN.md`, the requirements index and `sableos-project/.github/docs/SECURITY_QUALITY_ENGINEERING.md`.
 
