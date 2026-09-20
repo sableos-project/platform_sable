@@ -10,7 +10,7 @@ As of 2026-09-16, project monitoring of Zinwa announcements indicates:
 
 - Q27 is expected to remain on a stock Android 16 baseline rather than move to Android 17;
 - Zinwa does not plan to release the full Android/device/vendor OS source tree;
-- Zinwa plans to release kernel source, similar in spirit to Q25, to support community custom-ROM work;
+- Zinwa plans to release kernel source to support community custom-ROM work;
 - Lineage/community device enablement is therefore expected to be the practical upstream path for a future custom ROM;
 - the project has access to Q27 OTA artifacts for possible future analysis;
 - no Q27 OTA analysis is authorized or required for current R8 closure.
