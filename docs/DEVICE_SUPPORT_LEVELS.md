@@ -39,11 +39,10 @@ A hardware/BSP/platform used to learn integration patterns, compatibility techni
 
 Examples may include:
 - Brax3 / other MediaTek reference work;
-- Q25 low-level MediaTek research;
 - Zinwa Q27 future-port feasibility work after current Panther/Titan execution;
 - other BSP/GSI experiments not yet promoted to PORTABILITY.
 
-The Zinwa Q27 is deliberately **not** an R8 image target. Current project information from monitored Zinwa announcements indicates a stock Android 16 baseline, vendor kernel-source publication similar to Q25, no planned release of the full Android/device/vendor OS source, and reliance on community/Lineage device enablement for a custom-ROM path. OTA artifacts are available to the project for possible future analysis, but that analysis is explicitly deferred so it does not divert Panther/`ai-g732` execution. See `ZINWA_Q27_FUTURE_PORTABILITY_NOTES.md`.
+The Zinwa Q27 is deliberately **not** an R8 image target. Current project information from monitored Zinwa announcements indicates a stock Android 16 baseline, vendor kernel-source publication, no planned release of the full Android/device/vendor OS source, and reliance on community/Lineage device enablement for a custom-ROM path. OTA artifacts are available to the project for possible future analysis, but that analysis is explicitly deferred so it does not divert Panther/`ai-g732` execution. See `ZINWA_Q27_FUTURE_PORTABILITY_NOTES.md`.
 
 ### PRODUCT_CANDIDATE
 
