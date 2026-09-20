@@ -1,5 +1,17 @@
 # Sable platform
 
+![Local CI](https://img.shields.io/badge/CI-local%20direct-active-2ea44f)
+![R9 Launcher](https://img.shields.io/badge/R9%20launcher%20visual-PASS-2ea44f)
+![Fresh Panther](https://img.shields.io/badge/fresh%20Panther%20build-IN%20PROGRESS-f0ad4e)
+![Pixel 7](https://img.shields.io/badge/Pixel%207%20physical-PENDING-lightgrey)
+![Titan 2](https://img.shields.io/badge/Titan%202-keyboard--first%20QUEUED-6f42c1)
+
+## Current R9 architecture status
+
+R8 established the shared Sable design and first-party application foundation. R9 is the current release milestone: Sable Start runs as a Launcher3/Quickstep-hosted presentation, the visual contract is accepted, and fresh Panther/full-device qualification is underway. Titan 2 follows as a keyboard-first portability target after Panther acceptance.
+
+CI/build qualification is now local-direct on the controlled build machine; GitHub-hosted Actions are not the authoritative build path.
+
 Common SableOS semantic contracts, shared design/application architecture, security-quality requirements, release/support policy and bounded Android adapter guidance.
 
 This repository sits between Sable-owned application behavior and product/device integration. It must not become a dumping ground for device-specific compatibility code, application implementation source or opaque prebuilt APKs.
@@ -17,7 +29,7 @@ This repository sits between Sable-owned application behavior and product/device
 
 Organization-wide direction is maintained in `sableos-project/.github/docs/DEVELOPMENT_RELEASE_PLAN.md`, the requirements index and `sableos-project/.github/docs/SECURITY_QUALITY_ENGINEERING.md`.
 
-## Current R8 architecture
+## Current product architecture
 
 The validated Panther baseline is the reference for the next source tranche. Current direction is:
 
@@ -30,7 +42,9 @@ R8-C3   Sable 2048
 R8-D    Reader publication path via Vaachak Mobile / Readium
 R8-D2   Reader TXT/share/TTS/OCR path via Vaachak Text Reader
 R8-E    Media: local Music + Internet Radio / Zune-Metro influenced UX
-R8-SHELL Sable Start/Home + system-surface visual integration
+R8-SHELL shared system/application design foundation
+R9-L     Launcher3/Quickstep HOME + Sable Start presentation
+R9-P     fresh Panther build + physical runtime closure
 ```
 
 A separate Sable Convert APK is no longer the preferred direction; conversion is intended to become part of Calculator. The three game modes are intended to become separate polished applications rather than one diagnostic-style combined Games surface.
@@ -38,12 +52,13 @@ A separate Sable Convert APK is no longer the preferred direction; conversion is
 Execution remains:
 
 ```text
-A1 disposable GitHub qualification
- -> A2 trusted standalone app build on ai-g732
+local direct CI / source qualification
+ -> trusted standalone app build on ai-g732
  -> exact trusted application freeze
- -> B1 pre-image Android/Soong integration proof
- -> B2 Panther development image/runtime acceptance
- -> B3 Titan 2 portability development image/runtime acceptance
+ -> Android/Soong product integration proof
+ -> fresh source-bound Panther build
+ -> physical Panther R9 acceptance
+ -> Titan 2 keyboard-first portability qualification
  -> later production-signing workstream
 ```
 
