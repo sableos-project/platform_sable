@@ -73,3 +73,13 @@ Examples may include future QWERTY hardware only after real hardware/BSP/securit
 | Other MediaTek/BSP devices | RESEARCH / PRODUCT_CANDIDATE | future exploration | not current R8 closure target |
 
 Production signing is deferred until Panther and Titan 2 development builds/runtime behavior are satisfactory. Device support promotion after that still requires a separate security/update/firmware/release assessment.
+
+## Current keyboard-device development set
+
+```text
+Titan 2        N0 GSI/userspace lab; external GSI feasibility demonstrated
+Titan 2 Elite  N0 GSI candidate; local unlock/recovery/GSI boot proof required
+Zinwa Q27      future integrated/full-QWERTY candidate after shipped hardware acceptance
+```
+
+Titan 2 and Elite share keyboard-first common semantics but are separate hardware qualification targets. A PASS on one does not imply display, camera, telephony, bootloader or GSI PASS on the other.
