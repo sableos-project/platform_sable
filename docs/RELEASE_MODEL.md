@@ -1,158 +1,93 @@
-# SableOS release model
+# SableOS release and support model
 
-> **Current execution overlay — 2026-09-20:** R9 is the active development milestone. R8 established the application/design/product-composition foundation; R9 closes Launcher3/Sable Start, fresh Panther build causality and physical Pixel 7 runtime acceptance before Titan 2 keyboard-first portability work. GitHub-hosted build CI is not current release authority; local direct CI is canonical.
+Status: **current normative model — 2026-09-24**
 
+SableOS product identity is separate from Android substrate identity, internal
+development milestone labels, device support level, artifact kind and production
+signing state.
 
-Status: **normative product release/support identity model.**
+## Internal milestone context
 
-SableOS product identity is separate from Android substrate identity, internal development milestones, application qualification status, device support level and production signing state.
+R8/R9 are historical engineering milestones that produced the accepted Panther
+reference. K1/K2 is the merged multi-device artifact/deployment foundation.
 
-## Identity layers
+The active product phase is keyboard-first design plus Titan-family N0 research.
 
-A build/release record must distinguish:
-
-```text
-SableOS semantic product version when applicable
-Android/substrate release identity
-platform_manifest/source-composition identity
-qualified external application artifact identities
-build/toolchain/host identity
-device/product/release/variant identity
-artifact hashes
-development-signing identity when applicable
-production-signing/update identity when later activated
-device support/qualification level
-known limitations
-```
-
-No single layer substitutes for the others.
-
-## Development milestones
+## Device support state
 
 ```text
-R5/R6  source + launcher foundation
-R7     Panther product/daily-driver evidence baseline
-R8     shared design + app qualification + trusted artifact freeze
-       + Panther development integration + Titan 2 portability
-R9+    next coherent productivity/replacement tranche
+REFERENCE_FROZEN
+    accepted full-stack device retained for regression/maintenance
+
+PORTABILITY
+    device used to prove common Sable product portability
+
+RESEARCH
+    evidence collection only; no support claim
+
+PRODUCT_CANDIDATE
+    future support candidate after meaningful portability evidence
+
+PRIMARY
+    current end-to-end active release/security target
 ```
 
-The superseded sequence `R8 design only -> R9 first Calculator` is no longer current.
-
-## R8 development-candidate formation
+Current roles:
 
 ```text
-A1 disposable standalone qualification
-    |
-    v
-A2 trusted standalone app build on ai-g732
-    |
-    v
-exact trusted application freeze
-    |
-    v
-B1 pre-image Android product-integration PASS
-    |
-    v
-B2 Panther development image/runtime PASS
-    |
-    v
-B3 Titan 2 portability development image/runtime PASS
-    |
-    v
-R8 development architecture closure
+panther       REFERENCE_FROZEN
+titan2        PORTABILITY / N0 active
+titan2-elite  PORTABILITY candidate / N0 pending
+q27           RESEARCH
 ```
 
-This is deliberately **not** yet a production signed release claim.
+No new PRIMARY device is declared.
 
-## Source-built and sealed-artifact inputs
-
-A SableOS image may contain both:
-
-1. Android/Sable components built from revision-pinned OS source composition; and
-2. exact qualified application artifacts whose canonical build/dependency graph remains outside AOSP.
-
-For sealed external APKs record at least:
+## Non-Pixel assurance
 
 ```text
-application source repository + commit
-upstream/reuse source commit where applicable
-trusted A2 build/toolchain identity
-trusted APK SHA-256
-package/application ID + version
-permissions/components
-DEX/JNI inner-content identities
-native ABI/16 KiB compatibility
-third-party dependency/provenance inventory
-product import/module identity
-install partition/path
-signing/transformation behavior
+N0_GSI_USERSPACE_LAB
+N1_INTEGRATED_VENDOR_BSP_PORT
+N2_PRODUCTION_QUALIFIED
 ```
 
-Do not imply an APK was source-built inside AOSP if it was intentionally imported as a sealed artifact.
+A booting GSI is not N1/N2.
 
-## Device support
+## Artifact identity
 
-See `DEVICE_SUPPORT_LEVELS.md`.
+A release candidate identifies exact source plus exact artifact kind/hash and,
+where needed, exact stock/vendor basis.
 
-Panther remains PRIMARY. Titan 2 is the active R8 PORTABILITY target. A Panther PASS does not automatically qualify Titan 2, and Titan 2 functional portability does not automatically establish production-security support.
+Artifact identity never includes a physical device serial.
 
-## Trusted development builder
+## Device acceptance
 
-The next R8 application/product/image work is planned on `ai-g732` after host/storage/source/toolchain migration is sealed.
+A PASS is device-specific. Panther does not qualify Titan 2; Titan 2 does not
+qualify Titan 2 Elite.
 
-GitHub-hosted runners remain disposable qualification infrastructure; the trusted standalone application artifact is rebuilt on `ai-g732` before product integration.
+Functional portability and production-security ownership are separate claims.
 
-## Signing
+## Production signing
 
-Development/test signing required for functional engineering images is separate from production signing architecture.
+Development/test signing is separate from production release signing.
 
-Production signing is deliberately deferred until Panther and Titan 2 development qualification is satisfactory.
+Production application keys, AVB hierarchy, OTA signing/update service, key
+custody/rotation/recovery and public support lifecycle remain deferred until a
+future production-qualified target and repeatable release process exist.
 
-The later signing workstream must define:
+## Status vocabulary
+
+Use bounded states such as:
 
 ```text
-production app-key policy
-AVB key hierarchy
-OTA signing
-sign_target_files_apks flow
-key custody / backup / recovery / rotation
-approved artifact handoff
-signing-host hardening/offline policy
-signed-output provenance
+PASS
+FAIL
+BLOCKED
+NOT_TESTED
+UNKNOWN
+REFERENCE_FROZEN
+PORTABILITY
+RESEARCH
 ```
 
-The ThinkPad P50 is a future signing-host candidate after Android building has moved to `ai-g732`. It is not yet `sable-signer-01`. OptiPlex is not part of the current signing plan.
-
-Production signing material must not be present on disposable CI or the ordinary trusted development builder.
-
-## Update/rollback
-
-Every eventual release should preserve enough identity for:
-
-- update provenance;
-- component/app security-update ownership;
-- rollback/fallback knowledge where supported;
-- historical reconstruction/audit;
-- clear distinction between current and deprecated supported device states.
-
-Replacing a product application must retain the prior implementation/release identity in history even after it stops shipping.
-
-## Formal release closure
-
-A future formal release claim requires more than R8 development closure. At minimum close applicable claims for:
-
-```text
-source composition
-qualified external inputs
-build target/configuration
-required images
-product application inclusion
-runtime/device behavior
-security/permission policy
-artifact checksums
-production signing/update provenance
-support/known limitations
-```
-
-Use bounded statuses such as `PASS`, `FAIL`, `BLOCKED`, `NOT_TESTED` and `UNKNOWN`; do not collapse partial success into one release verdict.
+Do not collapse partial success into a release verdict.
