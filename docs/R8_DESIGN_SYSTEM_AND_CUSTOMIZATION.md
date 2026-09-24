@@ -3,7 +3,7 @@
 > **HISTORICAL / SUPERSEDED MILESTONE DOCUMENT — 2026-09-24:** retained for design/requirements provenance. Panther R9 is accepted/frozen and the described R8/R9 execution sequencing is no longer current. Consult this repository's README/ARCHITECTURE plus organization current-status docs for current product state.
 
 
-Status: **normative architecture and product requirements for the shared Sable visual/customization layer.**
+Status: **HISTORICAL / SUPERSEDED MILESTONE DOCUMENT — retained for requirements/design provenance.**
 
 R8-A is the design/customization workstream inside the broader R8 native-application foundation defined by `SABLE_APP_REUSE_AND_INTEGRATION_PLAN.md`. It exists before the R8 application family is integrated so Sable Start, Calculator, Convert, Games, Reader, Media, and future UI do not each invent their own colors, dimensions, preference keys, and behavior.
 
