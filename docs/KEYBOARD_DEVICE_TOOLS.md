@@ -1,66 +1,72 @@
 # Keyboard-device Sable Tools
 
-Status: **common architecture direction for Titan 2 / future Q27; not an R8 Panther build blocker**.
+Status: **current keyboard-first tools architecture — 2026-09-24**
 
-## Product rule
+Keyboard-first SableOS devices should expose compact, keyboard-operable
+diagnostics and bounded maintenance actions without turning the user-facing
+Tools surface into a generic privileged mutation console.
 
-Physical-keyboard SableOS devices should provide a compact Sable-native device toolbox with keyboard-first navigation, read-only diagnostics by default and bounded maintenance actions routed through the owning Android/Sable service.
-
-Common semantic sections:
-
-```text
-DEVICE
-KEYBOARD
-RADIO_CONNECTIVITY
-STORAGE
-APPS_PROCESSES
-LOGS_REPORT
-FILE_TRANSFER
-RECOVERY_MAINTENANCE
-```
-
-Device repositories may provide adapters for hardware-specific keyboard, radio, display, partition or firmware evidence. They must not fork the common Tools application merely because hardware differs.
-
-## External reference
-
-Behavior/tooling reference:
+## Targets
 
 ```text
-repository: bb10root/bb10tools
-revision: 68d2e42a471b46b53ff5567edac4293ef0f3d5d6
-license: GPL-3.0
+Titan 2        active PORTABILITY / N0
+Titan 2 Elite  independent PORTABILITY candidate
+Q27            RESEARCH / future
 ```
 
-Useful lessons include on-device radio/device inspection, compact service utilities, report/file workflows and low-level observability.
+Panther remains the frozen touch-first reference.
 
-The repository also contains BB10/QNX kernel/process patching, NVRAM/MMC mutation, physical-memory work, trust/security bypass experiments and unauthenticated transfer tooling. These are not Sable production architecture.
+## Common capabilities
 
-Direct code reuse requires separate licensing/provenance review. Default policy is behavioral/reference use.
+Read-only by default:
 
-## Security boundary
+- device/build identity;
+- display/input inventory;
+- keyboard profile/status;
+- camera capability report;
+- network/telephony status summaries;
+- artifact/build provenance;
+- exportable diagnostics.
 
-```text
-READ_ONLY_BY_DEFAULT=YES
-NO_NEW_SHARED_UID=YES
-NO_AMBIENT_ROOT_DAEMON=YES
-NO_RAW_DEVICE_NODE_ACCESS_FROM_UI=YES
-NO_ACCESSIBILITY_AUTOMATION_FOR_PLATFORM_OWNED_ACTIONS=YES
-```
-
-Do not expose generic arbitrary memory, NVRAM, raw-storage or kernel mutation from the production Tools UI.
+Maintenance actions must route through the Android/Sable owner of the capability
+and require explicit authorization.
 
 ## Keyboard-first interaction
 
-Titan 2 and Q27 Tools presentation must support deterministic visible focus, type-to-filter/search, Enter activation, Back/Escape, keyboard-only report/export flows and touch as a secondary input path.
+Tools must support:
 
-## Relationship to existing surfaces
+- deterministic visible focus;
+- type-to-filter/search;
+- arrows/D-pad navigation;
+- Enter activation;
+- Back/Escape;
+- keyboard-only export/report flows;
+- touch as secondary input.
 
-- Settings owns configuration/policy.
-- Application Security & Privacy owns per-app security evidence/control routes.
-- Sable Tools owns device diagnostics, input inspection, reports and bounded utility workflows.
+## Device adapter boundary
 
-Reuse/deep-link rather than duplicating authority.
+Device repositories may adapt physical keyboard, display, radio, partition,
+firmware or vendor-service evidence. They must not fork the common Tools app.
 
-## Portability
+Physical input differences belong in a device profile:
 
-Titan 2 is the first near-term qualification target. Q27 should consume the same common semantics if it becomes an active supported development target.
+```text
+identity
+input devices
+scan/keycode mapping
+.kl/.kcm/.idc ownership
+Fn/Sym/vendor keys
+keyboard backlight
+pointer/touch surface
+display association
+programmable keys
+```
+
+## Security boundary
+
+Do not expose arbitrary raw memory/NVRAM/kernel/storage mutation through the
+production Tools UI.
+
+K1/K2 deployment functions remain engineering tooling, not end-user Tools
+actions. Titan-family release artifact registration/flash stays blocked until
+the corresponding device adapter is qualified.
