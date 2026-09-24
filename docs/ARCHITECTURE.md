@@ -1,154 +1,147 @@
-# Common Sable platform architecture
+# SableOS common architecture
 
-Status: **normative common product/application architecture.**
+Status: **current normative architecture — 2026-09-24**
 
-The platform layer sits between Sable applications/product semantics and substrate/device/product integration. It defines stable shared behavior; it does not own substantial application source, product package lists, or device-specific hardware policy.
+## Product structure
 
-## Layering
+SableOS uses one common product core with multiple interaction profiles and
+bounded device adapters.
 
 ```text
-Sable application source/workspaces
-    UI/domain logic, app tests, standalone build/dependency graphs
-            |
-            | consume shared Sable contracts
-            v
-platform_sable
-    semantic design/application contracts
-    shared typed policy/models
-    bounded Android-version adapters only when cross-app reuse requires them
-            |
-            v
-Android / validated substrate APIs
-            |
-            v
-vendor_sable product composition
-    + device_sable_<target> bounded target adapter
-            |
-            v
-product image / device runtime
+common product semantics
+    launcher / hub / apps / appearance / privacy contracts
+        |
+        +-- touch-first presentation
+        +-- keyboard-first presentation
+        |
+        v
+device adapter
+    display/input/camera/boot/vendor/telephony specifics
+        |
+        v
+Android framework + vendor BSP + hardware
 ```
 
-`platform_sable` must not become an application monorepo or a vendor/device catch-all.
+## Launcher
 
-## R8 application-development boundary
+`org.sableos.launcher` / SableLauncher owns HOME and the Sable-facing
+Start/All Apps/Search/Peek/app-context experience.
 
-R8 introduces a deliberate split:
+Launcher3QuickStep remains a private platform dependency for
+Recents/Overview/task/gesture substrate. It is not HOME eligible.
 
-### Process A — standalone application qualification
+Historical SableStart source remains presentation/history reference.
 
-Applications and portable Rust cores are compiled/tested through their canonical Cargo/Gradle/upstream workflows. This is where ordinary correctness, static/security, JNI/native packaging and APK qualification should happen.
+## Appearance
 
-### Process B — SableOS integration
+Settings is the global appearance authority.
 
-Only exact frozen qualified inputs reach product integration. The product layer then proves import/module semantics, selection, install path, target-files/image membership and runtime behavior.
-
-A shared platform contract may be source-built inside Android when that is the correct architecture. A dependency-heavy ordinary Android app does not need its entire Gradle/Maven graph recreated in Soong merely to be part of SableOS; a sealed prebuilt path is allowed only after its exact semantics/provenance are proved.
-
-## R8-A shared design contract
-
-The shared visual/customization contract is application-neutral and typed. First-R8 user-facing choices are:
+Common modes:
 
 ```text
 Follow system
 Light
 Dark
-bounded accent
-reset/default
 ```
 
-The platform contract owns semantic roles and behavior, not arbitrary per-app literal colors or independent preference schemas.
+Apps consume semantic roles rather than inventing independent theme stores.
+Panther physical acceptance proved Light/Dark propagation across Sable apps.
 
-Sable Start, Calculator/Convert, Games, Reader and Media should consume the same concepts while retaining app-specific presentation.
+## Application boundaries
 
-## Application ownership
+Applications own capabilities; the Sable shell organizes people, attention and
+actions.
 
-Substantial applications belong in their application repository/workspace once their stable source boundary is known.
+Common app source must not fork merely because a target has a physical keyboard,
+different SoC, square display or vendor BSP.
 
-This repository may define:
+## Reader split
 
-- shared semantic models;
-- design tokens/contracts;
-- cross-app preference/schema contracts that genuinely need common ownership;
-- bounded Android-version adapters reused by multiple Sable components;
-- application architecture requirements and interoperability contracts.
-
-It should not contain:
-
-- copied Vaachak source;
-- complete Calculator/Games/Media implementations merely to avoid a repo decision;
-- product APK blobs;
-- Panther-specific makefiles/HAL/vendor logic;
-- duplicated framework plumbing.
-
-## Rust / Kotlin boundary
-
-Common architecture follows the organization Rust policy:
+Current products are separate:
 
 ```text
-Kotlin / Android
-    lifecycle
-    accessibility
-    permissions
-    intents/providers
-    CameraX
-    Media3/MediaSession
-    Readium Android integration
-    platform storage/network APIs
-        |
-        | narrow typed FFI only where justified
-        v
-Rust
-    deterministic domain logic
-    parsers
-    state/rule engines
-    validation
-    selected high-risk transformations
+Sable Reader
+    publication / EPUB / Readium / bookshelf / reading state / TTS
+
+Sable Text Reader
+    TXT / ACTION_VIEW / SEND / PROCESS_TEXT
+    paste/edit
+    local-only TTS + WAV
+    OCR Latin + Devanagari
 ```
 
-A Rust crate plus a compiling Kotlin shell is not end-to-end proof. Rust-backed Android applications need native target builds, ABI/package inspection and representative Kotlin->JNI->Rust tests before integration freeze.
+Sable Text Reader is bounded for local/offline behavior and does not inherit the
+old network translation/model-download design.
 
-## Reader architecture
+## Camera
 
-Sable Reader should remain one product while reusing two separately qualified capability sources:
+Sable Camera is a common system-image workstream.
+
+Architecture:
 
 ```text
-Vaachak Mobile / Readium
-    EPUB/publication/library/reader path
-
-Vaachak Text Reader
-    TXT/share/process-text/TTS/OCR path
+camera-core
+camera-capabilities
+device-profiles
+ui
+platform-integration
 ```
 
-The eventual Sable-owned composition/adaptation must keep these source/provenance paths visible. Network/model acquisition is explicitly gated rather than inherited accidentally.
+Use normal Camera2/vendor HAL capability first. SYSTEM_CAMERA privilege is
+device-specific and only justified by physical evidence plus negative
+third-party discovery/access tests.
 
-## Media architecture
+## Keyboard/input
 
-Android owns playback/session/storage/network behavior. Portable Rust media-domain work may parse station lists, validate URLs, probe simple formats or own deterministic state, but embedded ESP playback/task/I2S architecture does not cross the boundary.
-
-## Device portability
-
-Panther, future legacy/portability targets, and other device families consume the same shared Sable semantics where supported.
-
-Device repositories may adapt capability; they must not redefine common application/design semantics to fit one target.
-
-## Product integration
-
-`vendor_sable` owns common package/integration selection. `device_sable_<target>` owns bounded target adaptation. Generated upstream/substrate product files are inputs, not owners of Sable semantics.
-
-For sealed APK inputs, exact product integration must prove the current Android-tree mechanism rather than assuming `android_app_import` or any other module type has the required signing/partition/native-library behavior.
-
-## Validation
-
-Use layered claims:
+Separate:
 
 ```text
-shared contract tests
- -> app/domain tests
- -> standalone APK/native qualification
- -> exact artifact freeze
- -> product wiring
- -> image membership
- -> runtime behavior
+common Sable Keyboard / IME
+    text composition, layouts, symbols, languages, emoji
+
+device physical-keyboard adapter
+    scan/keylayout/keycharacter mapping
+    Fn/Sym/vendor keys
+    backlight
+    pointer/trackpad
 ```
 
-No earlier layer implies a later one.
+Device scan-code quirks do not belong in common IME or app code.
+
+## Keyboard-first interaction
+
+Required across launcher and first-party apps:
+
+- deterministic visible focus;
+- arrow/D-pad movement;
+- Enter/Space activation;
+- Back/Escape;
+- printable-key type-to-search where appropriate;
+- shortcut/command discoverability;
+- stable focus restoration;
+- no focus traps;
+- square/near-square responsive layouts;
+- touch retained as secondary input.
+
+## Device roles
+
+Panther is REFERENCE_FROZEN. Titan 2 is active PORTABILITY/N0 research. Titan 2
+Elite is an independent candidate. Q27 remains RESEARCH.
+
+No new PRIMARY device is currently declared.
+
+## Build/artifact boundary
+
+K1/K2 is part of the architecture:
+
+- artifact records support multiple artifact kinds;
+- serial is not build/artifact identity;
+- common deployment code owns safety/evidence;
+- device adapters own transport/partition/restore semantics;
+- unqualified devices fail closed.
+
+## Security boundary
+
+Common apps should prefer ordinary app permissions and supported Android APIs.
+Privileged/system authority is narrow, explicit, device/product justified and
+negative-tested.
