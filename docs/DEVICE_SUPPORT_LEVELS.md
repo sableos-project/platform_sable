@@ -1,5 +1,8 @@
 # SableOS device support levels
 
+> **Current tooling note — 2026-09-24:** K1/K2 is merged. Artifact schema and common deployment orchestration are multi-device, but Titan 2, Titan 2 Elite and Q27 remain fail-closed for release artifact registration/flash until independently qualified.
+
+
 SableOS separates product identity, functional portability and production
 security support.
 
