@@ -1,84 +1,91 @@
 # SableOS device support levels
 
-SableOS separates product identity from device qualification. A device booting SableOS does not automatically make it a supported production target.
+SableOS separates product identity, functional portability and production
+security support.
 
-## Levels
+## REFERENCE_FROZEN
 
-### PRIMARY
-
-A current reference device used for active product, security, integration and runtime qualification.
-
-Requirements include:
-- reproducible upstream/source composition;
-- validated build and runtime closure;
-- supported or explicitly qualified vendor/firmware lifecycle;
-- verified-boot/update behavior understood before production support;
-- broad hardware/app compatibility acceptance;
-- release provenance tracked when production releases begin.
+A previously accepted full-stack device retained for regression, architecture
+comparison and maintenance without driving new product design.
 
 Current device:
-- Google Pixel 7 (`panther`) — PRIMARY.
 
-### PORTABILITY
+- Google Pixel 7 (`panther`) — R9 physical acceptance PASS; active feature
+  development on hold.
 
-A device used to prove that common Sable product semantics and applications remain portable across another Android substrate, SoC generation, display/input model or vendor BSP.
+A frozen reference may receive security-critical or common-regression fixes, but
+new form-factor/product behavior is not designed around it by default.
 
-A PORTABILITY target may be fully functional without being production-security supported.
+## PORTABILITY
 
-Current active R8 target:
-- Unihertz Titan 2 — PORTABILITY development target.
+A device used to prove that common Sable product semantics remain portable
+across another Android substrate, SoC, display/input model or vendor BSP.
 
-R8 uses Titan 2 specifically to test the common application/product boundary across a MediaTek/QWERTY/square-display platform after Panther qualification. Its production-security/support status remains separate and unproven unless a later support program closes that evidence.
+Current active target:
 
-Future/secondary candidate:
-- Google Pixel 4a 5G (`bramble`) — legacy-hardware regression/portability candidate, not current R8 priority.
+- Unihertz Titan 2 — keyboard-first PORTABILITY / N0 target.
 
-### RESEARCH
+Candidate:
 
-A hardware/BSP/platform used to learn integration patterns, compatibility techniques or vendor boundaries. Boot or partial functionality is not a support claim.
+- Unihertz Titan 2 Elite — independent keyboard-first PORTABILITY/N0 candidate;
+  its own stock, boot, recovery, Treble, camera, telephony and display evidence
+  is required.
 
-Examples may include:
-- Brax3 / other MediaTek reference work;
-- Zinwa Q27 future-port feasibility work after current Panther/Titan execution;
-- other BSP/GSI experiments not yet promoted to PORTABILITY.
+PORTABILITY does not imply production-security ownership.
 
-The Zinwa Q27 is deliberately **not** an R8 image target. Current project information from monitored Zinwa announcements indicates a stock Android 16 baseline, vendor kernel-source publication, no planned release of the full Android/device/vendor OS source, and reliance on community/Lineage device enablement for a custom-ROM path. OTA artifacts are available to the project for possible future analysis, but that analysis is explicitly deferred so it does not divert Panther/`ai-g732` execution. See `ZINWA_Q27_FUTURE_PORTABILITY_NOTES.md`.
+## RESEARCH
 
-### PRODUCT_CANDIDATE
+A hardware/BSP/platform used to learn integration patterns without a support
+claim.
 
-A device being evaluated for future supported-product status. It has not yet met PRIMARY acceptance requirements.
+Current device:
 
-Examples may include future QWERTY hardware only after real hardware/BSP/security-lifecycle qualification.
+- Zinwa Q27 — future product candidate only after shipped hardware/firmware
+  qualification.
+
+## PRODUCT_CANDIDATE
+
+A device under evaluation for future supported-product status after meaningful
+PORTABILITY evidence exists.
+
+## PRIMARY
+
+A current device chosen for active end-to-end release/security qualification.
+
+No new PRIMARY is declared by this transition. Panther is frozen; Titan-family
+devices begin at PORTABILITY/N0.
+
+## Non-Pixel assurance levels
+
+```text
+N0_GSI_USERSPACE_LAB
+N1_INTEGRATED_VENDOR_BSP_PORT
+N2_PRODUCTION_QUALIFIED
+```
+
+A successful GSI boot never promotes a target automatically.
 
 ## Rules
 
-1. Common Sable product code must not be forked merely because a target has a different Android version, SoC, display shape or physical keyboard.
-2. Device-specific repositories are adapters, not copies of SableOS.
-3. Support level is explicit metadata in manifests and validation records.
-4. Promotion between levels requires evidence; successful boot alone never promotes support.
-5. Security support and functional portability are separate claims.
-6. A deprecated PRIMARY device may remain PORTABILITY/historical without retaining production support.
-7. Production signing/release readiness is separate from development image acceptance.
-8. A future target whose vendor publishes only kernel source remains RESEARCH until device/vendor/BSP/runtime feasibility is independently proven; kernel source alone is not a SableOS platform-port closure claim.
+1. Common Sable product code must not fork because of SoC, display shape,
+   physical keyboard or Android/vendor substrate.
+2. Device repositories adapt capability; they do not redefine Sable semantics.
+3. Interaction profile and support level are independent metadata.
+4. Titan 2 and Titan 2 Elite require independent physical evidence.
+5. Security/update support and functional portability are separate claims.
+6. Build outputs are isolated per device/release/source.
+7. A physical serial is not part of artifact identity.
+8. Device mutation remains disabled until the adapter's transport, partition,
+   restore and acceptance contract is qualified.
+9. Production signing/release readiness is a separate gate.
 
-## R8 dual-target matrix
+## Current matrix
 
-| Device | Role | R8 purpose | Status |
-| --- | --- | --- | --- |
-| Pixel 7 / panther | PRIMARY | reference product/runtime qualification | active |
-| Titan 2 | PORTABILITY | same common R8 app/product artifacts across MediaTek/QWERTY/square-display substrate | active R8 target |
-| Pixel 4a 5G / bramble | PORTABILITY candidate | future legacy/regression work | deferred |
-| Zinwa Q27 | RESEARCH / future PRODUCT_CANDIDATE | future app compatibility and post-Lineage/device-enable port feasibility | deferred; not R8 image target |
-| Other MediaTek/BSP devices | RESEARCH / PRODUCT_CANDIDATE | future exploration | not current R8 closure target |
+| Device | Support level | Assurance | Interaction | State |
+| --- | --- | --- | --- | --- |
+| Pixel 7 / panther | REFERENCE_FROZEN | accepted R9 reference | touch-first | feature development held |
+| Titan 2 | PORTABILITY | N0 active | keyboard-first | active |
+| Titan 2 Elite | PORTABILITY candidate | N0 pending | keyboard-first | independent baseline pending |
+| Q27 | RESEARCH | unqualified | keyboard-first future | shipped-hardware gate |
+| Pixel 4a 5G / bramble | historical | frozen | touch-first | no active investment |
 
-Production signing is deferred until Panther and Titan 2 development builds/runtime behavior are satisfactory. Device support promotion after that still requires a separate security/update/firmware/release assessment.
-
-## Current keyboard-device development set
-
-```text
-Titan 2        N0 GSI/userspace lab; external GSI feasibility demonstrated
-Titan 2 Elite  N0 GSI candidate; local unlock/recovery/GSI boot proof required
-Zinwa Q27      future integrated/full-QWERTY candidate after shipped hardware acceptance
-```
-
-Titan 2 and Elite share keyboard-first common semantics but are separate hardware qualification targets. A PASS on one does not imply display, camera, telephony, bootloader or GSI PASS on the other.
