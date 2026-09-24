@@ -1,76 +1,81 @@
-# Sable camera enhancement model
+# Sable Camera architecture
 
-Status: **current cross-device camera architecture direction.**
+Status: **current cross-device camera direction — 2026-09-24**
 
-Targets:
+Sable Camera is a common system-image workstream for keyboard-first devices.
+Panther's frozen R9 image keeps its documented upstream/preprocessed Camera
+exception and is not reopened merely to adopt this work.
+
+## Architecture
 
 ```text
-Unihertz Titan 2
-Unihertz Titan 2 Elite
-Zinwa Q27
+camera-core/
+camera-capabilities/
+device-profiles/
+ui/
+platform-integration/
 ```
 
-## Baseline
+Common code owns capture/session semantics, capability interpretation and Sable
+presentation. Device profiles own physical topology, vendor quirks and any
+proven privileged-camera requirement.
 
-Prefer the open-source GrapheneOS Camera / CameraX architecture as the Sable camera application baseline. Keep the stock vendor camera HAL/ISP during GSI work.
+## Capability rule
 
-Community GCam/LMC/SGCam ports are useful behavioral references for quality and device quirks, but SableOS does not redistribute proprietary Google Camera-derived APKs or copy opaque proprietary processing code.
+Keep these facts separate:
 
-## Required capability-first design
+```text
+sensor capability
+HAL capability
+ordinary-app-visible capability
+system/privileged-app capability
+```
 
-Probe each physical device for Camera2/CameraX capabilities before deciding features:
+Do not infer hidden camera support from marketing specs, a different Titan
+family device or a community camera port.
 
-- public/system camera IDs;
-- logical/physical camera membership;
-- stream resolutions and FPS;
-- RAW/manual support;
-- AF/AE/AWB;
-- OIS/EIS/video stabilization;
-- dynamic-range/color-space profiles;
-- CameraX vendor extensions;
-- maximum-resolution modes and vendor tags.
+## N0 strategy
 
-Common UI/domain code consumes capability data rather than device-name conditionals.
+For Titan-family N0, preserve the stock vendor camera HAL/ISP. Start with normal
+Camera2 capability and ordinary CAMERA permission.
 
-## Square/near-square requirements
+A Sable Camera system app may receive `SYSTEM_CAMERA` only on a device where
+physical evidence proves useful system-only cameras and negative third-party
+discovery/access tests preserve the intended boundary.
 
-Titan 2 (1440x1440), Titan 2 Elite (1080x1200) and Q27 (1080x1240) require explicit camera geometry qualification:
+## Keyboard-first UI
 
-- no overlapping controls;
-- accurate preview transform;
-- accurate tap-to-focus coordinates;
-- 1:1 composition where supported;
-- truthful 4:3/video framing;
-- high-resolution preview where stable;
-- keyboard shutter/focus/zoom where useful.
+Support square/near-square layouts and keyboard operation for:
 
-## Titan 2 Elite system-camera opportunity
+- focus/shutter;
+- video start/stop;
+- zoom;
+- camera switch;
+- exposure adjustment where supported;
+- gallery/open-last-capture;
+- settings/mode navigation.
 
-The reviewed community GCam adaptation reports that the Elite physical 2x camera is exposed as Android `SYSTEM_CAMERA`, which blocks ordinary third-party camera apps.
+Bindings are device-profile aware rather than globally hard-coded.
 
-Android supports system camera devices for system/privileged apps holding both normal `CAMERA` and `android.permission.SYSTEM_CAMERA`. SableOS controls the system image, so a narrowly privileged Sable Camera may be able to use the real telephoto camera without rooting.
+## Titan 2
 
-This remains a hypothesis until physical Camera2 metadata and capture tests prove it. The privilege must be device/product allowlisted and accompanied by negative third-party-access tests.
+Current Titan 2 research already proves useful ordinary Camera2 capability,
+including rear/front capture, high-resolution JPEG and rear RAW/DNG. That is
+sufficient to start common camera-core design without privileged-camera hacks.
 
-## Quality goals
+## Titan 2 Elite
 
-GCam-inspired outcomes, implemented with open/licensable components and vendor HAL capability:
+Repeat ordinary-app capability inventory independently. Community reports about
+system-only tele/logical cameras are hypotheses until the retail device proves
+them.
 
-- reliable HDR/exposure fusion;
-- low-light denoise;
-- controlled sharpening/tone mapping;
-- neutral skin/color rendering;
-- motion-aware frame selection;
-- super-resolution crop only where justified;
-- stabilization only when it improves video;
-- local QR/barcode scanning;
-- RAW/manual modes where hardware supports them.
+## Q27
 
-Do not use Google proprietary feature names such as HDR+ unless the implementation and licensing actually justify them.
+Remain research-only until shipped hardware and current firmware are available.
 
-## References
+## Non-goals
 
-- GrapheneOS Camera: https://github.com/GrapheneOS/Camera
-- Android system cameras: https://source.android.com/docs/core/camera/system-cameras
-- Android GSI requirements: https://source.android.com/docs/core/tests/vts/gsi
-- Titan 2 Elite community GCam adaptation: https://www.reddit.com/r/unihertz/comments/1vzxax6/gcam_port_for_the_unihertz_titan_2_elite_square/
+- redistributing proprietary Google Camera-derived APKs;
+- copying opaque proprietary processing code;
+- granting privileged camera authority as a convenience;
+- one device's camera ID map becoming common product logic.
