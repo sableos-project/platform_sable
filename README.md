@@ -1,5 +1,23 @@
 # Sable platform
 
+## 2026-09-24 transition status
+
+Pixel 7 / Panther R9 is physically accepted and now frozen as a touch-first
+reference. Active product work moves to the keyboard-first Titan family.
+
+```text
+panther       REFERENCE_FROZEN / R9 PASS
+titan2        PORTABILITY / N0 ACTIVE
+titan2-elite  PORTABILITY CANDIDATE / N0 PENDING
+q27           RESEARCH / FUTURE PRODUCT CANDIDATE
+```
+
+The keyboard-first profile is common product architecture, not a device fork.
+Sable Camera and Sable Keyboard/input are now explicit common system-application
+workstreams, with device-specific capability/input adapters below them.
+
+See `docs/DEVICE_SUPPORT_LEVELS.md` and `docs/PORTABILITY_RULES.md`.
+
 ![Local CI](https://img.shields.io/badge/CI-local%20direct-active-2ea44f)
 ![R9 Launcher](https://img.shields.io/badge/R9%20launcher%20visual-PASS-2ea44f)
 ![Fresh Panther](https://img.shields.io/badge/fresh%20Panther%20build-IN%20PROGRESS-f0ad4e)
