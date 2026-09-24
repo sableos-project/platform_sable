@@ -1,5 +1,8 @@
 # Portability rules
 
+> **K1/K2 implementation status — 2026-09-24:** the multi-device artifact registry and common-policy/device-transport deployment split described here are now implemented in the private integration baseline. Panther is the qualified target-files/A-B adapter; Titan-family and Q27 mutation remain blocked.
+
+
 ## Core rule
 
 One Sable product core, multiple hardware adapters, multiple interaction
