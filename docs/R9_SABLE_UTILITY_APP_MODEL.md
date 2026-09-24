@@ -3,7 +3,7 @@
 > **HISTORICAL / SUPERSEDED MILESTONE DOCUMENT — 2026-09-24:** retained for design/requirements provenance. Panther R9 is accepted/frozen and the described R8/R9 execution sequencing is no longer current. Consult this repository's README/ARCHITECTURE plus organization current-status docs for current product state.
 
 
-Status: **application-model guidance retained for link/history stability; the original milestone assignment is superseded.**
+Status: **HISTORICAL / SUPERSEDED MILESTONE DOCUMENT — retained for requirements/design provenance.**
 
 This file was originally written when the plan was:
 
