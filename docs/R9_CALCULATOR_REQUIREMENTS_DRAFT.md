@@ -3,7 +3,7 @@
 > **HISTORICAL / SUPERSEDED MILESTONE DOCUMENT — 2026-09-24:** retained for design/requirements provenance. Panther R9 is accepted/frozen and the described R8/R9 execution sequencing is no longer current. Consult this repository's README/ARCHITECTURE plus organization current-status docs for current product state.
 
 
-Status: **active requirements scaffold for R8-B; filename retained for link/history stability.**
+Status: **HISTORICAL_REQUIREMENTS — accepted Calculator product now exists; retained for requirement provenance.**
 
 The original document predated the consolidated R8 application plan and called Calculator an R9 application. That milestone assignment is superseded: Sable Calculator + Convert now belong to **R8-B**.
 
