@@ -1,9 +1,11 @@
 # SableOS common platform contracts
 
-Status: **current common architecture — 2026-09-24**
+Status: **current common architecture — 2026-09-25**
 
 ```text
-Pixel 7 / panther   REFERENCE_FROZEN / R9 physical acceptance PASS
+Pixel 7 / panther   REFERENCE_FROZEN / R9 Hub V1 physical acceptance PASS
+R9 Hub V1           MERGED / PR #110
+Keyboard-first V1   MERGED / PR #108
 K1/K2               multi-device artifact/deployment foundation MERGED
 Titan 2             active keyboard-first PORTABILITY / N0 research
 Titan 2 Elite       next independent keyboard-first PORTABILITY target
@@ -13,6 +15,13 @@ Production signing  deferred
 
 This repository owns common Sable semantic, design, portability, support and
 release contracts. It does not own target-specific BSP/device code.
+
+Current image authority from the private integration repository:
+
+```text
+R9_PANTHER_ACCEPTED_SOURCE=edf62e5bb08372a1395841d6cc5d78d3148a7695
+R9_PANTHER_TARGET_FILES_SHA256=a0b359613c4f30e9a834fba212e0b044a97d63ed0537c59471c31b99b627d285
+```
 
 ## Current product architecture
 
@@ -31,14 +40,20 @@ common Sable applications + semantics
 bounded device adapters
 ```
 
-Current HOME is standalone `org.sableos.launcher` / SableLauncher.
-Launcher3QuickStep is Recents/Overview/task/gesture substrate only.
+Sable Hub V1 is the accepted communications surface:
+
+```text
+Priority | Messages | Email | People
+```
+
+Hub is an aggregator and interaction surface. Source applications/providers keep
+ownership of their accounts, credentials, private databases and protocol stacks.
 
 ## Accepted common application family
 
 The frozen Panther reference proves the current product family:
 
-- SableLauncher;
+- Sable HOME / launcher presentation;
 - Sable Calculator;
 - Sable Sudoku;
 - Sable Minesweeper;
@@ -53,8 +68,8 @@ The frozen Panther reference proves the current product family:
 
 Reader and Text Reader are separate products.
 
-Settings is global appearance authority; common apps consume
-Follow-system/Light/Dark and shared semantic design roles.
+Open appearance/polish issues remain intentionally open until Titan 2 SableOS
+install closure proves or supersedes them.
 
 ## Current active architecture documents
 
