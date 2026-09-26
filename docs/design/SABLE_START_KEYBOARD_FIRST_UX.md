@@ -16,6 +16,7 @@ KEYBOARD_FIRST=YES
 TOUCH_SECONDARY=YES
 VISIBLE_FOCUS_REQUIRED=YES
 COMMON_APPS_NOT_FORKED_BY_DEVICE=YES
+BASE_QUICK_BAR=REQUIRED
 ```
 
 ## Design goals
@@ -28,6 +29,10 @@ Goals:
 ```text
 one-keystroke app access
 fast type-to-launch
+persistent Phone access
+persistent Hub access
+persistent Command/Search access
+persistent All Apps access
 visible focus at all times
 predictable Back/Home/Recents behavior
 Android-compatible app drawer and app-info paths
@@ -45,50 +50,56 @@ no forced Pixel Launcher layout on square devices
 no app-package names as primary labels
 no hidden keyboard-only features without discoverability
 no raw factory/diagnostic actions from Home
+no communication actions hidden behind search-only flows
 ```
+
+## Base quick bar
+
+Sable Start requires a persistent base quick bar at the bottom of the Home
+surface. This is the daily-driver access row for communication, command and app
+inventory.
+
+Default Titan 2 slots:
+
+```text
+Phone | Hub | Command | All Apps
+```
+
+Optional fifth slot where density allows:
+
+```text
+Phone | Hub | Command | Camera | All Apps
+```
+
+The quick bar borrows the familiar Android launcher dock concept, but its Sable
+priority is different: fast call, fast Hub, fast command and fast app inventory.
+
+```text
+PHONE_QUICK_ACCESS=REQUIRED
+HUB_QUICK_ACCESS=REQUIRED
+COMMAND_QUICK_ACCESS=REQUIRED
+ALL_APPS_QUICK_ACCESS=REQUIRED
+CAMERA_QUICK_ACCESS=OPTIONAL_PROFILE_OR_USER_PIN
+USER_CUSTOMIZATION=YES_WITH_SAFE_DEFAULTS
+```
+
+Keyboard shortcuts:
+
+```text
+Fn + 1  Phone
+Fn + 2  Hub
+Fn + 3  Command / Search
+Fn + 4  All Apps
+Fn + 5  optional Camera or user-selected quick slot
+```
+
+The quick bar must be keyboard-focusable, pointer-clickable and touchable. It may
+collapse to compact icon labels on smaller displays, but it must remain obvious.
 
 ## Screen design — Titan 2 square profile
 
 Titan 2 uses a square main display with physical keyboard below it. The default
 Sable Start layout should be a dense vertical composition, not a phone-slab grid.
-
-Wireframe:
-
-```text
-┌────────────────────────────────────────┐
-│ 10:46   Sable Start              ▣ 🔋  │
-├────────────────────────────────────────┤
-│ Search or command                       │
-│ > type app, action, contact or setting  │
-├────────────────────────────────────────┤
-│ Today                                   │
-│  Next event · Weather · Battery · Hub   │
-├────────────────────────────────────────┤
-│ Pinned                                  │
-│  [Hub] [Phone] [Messages] [Mail]        │
-│  [Browser] [Camera] [Media] [Settings] │
-├────────────────────────────────────────┤
-│ All apps                                │
-│  Calculator                             │
-│  Calendar                               │
-│  Camera                                 │
-│  Hub                                    │
-│  Mail                                   │
-│  Media                                  │
-│  Settings                               │
-└────────────────────────────────────────┘
-```
-
-Default focus starts on the command/search field or first pinned item depending
-on the user's chosen Home mode. The focused element must be visually obvious on
-LCD square displays.
-
-```text
-TITAN2_DEFAULT_LAYOUT=square_keyboard_start
-TITAN2_PRIMARY_COLUMN=vertical
-TITAN2_APP_GRID=SECONDARY_OPTION
-TITAN2_FOCUS_RING=REQUIRED
-```
 
 Recommended visual structure:
 
@@ -96,9 +107,22 @@ Recommended visual structure:
 top status/title area
 command/search bar
 Today/Hub glance strip
-pinned app/action tiles
-All Apps vertical list
-optional footer shortcut hint row
+pinned app/action tiles or list
+All Apps preview or list
+persistent base quick bar
+optional shortcut hint row
+```
+
+Default focus starts on the command/search field, first pinned item or base quick
+bar depending on the user's chosen Home mode. The focused element must be
+visually obvious on LCD square displays.
+
+```text
+TITAN2_DEFAULT_LAYOUT=square_keyboard_start
+TITAN2_PRIMARY_COLUMN=vertical
+TITAN2_APP_GRID=SECONDARY_OPTION
+TITAN2_FOCUS_RING=REQUIRED
+TITAN2_BASE_QUICK_BAR=REQUIRED
 ```
 
 ## Screen design — compact AMOLED keyboard profile
@@ -106,32 +130,9 @@ optional footer shortcut hint row
 Titan 2 Elite and Q27-class devices are compact portrait keyboard devices. They
 should use the same Sable Start semantics but may use a taller list-first layout.
 
-Wireframe:
-
-```text
-┌──────────────────────────────┐
-│ Sable Start             🔋   │
-├──────────────────────────────┤
-│ Search or command            │
-├──────────────────────────────┤
-│ Hub: 2 priority · 5 messages │
-├──────────────────────────────┤
-│ Favorites                    │
-│ Hub      Phone    Mail       │
-│ Browser  Camera   Settings   │
-├──────────────────────────────┤
-│ A                            │
-│ Apps                         │
-│ B                            │
-│ Browser                      │
-│ C                            │
-│ Calculator                   │
-│ Calendar                     │
-└──────────────────────────────┘
-```
-
 ```text
 COMPACT_KEYBOARD_DEFAULT_LAYOUT=list_plus_favorites
+COMPACT_BASE_QUICK_BAR=REQUIRED
 AMOLED_ATTENTION=PROFILE_DEPENDENT
 AOD_ENTRY_POINTS=ONLY_IF_PROFILE_VALIDATED
 ```
@@ -285,6 +286,7 @@ App info
 Permissions
 Uninstall / disable where allowed
 Add to pinned
+Add to quick bar where allowed
 Remove from pinned
 Widget / shortcut where supported
 Privacy summary
@@ -292,23 +294,38 @@ Privacy summary
 
 The app-actions menu must be reachable by touch, keyboard and pointer.
 
-## Hub and attention entry
+## Phone quick access
+
+The Phone quick-bar slot exists because a keyboard-first phone must still be a
+fast calling device.
+
+```text
+Enter on Phone
+  open dialer or recent calls according to user preference
+
+digits while Phone focused
+  open dialer and enter digits
+
+Menu / long press / Fn+Enter
+  Dial pad, Recent calls, Contacts, Emergency information where allowed
+```
+
+Launcher may route the user to dialer/contacts; it must not own telephony state.
+
+## Hub quick access
 
 Sable Start should expose Hub as a primary surface without making Home a
 notification database owner.
 
 ```text
-Hub glance:
-  priority count
-  message count
-  missed calls where available
-  next event where available
+Enter on Hub
+  open Sable Hub priority view
 
-Enter on Hub glance:
-  open Sable Hub
+Space on Hub
+  expand safe glance/peek if privacy policy allows
 
-Space on Hub glance:
-  expand preview if privacy policy allows
+Menu / long press / Fn+Enter
+  choose Hub filter: Priority, Messages, Mail, People, Missed calls
 ```
 
 Provider ownership remains outside the launcher. Start may link to source app
@@ -323,7 +340,7 @@ Up / Down
   move vertical focus
 
 Left / Right
-  move inside tile rows or between panes where present
+  move inside tile rows, quick bar or panes where present
 
 Enter
   launch / open / activate
@@ -346,6 +363,9 @@ Fn + Up / Fn + Down
 Fn + Left / Fn + Right
   previous / next section
 
+Fn + 1..5
+  activate base quick bar slots
+
 Alt + Enter
   app info / details for focused app
 
@@ -356,8 +376,8 @@ Long Backspace
   clear query
 ```
 
-No keyboard action may trap the user in Start, search, app actions or the app
-drawer.
+No keyboard action may trap the user in Start, search, app actions, quick bar or
+the app drawer.
 
 ## Mouse / pointer behavior
 
@@ -396,7 +416,7 @@ Long press focused item
   show available actions
 
 First-run tip
-  explains type-to-launch, command prefixes and app actions
+  explains type-to-launch, base quick bar shortcuts, command prefixes and app actions
 ```
 
 Every core action must have touch and keyboard paths.
@@ -413,6 +433,7 @@ strong focus ring
 clear section headers
 simple icons with semantic color
 compact information density
+persistent bottom communication/command bar
 ```
 
 Visual design must not rely on OLED-only behavior because Titan 2 is LCD-class
@@ -425,6 +446,11 @@ SABLE_START_KEYBOARD_FIRST_UX=PASS
 ANDROID_HOME_MENTAL_MODEL=PASS
 TITAN2_SQUARE_LAYOUT=PASS
 COMPACT_KEYBOARD_LAYOUT=PASS
+BASE_QUICK_BAR=PASS
+PHONE_QUICK_ACCESS=PASS
+HUB_QUICK_ACCESS=PASS
+COMMAND_QUICK_ACCESS=PASS
+ALL_APPS_QUICK_ACCESS=PASS
 TYPE_TO_LAUNCH=PASS
 COMMAND_SEARCH_ENTRY=PASS
 ALL_APPS_PRIVACY_SUMMARY=PASS
