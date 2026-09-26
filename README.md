@@ -84,6 +84,7 @@ install closure proves or supersedes them.
 - [Keyboard and pointer profile model](docs/KEYBOARD_AND_POINTER_PROFILE_MODEL.md)
 - [Critical text-entry gates](docs/CRITICAL_TEXT_ENTRY_GATES.md)
 - [Keyboard-first reference intake](docs/KEYBOARD_FIRST_REFERENCE_INTAKE.md)
+- [Device capability matrix](docs/device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -117,6 +118,7 @@ Keyboard-first product design now covers:
 - touch as a secondary path;
 - per-device keyboard and pointer-surface profiles;
 - critical text-entry fallback for setup, pairing and lockscreen flows;
+- per-device capability matrix for Titan 2, Titan 2 Elite and Q27;
 - common Sable Keyboard/IME boundary;
 - common Sable Camera/system-image boundary.
 
