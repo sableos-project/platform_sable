@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2400" viewBox="0 0 1800 2400" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Browser / WebView Titan 2 UX</title>
+  <desc id="desc">Four Titan 2 browser and WebView states: Browser start/search, reader page mode, tab privacy overview, and WebView permission/external-open sheet.</desc>
+  <defs>
+    <style>
+      .bg { fill: #0b0f14; }
+      .device { fill: #111820; stroke: #5f7488; stroke-width: 4; }
+      .screen { fill: #05070a; stroke: #9fb5c8; stroke-width: 3; }
+      .panel { fill: #101923; stroke: #496276; stroke-width: 2; rx: 16; }
+      .panel2 { fill: #14202b; stroke: #5c7890; stroke-width: 2; rx: 16; }
+      .dock { fill: #172634; stroke: #6a8aa4; stroke-width: 2; rx: 12; }
+      .text { fill: #e8f1f7; font-family: Inter, Arial, sans-serif; }
+      .muted { fill: #9fb5c8; font-family: Inter, Arial, sans-serif; }
+      .accent { fill: #80d8ff; font-family: Inter, Arial, sans-serif; }
+      .warn { fill: #ffd166; font-family: Inter, Arial, sans-serif; }
+      .bad { fill: #ff8a80; font-family: Inter, Arial, sans-serif; }
+      .good { fill: #9be7c4; font-family: Inter, Arial, sans-serif; }
+      .key { fill: #1e3142; stroke: #7190aa; stroke-width: 2; rx: 8; }
+      .focus { fill: none; stroke: #80d8ff; stroke-width: 5; rx: 14; }
+      .kbd { fill: #0e151d; stroke: #3d5568; stroke-width: 2; rx: 10; }
+      .small { font-size: 18px; }
+      .body { font-size: 22px; }
+      .label { font-size: 24px; font-weight: 700; }
+      .title { font-size: 30px; font-weight: 800; }
+    </style>
+  </defs>
+  <rect class="bg" width="1800" height="2400"/>
+  <text x="90" y="70" class="text title">Sable Browser / WebView UX · Titan 2 visual target</text>
+  <text x="90" y="105" class="muted body">Accurate Vanadium/Sable browser labeling · keyboard-first navigation · no touchpad-scroll dependency · WebView source boundaries</text>
+
+  <!-- Device 1 -->
+  <g transform="translate(90,150)">
+    <rect class="device" x="0" y="0" width="760" height="1000" rx="42"/>
+    <rect class="screen" x="60" y="50" width="640" height="640" rx="20"/>
+    <text x="80" y="92" class="muted small">12:00</text>
+    <text x="250" y="92" class="text label">Vanadium</text>
+    <text x="570" y="92" class="muted small">WiFi 87%</text>
+    <rect class="panel" x="90" y="120" width="580" height="58" rx="18"/>
+    <text x="115" y="157" class="accent body">Search or enter address</text>
+    <rect class="focus" x="88" y="118" width="584" height="62"/>
+    <text x="90" y="220" class="text label">Start / Search</text>
+    <text x="90" y="255" class="muted body">Default label is Vanadium, not Chrome.</text>
+    <rect class="panel2" x="90" y="290" width="270" height="92"/>
+    <text x="112" y="326" class="text body">Bookmarks</text>
+    <text x="112" y="357" class="muted small">Keyboard focus grid</text>
+    <rect class="panel2" x="390" y="290" width="270" height="92"/>
+    <text x="412" y="326" class="text body">Private tab</text>
+    <text x="412" y="357" class="muted small">Redacted outside browser</text>
+    <rect class="panel2" x="90" y="410" width="570" height="100"/>
+    <text x="112" y="448" class="good body">Ctrl+L</text>
+    <text x="195" y="448" class="text body">address/search · </text>
+    <text x="372" y="448" class="good body">/</text>
+    <text x="402" y="448" class="text body">find · </text>
+    <text x="470" y="448" class="good body">Tab</text>
+    <text x="523" y="448" class="text body">focus</text>
+    <text x="112" y="482" class="muted small">Single-key shortcuts disabled while typing in forms.</text>
+    <rect class="dock" x="60" y="560" width="640" height="130"/>
+    <text x="90" y="602" class="accent body">&gt; browser command...</text>
+    <text x="90" y="642" class="muted small">[Ctrl+T New] [Ctrl+W Close] [Alt+← Back] [Alt+→ Fwd]</text>
+    <text x="150" y="742" class="text label">BROWSER_START_SEARCH</text>
+    <g transform="translate(60,720)">
+      <rect class="kbd" x="0" y="0" width="640" height="220"/>
+      <text x="28" y="45" class="muted small">Physical keyboard required path</text>
+      <rect class="key" x="30" y="70" width="54" height="42"/><text x="48" y="99" class="text small">/</text>
+      <rect class="key" x="96" y="70" width="54" height="42"/><text x="108" y="99" class="text small">Tab</text>
+      <rect class="key" x="162" y="70" width="54" height="42"/><text x="178" y="99" class="text small">↵</text>
+      <rect class="key" x="228" y="70" width="100" height="42"/><text x="247" y="99" class="text small">Ctrl+L</text>
+      <rect class="key" x="340" y="70" width="100" height="42"/><text x="359" y="99" class="text small">Ctrl+T</text>
+      <rect class="key" x="452" y="70" width="100" height="42"/><text x="466" y="99" class="text small">Esc</text>
+    </g>
+  </g>
+
+  <!-- Device 2 -->
+  <g transform="translate(950,150)">
+    <rect class="device" x="0" y="0" width="760" height="1000" rx="42"/>
+    <rect class="screen" x="60" y="50" width="640" height="640" rx="20"/>
+    <text x="80" y="92" class="muted small">12:00</text>
+    <text x="230" y="92" class="text label">Reader mode</text>
+    <text x="570" y="92" class="muted small">2/8</text>
+    <rect class="panel" x="90" y="120" width="580" height="420"/>
+    <text x="115" y="160" class="text title">Kernel HAL3 notes</text>
+    <text x="115" y="198" class="muted body">example.dev · simplified reader</text>
+    <line x1="115" y1="220" x2="635" y2="220" stroke="#496276" stroke-width="2"/>
+    <text x="115" y="260" class="text body">Readable page block with explicit</text>
+    <text x="115" y="292" class="text body">keyboard paging. No touchpad-style</text>
+    <text x="115" y="324" class="text body">continuous scroll is required to read.</text>
+    <text x="115" y="382" class="accent body">[Space] next block · [Shift+Space] previous</text>
+    <text x="115" y="418" class="accent body">[/] find · [T] top · [L] link mode</text>
+    <rect class="focus" x="104" y="240" width="545" height="195"/>
+    <rect class="panel2" x="90" y="558" width="580" height="70"/>
+    <text x="115" y="602" class="good body">Current focus remains visible</text>
+    <rect class="dock" x="60" y="630" width="640" height="60"/>
+    <text x="90" y="668" class="muted small">Find: keyboard shortcut input does not hijack web forms</text>
+    <text x="142" y="742" class="text label">BROWSER_READER_PAGE_MODE</text>
+    <g transform="translate(60,720)">
+      <rect class="kbd" x="0" y="0" width="640" height="220"/>
+      <text x="28" y="45" class="muted small">Explicit page / find / link modes</text>
+      <rect class="key" x="30" y="70" width="120" height="42"/><text x="53" y="99" class="text small">Space</text>
+      <rect class="key" x="162" y="70" width="150" height="42"/><text x="180" y="99" class="text small">Shift+Space</text>
+      <rect class="key" x="324" y="70" width="54" height="42"/><text x="342" y="99" class="text small">T</text>
+      <rect class="key" x="390" y="70" width="54" height="42"/><text x="408" y="99" class="text small">L</text>
+      <rect class="key" x="456" y="70" width="54" height="42"/><text x="474" y="99" class="text small">/</text>
+    </g>
+  </g>
+
+  <!-- Device 3 -->
+  <g transform="translate(90,1250)">
+    <rect class="device" x="0" y="0" width="760" height="1000" rx="42"/>
+    <rect class="screen" x="60" y="50" width="640" height="640" rx="20"/>
+    <text x="80" y="92" class="muted small">12:00</text>
+    <text x="235" y="92" class="text label">Tabs · 4 open</text>
+    <text x="570" y="92" class="muted small">Private</text>
+    <rect class="panel2" x="90" y="128" width="260" height="145"/>
+    <text x="112" y="166" class="text body">Vanadium</text>
+    <text x="112" y="198" class="muted small">SableOS docs</text>
+    <text x="112" y="234" class="accent small">Normal tab</text>
+    <rect class="focus" x="88" y="126" width="264" height="149"/>
+    <rect class="panel2" x="390" y="128" width="260" height="145"/>
+    <text x="412" y="166" class="text body">Build log</text>
+    <text x="412" y="198" class="muted small">local file view</text>
+    <rect class="panel2" x="90" y="305" width="260" height="145"/>
+    <text x="112" y="343" class="warn body">Private tab</text>
+    <text x="112" y="375" class="muted small">Preview hidden outside</text>
+    <text x="112" y="411" class="bad small">No lockscreen title</text>
+    <rect class="panel2" x="390" y="305" width="260" height="145"/>
+    <text x="412" y="343" class="text body">Downloads</text>
+    <text x="412" y="375" class="muted small">2 active</text>
+    <rect class="panel" x="90" y="488" width="560" height="82"/>
+    <text x="112" y="524" class="good body">Tab overview is keyboard navigable</text>
+    <text x="112" y="555" class="muted small">Private tab previews redacted in Hub, Search, Lockscreen.</text>
+    <rect class="dock" x="60" y="608" width="640" height="82"/>
+    <text x="90" y="646" class="muted small">[Ctrl+Tab Next] [Ctrl+Shift+Tab Prev] [Ctrl+W Close]</text>
+    <text x="144" y="742" class="text label">TAB_OVERVIEW_PRIVACY</text>
+    <g transform="translate(60,720)">
+      <rect class="kbd" x="0" y="0" width="640" height="220"/>
+      <text x="28" y="45" class="muted small">Privacy and tab controls</text>
+      <rect class="key" x="30" y="70" width="110" height="42"/><text x="50" y="99" class="text small">Ctrl+Tab</text>
+      <rect class="key" x="152" y="70" width="168" height="42"/><text x="172" y="99" class="text small">Ctrl+Shift+Tab</text>
+      <rect class="key" x="332" y="70" width="100" height="42"/><text x="351" y="99" class="text small">Ctrl+W</text>
+      <rect class="key" x="444" y="70" width="80" height="42"/><text x="463" y="99" class="text small">Esc</text>
+    </g>
+  </g>
+
+  <!-- Device 4 -->
+  <g transform="translate(950,1250)">
+    <rect class="device" x="0" y="0" width="760" height="1000" rx="42"/>
+    <rect class="screen" x="60" y="50" width="640" height="640" rx="20"/>
+    <text x="80" y="92" class="muted small">12:00</text>
+    <text x="210" y="92" class="text label">WebView permission</text>
+    <text x="570" y="92" class="muted small">Mail</text>
+    <rect class="panel" x="90" y="120" width="580" height="110"/>
+    <text x="115" y="158" class="text body">Source app: Sable Mail</text>
+    <text x="115" y="190" class="muted small">Origin: accounts.example.com</text>
+    <text x="115" y="218" class="muted small">Provider: Vanadium WebView</text>
+    <rect class="panel2" x="120" y="270" width="520" height="180"/>
+    <text x="150" y="314" class="warn body">Allow camera for this site?</text>
+    <text x="150" y="350" class="muted small">Keyboard cannot bypass this prompt.</text>
+    <rect class="focus" x="146" y="382" width="150" height="48"/>
+    <rect class="key" x="150" y="385" width="145" height="42"/><text x="184" y="414" class="text small">Deny</text>
+    <rect class="key" x="315" y="385" width="145" height="42"/><text x="348" y="414" class="text small">Allow</text>
+    <rect class="panel" x="90" y="488" width="580" height="92"/>
+    <text x="115" y="524" class="good body">Open in Browser · Copy link · Clear site data</text>
+    <text x="115" y="555" class="muted small">App owns session; no cross-app history leakage.</text>
+    <rect class="dock" x="60" y="620" width="640" height="70"/>
+    <text x="90" y="660" class="muted small">[Tab Focus] [Enter Choose] [Esc Cancel] [O Open in Browser]</text>
+    <text x="92" y="742" class="text label">WEBVIEW_PERMISSION_EXTERNAL_OPEN</text>
+    <g transform="translate(60,720)">
+      <rect class="kbd" x="0" y="0" width="640" height="220"/>
+      <text x="28" y="45" class="muted small">Permission prompts remain explicit</text>
+      <rect class="key" x="30" y="70" width="70" height="42"/><text x="48" y="99" class="text small">Tab</text>
+      <rect class="key" x="112" y="70" width="70" height="42"/><text x="129" y="99" class="text small">↵</text>
+      <rect class="key" x="194" y="70" width="70" height="42"/><text x="211" y="99" class="text small">Esc</text>
+      <rect class="key" x="276" y="70" width="70" height="42"/><text x="295" y="99" class="text small">O</text>
+      <rect class="key" x="358" y="70" width="120" height="42"/><text x="378" y="99" class="text small">Ctrl+C</text>
+    </g>
+  </g>
+</svg>
