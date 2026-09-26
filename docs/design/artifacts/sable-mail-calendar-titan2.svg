@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2200" viewBox="0 0 1800 2200" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Mail / Calendar Titan 2 productivity UX</title>
+  <desc id="desc">Four Titan 2 visual states: Mail inbox split pane, Mail reader quick reply, Calendar five column now view, and Calendar agenda event detail.</desc>
+  <defs>
+    <style>
+      .bg{fill:#070b12}.phone{fill:#121722;stroke:#2d3a4f;stroke-width:6}.screen{fill:#101725;stroke:#6d7ea1;stroke-width:3}.kbd{fill:#0b0f18;stroke:#2b3547;stroke-width:2}.key{fill:#1a2230;stroke:#46556f;stroke-width:1}.label{font-family:Inter,Arial,sans-serif;fill:#e6edf7}.muted{font-family:Inter,Arial,sans-serif;fill:#93a3b8}.accent{fill:#72d4ff}.good{fill:#92f2c4}.warn{fill:#ffd166}.line{stroke:#324159;stroke-width:2}.focus{fill:none;stroke:#72d4ff;stroke-width:4}.pane{fill:#141c2b;stroke:#2d3a4f;stroke-width:2}.dock{fill:#0f1624;stroke:#72d4ff;stroke-width:2}.chip{fill:#202b3b;stroke:#52637f;stroke-width:1}.event{fill:#22324a;stroke:#72d4ff;stroke-width:2}.now{stroke:#ff6978;stroke-width:4}.small{font-size:18px}.med{font-size:24px}.big{font-size:34px;font-weight:700}.tiny{font-size:14px}.title{font-size:42px;font-weight:800}.keytxt{font-size:16px;font-weight:700}
+    </style>
+  </defs>
+  <rect class="bg" width="1800" height="2200"/>
+  <text x="90" y="82" class="label title">Mail / Calendar Productivity UX · Titan 2</text>
+  <text x="90" y="124" class="muted med">Rule: current or latest relevant content is always visible; continuous scrolling is not required.</text>
+
+  <g id="state1" transform="translate(80 180)">
+    <text x="0" y="-30" class="label big">1 · Mail inbox split pane</text>
+    <rect x="0" y="0" width="760" height="890" rx="44" class="phone"/>
+    <rect x="45" y="45" width="670" height="670" rx="18" class="screen"/>
+    <rect x="45" y="45" width="670" height="54" class="pane"/>
+    <text x="70" y="81" class="label med">12:00</text><text x="285" y="81" class="label med">Inbox · 4 unread</text><text x="610" y="81" class="muted small">WiFi 87%</text>
+    <line x1="45" y1="99" x2="715" y2="99" class="line"/>
+    <rect x="65" y="119" width="235" height="510" class="pane"/>
+    <rect x="318" y="119" width="377" height="510" class="pane"/>
+    <text x="82" y="151" class="muted small">THREADS · latest first</text>
+    <rect x="76" y="166" width="205" height="82" rx="8" class="chip"/><rect x="76" y="166" width="205" height="82" rx="8" class="focus"/>
+    <text x="91" y="195" class="label med">Alex Chen</text><text x="225" y="195" class="accent small">11:42</text><text x="91" y="222" class="muted small">Kernel HAL3...</text><text x="91" y="241" class="good tiny">latest message</text>
+    <rect x="76" y="260" width="205" height="82" rx="8" class="chip"/>
+    <text x="91" y="289" class="label med">Sarah K.</text><text x="230" y="289" class="muted small">10:15</text><text x="91" y="316" class="muted small">5G band test...</text>
+    <rect x="76" y="354" width="205" height="82" rx="8" class="chip"/>
+    <text x="91" y="383" class="label med">GitBot</text><text x="232" y="383" class="muted small">09:02</text><text x="91" y="410" class="muted small">PR #402...</text>
+    <text x="336" y="155" class="muted small">MESSAGE PREVIEW</text>
+    <text x="336" y="195" class="label big">Kernel HAL3 patch</text>
+    <text x="336" y="226" class="muted small">From: Alex Chen · 11:42 · signed</text>
+    <text x="336" y="279" class="label med">Latest visible body preview starts here.</text>
+    <text x="336" y="313" class="muted small">Older quoted text is collapsed until requested.</text>
+    <rect x="336" y="492" width="80" height="34" rx="12" class="chip"/><text x="356" y="516" class="label small">R Reply</text>
+    <rect x="426" y="492" width="74" height="34" rx="12" class="chip"/><text x="446" y="516" class="label small">F Fwd</text>
+    <rect x="510" y="492" width="98" height="34" rx="12" class="chip"/><text x="529" y="516" class="label small">V Archive</text>
+    <rect x="618" y="492" width="62" height="34" rx="12" class="chip"/><text x="636" y="516" class="label small">D Del</text>
+    <rect x="65" y="649" width="630" height="46" rx="14" class="dock"/>
+    <text x="84" y="680" class="label med">&gt; mail search / command...</text>
+    <g transform="translate(80 735)">
+      <rect x="0" y="0" width="600" height="110" rx="18" class="kbd"/>
+      <text x="30" y="37" class="muted tiny">[C Compose] [R Reply] [/ Search] [J/K Move] [T Latest]</text>
+      <g transform="translate(35 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">C</text></g>
+      <g transform="translate(90 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">R</text></g>
+      <g transform="translate(145 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">/</text></g>
+      <g transform="translate(200 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">J</text></g>
+      <g transform="translate(255 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">K</text></g>
+    </g>
+  </g>
+
+  <g id="state2" transform="translate(960 180)">
+    <text x="0" y="-30" class="label big">2 · Mail reader quick reply</text>
+    <rect x="0" y="0" width="760" height="890" rx="44" class="phone"/>
+    <rect x="45" y="45" width="670" height="670" rx="18" class="screen"/>
+    <rect x="45" y="45" width="670" height="54" class="pane"/>
+    <text x="70" y="81" class="label med">12:00</text><text x="245" y="81" class="label med">Alex Chen · Inbox</text><text x="608" y="81" class="muted small">87%</text>
+    <rect x="65" y="119" width="630" height="510" class="pane"/>
+    <text x="87" y="158" class="label big">Kernel HAL3 &amp; Keymap Patch</text>
+    <text x="87" y="190" class="muted small">From: Alex Chen · 11:42 · verified sender</text>
+    <line x1="87" y1="210" x2="675" y2="210" class="line"/>
+    <text x="87" y="257" class="label med">Latest message body starts here.</text>
+    <text x="87" y="292" class="label med">Quoted history is collapsed by default.</text>
+    <text x="87" y="340" class="muted small">[E] Expand quote · [A] Attachments · [T] latest</text>
+    <rect x="87" y="396" width="242" height="38" rx="12" class="chip"/><text x="105" y="423" class="label small">patch_v2.diff · 14KB</text>
+    <text x="87" y="492" class="muted small">Quick actions</text>
+    <rect x="87" y="512" width="100" height="36" rx="12" class="chip"/><text x="113" y="538" class="label small">R Reply</text>
+    <rect x="197" y="512" width="104" height="36" rx="12" class="chip"/><text x="218" y="538" class="label small">L All</text>
+    <rect x="311" y="512" width="104" height="36" rx="12" class="chip"/><text x="335" y="538" class="label small">F Fwd</text>
+    <rect x="425" y="512" width="116" height="36" rx="12" class="chip"/><text x="449" y="538" class="label small">V Archive</text>
+    <rect x="551" y="512" width="90" height="36" rx="12" class="chip"/><text x="576" y="538" class="label small">D Del</text>
+    <rect x="65" y="649" width="630" height="46" rx="14" class="dock"/>
+    <text x="84" y="680" class="label med">&gt; Reply to Alex...   Ctrl+Enter send</text>
+    <g transform="translate(80 735)">
+      <rect x="0" y="0" width="600" height="110" rx="18" class="kbd"/>
+      <text x="30" y="37" class="muted tiny">Text input wins: shortcuts disabled while typing</text>
+      <g transform="translate(35 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">Alt</text></g>
+      <g transform="translate(90 58)"><rect class="key" width="42" height="32" rx="5"/><text x="9" y="22" class="label keytxt">Sym</text></g>
+      <g transform="translate(145 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">Fn</text></g>
+      <g transform="translate(200 58)"><rect class="key" width="90" height="32" rx="5"/><text x="11" y="22" class="label keytxt">Ctrl+Enter</text></g>
+    </g>
+  </g>
+
+  <g id="state3" transform="translate(80 1200)">
+    <text x="0" y="-30" class="label big">3 · Calendar 5-column now view</text>
+    <rect x="0" y="0" width="760" height="890" rx="44" class="phone"/>
+    <rect x="45" y="45" width="670" height="670" rx="18" class="screen"/>
+    <rect x="45" y="45" width="670" height="54" class="pane"/>
+    <text x="70" y="81" class="label med">12:00</text><text x="245" y="81" class="label med">Sep 2026 · Wk 39</text><text x="610" y="81" class="muted small">WiFi</text>
+    <rect x="65" y="119" width="630" height="390" class="pane"/>
+    <text x="78" y="151" class="muted tiny">Time</text><text x="143" y="151" class="label small">Mon 28</text><text x="253" y="151" class="label small">Tue 29</text><text x="363" y="151" class="label small">Wed 30</text><text x="473" y="151" class="label small">Thu 01</text><text x="583" y="151" class="label small">Fri 02</text>
+    <line x1="124" y1="119" x2="124" y2="509" class="line"/><line x1="234" y1="119" x2="234" y2="509" class="line"/><line x1="344" y1="119" x2="344" y2="509" class="line"/><line x1="454" y1="119" x2="454" y2="509" class="line"/><line x1="564" y1="119" x2="564" y2="509" class="line"/>
+    <text x="76" y="214" class="muted tiny">09:00</text><text x="76" y="286" class="muted tiny">10:00</text><text x="76" y="358" class="muted tiny">11:00</text><text x="76" y="430" class="muted tiny">12:00</text>
+    <rect x="137" y="252" width="84" height="92" rx="8" class="event"/><text x="149" y="283" class="label small">Sync</text><text x="149" y="311" class="label small">Call</text>
+    <rect x="357" y="252" width="84" height="92" rx="8" class="event"/><text x="370" y="283" class="label small">UI/UX</text><text x="370" y="311" class="label small">Rev</text>
+    <line x1="65" y1="418" x2="695" y2="418" class="now"/><text x="333" y="409" class="warn small">NOW</text>
+    <rect x="65" y="526" width="630" height="103" rx="14" class="pane"/>
+    <text x="85" y="558" class="label med">Selected: Mon 10:00-11:30</text>
+    <text x="85" y="586" class="muted small">Kernel &amp; Keymap Sync · Room B / Jitsi</text>
+    <text x="85" y="615" class="accent small">[Enter Edit] [R RSVP] [D Delete] [T Today]</text>
+    <rect x="65" y="649" width="630" height="46" rx="14" class="dock"/>
+    <text x="84" y="680" class="label med">&gt; cal add Thu 14:00 45m Architecture Sync</text>
+    <g transform="translate(80 735)">
+      <rect x="0" y="0" width="600" height="110" rx="18" class="kbd"/>
+      <text x="30" y="37" class="muted tiny">[C Create] [T Today] [V View] [/ Find] [J/K Event]</text>
+      <g transform="translate(35 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">C</text></g>
+      <g transform="translate(90 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">T</text></g>
+      <g transform="translate(145 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">V</text></g>
+      <g transform="translate(200 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">/</text></g>
+    </g>
+  </g>
+
+  <g id="state4" transform="translate(960 1200)">
+    <text x="0" y="-30" class="label big">4 · Calendar agenda event detail</text>
+    <rect x="0" y="0" width="760" height="890" rx="44" class="phone"/>
+    <rect x="45" y="45" width="670" height="670" rx="18" class="screen"/>
+    <rect x="45" y="45" width="670" height="54" class="pane"/>
+    <text x="70" y="81" class="label med">12:00</text><text x="255" y="81" class="label med">Today · 3 upcoming</text><text x="610" y="81" class="muted small">87%</text>
+    <rect x="65" y="119" width="300" height="510" class="pane"/>
+    <rect x="383" y="119" width="312" height="510" class="pane"/>
+    <text x="84" y="153" class="muted small">UPCOMING</text>
+    <rect x="84" y="176" width="250" height="82" rx="8" class="chip"/><rect x="84" y="176" width="250" height="82" rx="8" class="focus"/>
+    <text x="101" y="206" class="label med">10:00 Kernel Sync</text><text x="101" y="234" class="muted small">Room B / Jitsi</text>
+    <rect x="84" y="274" width="250" height="82" rx="8" class="chip"/><text x="101" y="305" class="label med">13:00 Build Review</text><text x="101" y="333" class="muted small">CI / release blockers</text>
+    <rect x="84" y="372" width="250" height="82" rx="8" class="chip"/><text x="101" y="403" class="label med">15:00 Architecture</text><text x="101" y="431" class="muted small">SableOS / Titan 2</text>
+    <text x="402" y="153" class="muted small">DETAIL</text>
+    <text x="402" y="200" class="label big">Kernel &amp;</text><text x="402" y="238" class="label big">Keymap Sync</text>
+    <text x="402" y="284" class="muted small">Mon 10:00-11:30</text><text x="402" y="318" class="muted small">Room B / Jitsi</text><text x="402" y="352" class="muted small">3 attendees · accepted</text>
+    <rect x="402" y="410" width="100" height="36" rx="12" class="chip"/><text x="428" y="436" class="label small">Edit</text>
+    <rect x="512" y="410" width="90" height="36" rx="12" class="chip"/><text x="535" y="436" class="label small">RSVP</text>
+    <rect x="402" y="456" width="90" height="36" rx="12" class="chip"/><text x="424" y="482" class="label small">Mute</text>
+    <rect x="502" y="456" width="90" height="36" rx="12" class="chip"/><text x="526" y="482" class="label small">Delete</text>
+    <rect x="65" y="649" width="630" height="46" rx="14" class="dock"/>
+    <text x="84" y="680" class="label med">&gt; cal search / command...</text>
+    <g transform="translate(80 735)">
+      <rect x="0" y="0" width="600" height="110" rx="18" class="kbd"/>
+      <text x="30" y="37" class="muted tiny">Agenda is the no-scroll-cost fallback for dense days</text>
+      <g transform="translate(35 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">J</text></g>
+      <g transform="translate(90 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">K</text></g>
+      <g transform="translate(145 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">T</text></g>
+      <g transform="translate(200 58)"><rect class="key" width="42" height="32" rx="5"/><text x="13" y="22" class="label keytxt">R</text></g>
+    </g>
+  </g>
+
+  <text x="90" y="2135" class="muted med">Acceptance: latest/current state visible by default · history uses explicit page/search/jump modes · no touchpad-style scrolling requirement.</text>
+</svg>
