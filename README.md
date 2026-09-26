@@ -104,6 +104,8 @@ install closure proves or supersedes them.
 - [Quick Settings visual confirmation](docs/design/QUICK_SETTINGS_VISUAL_CONFIRMATION.md)
 - [Lockscreen / Secure Entry UX](docs/design/LOCKSCREEN_SECURE_ENTRY_UX.md)
 - [Lockscreen visual confirmation](docs/design/LOCKSCREEN_VISUAL_CONFIRMATION.md)
+- [Setup Wizard / First Boot UX](docs/design/SETUP_WIZARD_FIRST_BOOT_UX.md)
+- [Setup Wizard visual confirmation](docs/design/SETUP_WIZARD_VISUAL_CONFIRMATION.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -296,6 +298,33 @@ No lockscreen keyboard, pointer or notification path may unlock, open private
 content, launch apps or send replies without successful authentication unless
 Android/platform policy explicitly allows that action while locked.
 
+## Setup Wizard / First Boot UX posture
+
+Setup Wizard / First Boot preserves Android setup expectations while making Titan
+2 keyboard verification, critical text-entry, privacy posture, theme choice,
+restore/import and account-provider boundaries explicit.
+
+```text
+SETUP_WIZARD_FIRST_BOOT_UX=YES
+ANDROID_SETUP_MENTAL_MODEL=KEEP
+KEYBOARD_FIRST_ONBOARDING=YES
+PHYSICAL_KEYBOARD_VERIFICATION=YES
+CRITICAL_TEXT_ENTRY_GATE=YES
+WIFI_PASSWORD_ENTRY=YES
+ALT_SYM_FN_TEXT_ENTRY=YES
+SOFTWARE_KEYBOARD_FALLBACK=YES
+DARK_THEME_SELECTION=YES
+SABLE_APPS_FOLLOW_SYSTEM_THEME=YES
+PRIVACY_POSTURE_EXPLICIT=YES
+RESTORE_IMPORT_FAIL_CLOSED=YES
+SETUP_WIZARD_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+TITAN2_HARDWARE_TEMPLATE=YES
+```
+
+Setup Wizard must not trap users in Wi-Fi, account, restore/import or lock-method
+flows. Unsupported restore/import or provider actions must be visibly disabled or
+skipped rather than presented as working paths.
+
 ## Visual artifact rule
 
 Titan 2 UI validation artifacts must use Titan 2 proportions unless the artifact
@@ -309,8 +338,8 @@ NO_STRETCHED_SCREEN_TARGET=YES
 ```
 
 This rule applies to Sable Start, Settings, Hub, All Apps, Command/Search, Quick
-Settings / Notification Shade, Lockscreen / Secure Entry and subsequent Titan 2
-visual design artifacts.
+Settings / Notification Shade, Lockscreen / Secure Entry, Setup Wizard / First
+Boot and subsequent Titan 2 visual design artifacts.
 
 ## K1/K2 boundary
 
@@ -390,6 +419,10 @@ Keyboard-first product design now covers:
 - lockscreen physical-keyboard PIN/password entry;
 - lockscreen Alt/Sym/Fn and software-keyboard fallback gates;
 - lockscreen notification privacy redaction and emergency access;
+- source-controlled Setup Wizard / First Boot visual artifact;
+- Setup Wizard keyboard verification and critical text-entry gates;
+- Setup Wizard Wi-Fi password, account/provider and lock-method text entry;
+- Setup Wizard privacy posture, dark-theme selection and restore/import fail-closed gates;
 - Titan 2 visual-template rule for square display plus physical keyboard;
 - configurable base quick bar with required fallback paths;
 - curated Sable glance widgets with Weather as first Home candidate;
