@@ -91,6 +91,7 @@ install closure proves or supersedes them.
 - [Sable Start keyboard-first UX](docs/design/SABLE_START_KEYBOARD_FIRST_UX.md)
 - [Sable Start screen design](docs/design/SABLE_START_SCREEN_DESIGN.md)
 - [Sable Start three-page model](docs/design/SABLE_START_THREE_PAGE_MODEL.md)
+- [Sable Start visual confirmation](docs/design/SABLE_START_VISUAL_CONFIRMATION.md)
 - [Sable Start functional references](docs/design/SABLE_START_REFERENCES.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
@@ -157,6 +158,7 @@ THREE_PAGE_START_MODEL=YES
 LEFT_PAGE_GLANCE_WIDGETS=YES
 RIGHT_PAGE_HUB=YES
 BASE_QUICK_BAR_CONFIGURABLE=YES
+VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
 FUNCTIONAL_REFERENCE_ONLY=YES
 CODE_IMPORT=NO
 ```
@@ -227,6 +229,7 @@ Keyboard-first product design now covers:
 - Settings search aliases for profile, diagnostics and factory-test concepts;
 - Start screen app privacy summaries and keyboard app actions;
 - Sable Start three-page Center/Glance/Hub page model;
+- source-controlled Sable Start visual confirmation artifact;
 - configurable base quick bar with required fallback paths;
 - curated Sable glance widgets with Weather as first Home candidate;
 - critical text-entry fallback for setup, pairing and lockscreen flows;
