@@ -84,9 +84,36 @@ install closure proves or supersedes them.
 - [Keyboard and pointer profile model](docs/KEYBOARD_AND_POINTER_PROFILE_MODEL.md)
 - [Critical text-entry gates](docs/CRITICAL_TEXT_ENTRY_GATES.md)
 - [Keyboard-first reference intake](docs/KEYBOARD_FIRST_REFERENCE_INTAKE.md)
+- [Device capability matrix](docs/device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
+
+## Keyboard-device capability posture
+
+The current profile model is intentionally not a generic keyboard-phone profile.
+Titan 2, Titan 2 Elite and Q27 must not inherit each other's display, AOD,
+keyboard, pointer, SubScreen, critical-input or release evidence.
+
+```text
+Titan 2
+  profile: square keyboard device + rear SubScreen candidate
+  AOD: no by default
+  status: N0_A16 planning, no Sable artifact/boot yet
+
+Titan 2 Elite
+  profile: compact AMOLED keyboard-device candidate
+  AOD: candidate, requires hardware/power/doze validation
+  status: independent baseline pending
+
+Q27
+  profile: compact AMOLED keyboard-device candidate
+  AOD: candidate, requires shipped/current hardware validation
+  status: research only
+```
+
+Public specifications are planning inputs only. They do not replace local
+hardware evidence, firmware binding, or release acceptance.
 
 ## K1/K2 boundary
 
@@ -97,6 +124,32 @@ device-adapter-owned.
 Panther is the qualified target-files/A-B adapter. Titan 2, Titan 2 Elite and
 Q27 remain fail-closed for release artifact registration/flash until independently
 qualified.
+
+## Cross-repository alignment
+
+Current adjacent repositories should use this repository as the common semantic
+and capability-contract authority:
+
+```text
+platform_manifest
+  exact composition and artifact identity
+
+build
+  public build/sign/verify/package/flash contracts
+
+device_sable_titan2
+  Titan 2 public device-adapter boundary
+
+aimindseye/unihertz-titan2
+  Titan-family research handoff and private-evidence boundary
+
+aimindseye/sableos
+  private integration and pre-public build-target work
+```
+
+Cross-repo references should not copy profile data as independent truth. They
+should link or cite the current platform_sable profile docs and keep release or
+flash gates fail-closed until evidence exists.
 
 ## Active design work
 

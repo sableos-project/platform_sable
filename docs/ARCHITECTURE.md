@@ -1,18 +1,23 @@
 # SableOS common architecture
 
-Status: **current normative architecture — 2026-09-24**
+Status: **current normative architecture — 2026-09-26**
 
 ## Product structure
 
-SableOS uses one common product core with multiple interaction profiles and
-bounded device adapters.
+SableOS uses one common product core with multiple interaction and hardware
+profiles plus bounded device adapters.
 
 ```text
 common product semantics
     launcher / hub / apps / appearance / privacy contracts
         |
         +-- touch-first presentation
-        +-- keyboard-first presentation
+        |     -> Panther reference profile
+        |
+        +-- keyboard-first profile family
+              -> Titan 2 profile
+              -> Titan 2 Elite profile
+              -> Q27 profile
         |
         v
 device adapter
@@ -21,6 +26,34 @@ device adapter
         v
 Android framework + vendor BSP + hardware
 ```
+
+Common app semantics do not fork by device model. Hardware, display, attention,
+keyboard, pointer and critical-input differences are expressed through profiles
+and device adapters.
+
+## Active architecture contracts
+
+The current keyboard-device architecture is profile-first:
+
+```text
+SableHardwareProfile
+SableDisplayProfile
+SablePanelPowerProfile
+SableAttentionSurfaceProfile
+SableKeyboardProfile
+SablePointerSurfaceProfile
+SableCriticalTextEntryProfile
+SableAppLayoutProfile
+```
+
+Normative profile docs:
+
+- [Keyboard-first device profile model](KEYBOARD_FIRST_DEVICE_PROFILE_MODEL.md)
+- [Display and attention profile model](DISPLAY_AND_ATTENTION_PROFILE_MODEL.md)
+- [Keyboard and pointer profile model](KEYBOARD_AND_POINTER_PROFILE_MODEL.md)
+- [Critical text-entry gates](CRITICAL_TEXT_ENTRY_GATES.md)
+- [Keyboard-first reference intake](KEYBOARD_FIRST_REFERENCE_INTAKE.md)
+- [Device capability matrix](device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
 
 ## Launcher
 
@@ -53,7 +86,8 @@ Applications own capabilities; the Sable shell organizes people, attention and
 actions.
 
 Common app source must not fork merely because a target has a physical keyboard,
-different SoC, square display or vendor BSP.
+different SoC, square display, AMOLED display, secondary display, trackpad,
+mouse mode or vendor BSP.
 
 ## Reader split
 
@@ -103,10 +137,48 @@ device physical-keyboard adapter
     scan/keylayout/keycharacter mapping
     Fn/Sym/vendor keys
     backlight
-    pointer/trackpad
+    touch surface / capacitive keyboard / mouse mode
 ```
 
-Device scan-code quirks do not belong in common IME or app code.
+Device scan-code quirks do not belong in common IME or app code. Titan 2,
+Titan 2 Elite and Q27 require independent keyboard and pointer profiles.
+
+## Critical text entry
+
+Setup, pairing, lockscreen and recovery-critical dialogs must always have a
+working text-entry path.
+
+```text
+Bluetooth pairing
+Wi-Fi password entry
+Setup Wizard
+Lockscreen / PIN / password
+Emergency text fields
+Account sign-in
+Recovery / restore prompts
+```
+
+A physical keyboard profile is not sufficient unless software-keyboard fallback,
+Alt/SYM/numeric/symbol entry and critical-dialog entry are independently proven.
+
+## Display and attention
+
+Display shape and panel technology are first-class architecture inputs.
+
+```text
+SQUARE_KEYBOARD
+COMPACT_TALL_KEYBOARD
+SECONDARY_GLANCE_DISPLAY
+TOUCH_REFERENCE_SLAB
+```
+
+AOD is a panel/power/device capability, not a product-wide feature flag.
+
+```text
+Titan 2       AOD_DEFAULT=NO / rear SubScreen candidate
+Titan 2 Elite AOD=CANDIDATE_REQUIRES_VALIDATION
+Q27           AOD=CANDIDATE_REQUIRES_VALIDATION
+```
 
 ## Keyboard-first interaction
 
@@ -120,13 +192,14 @@ Required across launcher and first-party apps:
 - shortcut/command discoverability;
 - stable focus restoration;
 - no focus traps;
-- square/near-square responsive layouts;
-- touch retained as secondary input.
+- display-profile-aware square/compact/touch layouts;
+- touch retained as secondary input;
+- pointer/touch-surface behavior when device hardware supports it.
 
 ## Device roles
 
-Panther is REFERENCE_FROZEN. Titan 2 is active PORTABILITY/N0 research. Titan 2
-Elite is an independent candidate. Q27 remains RESEARCH.
+Panther is REFERENCE_FROZEN. Titan 2 is active PORTABILITY/N0_A16 planning.
+Titan 2 Elite is an independent PORTABILITY/N0 candidate. Q27 remains RESEARCH.
 
 No new PRIMARY device is currently declared.
 
@@ -139,6 +212,8 @@ K1/K2 is part of the architecture:
 - common deployment code owns safety/evidence;
 - device adapters own transport/partition/restore semantics;
 - unqualified devices fail closed.
+
+A device-capability matrix is not build, flash or release authorization.
 
 ## Security boundary
 
