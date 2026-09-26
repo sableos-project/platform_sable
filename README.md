@@ -94,6 +94,8 @@ install closure proves or supersedes them.
 - [Sable Start three-page model](docs/design/SABLE_START_THREE_PAGE_MODEL.md)
 - [Sable Start visual confirmation](docs/design/SABLE_START_VISUAL_CONFIRMATION.md)
 - [Sable Start functional references](docs/design/SABLE_START_REFERENCES.md)
+- [Sable Hub keyboard-first UX](docs/design/SABLE_HUB_KEYBOARD_FIRST_UX.md)
+- [Sable Hub visual confirmation](docs/design/SABLE_HUB_VISUAL_CONFIRMATION.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -174,6 +176,28 @@ keyboard shortcuts, BlackBerry OS10 Hub/Peek/Flow, Windows Phone/Metro/Zune visu
 structure, OpenMiniLaunch/Mink command-box ideas, Commander command overlay, and
 keyboard/pointer learnings from Pastiera/Plektra and q25toolbox.
 
+## Sable Hub UX posture
+
+Sable Hub is the Sable communications and attention surface. It aggregates and
+routes messages, calls, mail, notifications and people views while preserving
+provider/source ownership.
+
+```text
+SABLE_HUB_SURFACE=YES
+COMMUNICATIONS_FIRST=YES
+PROVIDER_OWNERSHIP_RETAINED=YES
+PRIORITY_FILTER_DEFAULT=YES
+FILTER_BAR_VISIBLE=YES
+PRIVACY_LOCKED_MODE=YES
+INLINE_REPLY_PROVIDER_SAFE=YES
+START_BASE_QUICK_BAR_IN_HUB=NO
+HUB_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+TITAN2_HARDWARE_TEMPLATE=YES
+```
+
+Hub must not invent unsupported provider actions. Inline reply is allowed only
+when the source exposes a safe reply path.
+
 ## Visual artifact rule
 
 Titan 2 UI validation artifacts must use Titan 2 proportions unless the artifact
@@ -186,8 +210,8 @@ NO_SLAB_PHONE_VISUAL_TARGET=YES
 NO_STRETCHED_SCREEN_TARGET=YES
 ```
 
-This rule applies to Sable Start, Settings and subsequent Titan 2 visual design
-artifacts.
+This rule applies to Sable Start, Settings, Hub and subsequent Titan 2 visual
+design artifacts.
 
 ## K1/K2 boundary
 
@@ -251,6 +275,8 @@ Keyboard-first product design now covers:
 - Start screen app privacy summaries and keyboard app actions;
 - Sable Start three-page Center/Glance/Hub page model;
 - source-controlled Sable Start visual confirmation artifact;
+- source-controlled Sable Hub visual confirmation artifact;
+- Sable Hub provider-safe row actions and privacy states;
 - Titan 2 visual-template rule for square display plus physical keyboard;
 - configurable base quick bar with required fallback paths;
 - curated Sable glance widgets with Weather as first Home candidate;
