@@ -100,6 +100,8 @@ install closure proves or supersedes them.
 - [All Apps visual confirmation](docs/design/ALL_APPS_VISUAL_CONFIRMATION.md)
 - [Sable Command / Search UX](docs/design/SABLE_COMMAND_SEARCH_UX.md)
 - [Sable Command visual confirmation](docs/design/COMMAND_SEARCH_VISUAL_CONFIRMATION.md)
+- [Quick Settings / Notification Shade UX](docs/design/QUICK_SETTINGS_NOTIFICATION_SHADE_UX.md)
+- [Quick Settings visual confirmation](docs/design/QUICK_SETTINGS_VISUAL_CONFIRMATION.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -247,6 +249,27 @@ TITAN2_HARDWARE_TEMPLATE=YES
 Command must respect locked/private modes and must not expose message bodies,
 contact details or provider actions when the source policy does not allow it.
 
+## Quick Settings / Notification Shade UX posture
+
+Quick Settings / Notification Shade preserves the Android shade model while
+making keyboard-first access, dark-theme propagation, notification privacy,
+profile-gated hardware controls and Hub handoff first-class.
+
+```text
+QUICK_SETTINGS_NOTIFICATION_SHADE_UX=YES
+ANDROID_NOTIFICATION_SHADE_MENTAL_MODEL=KEEP
+KEYBOARD_FIRST_SHADE_ACCESS=YES
+DARK_THEME_PROPAGATION=YES
+SABLE_APPS_FOLLOW_SYSTEM_THEME=YES
+HUB_HANDOFF_FROM_SHADE=YES
+START_BASE_QUICK_BAR_IN_SHADE=NO
+QUICK_SETTINGS_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+TITAN2_HARDWARE_TEMPLATE=YES
+```
+
+Unsupported profile-dependent controls, including AOD on Titan 2, must not appear
+as working tiles until the relevant hardware/display/attention path is validated.
+
 ## Visual artifact rule
 
 Titan 2 UI validation artifacts must use Titan 2 proportions unless the artifact
@@ -259,8 +282,8 @@ NO_SLAB_PHONE_VISUAL_TARGET=YES
 NO_STRETCHED_SCREEN_TARGET=YES
 ```
 
-This rule applies to Sable Start, Settings, Hub, All Apps, Command/Search and
-subsequent Titan 2 visual design artifacts.
+This rule applies to Sable Start, Settings, Hub, All Apps, Command/Search, Quick
+Settings / Notification Shade and subsequent Titan 2 visual design artifacts.
 
 ## K1/K2 boundary
 
@@ -332,6 +355,10 @@ Keyboard-first product design now covers:
 - All Apps privacy/security summaries under app names;
 - All Apps app actions, pin-to-Start and add-to-base-bar flows;
 - source-controlled Sable Command visual confirmation artifact;
+- source-controlled Quick Settings / Notification Shade visual artifact;
+- Quick Settings dark-theme propagation into Sable apps;
+- Quick Settings profile-gated keyboard backlight, SubScreen and AOD controls;
+- Notification Shade privacy redaction and Hub handoff;
 - Titan 2 visual-template rule for square display plus physical keyboard;
 - configurable base quick bar with required fallback paths;
 - curated Sable glance widgets with Weather as first Home candidate;
