@@ -90,6 +90,7 @@ install closure proves or supersedes them.
 - [Hardware diagnostics and dialer-code UX](docs/design/HARDWARE_DIAGNOSTICS_AND_DIALER_CODES.md)
 - [Sable Start keyboard-first UX](docs/design/SABLE_START_KEYBOARD_FIRST_UX.md)
 - [Sable Start screen design](docs/design/SABLE_START_SCREEN_DESIGN.md)
+- [Sable Start three-page model](docs/design/SABLE_START_THREE_PAGE_MODEL.md)
 - [Sable Start functional references](docs/design/SABLE_START_REFERENCES.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
@@ -152,6 +153,10 @@ TYPE_TO_LAUNCH=YES
 COMMAND_SEARCH_ENTRY=YES
 TITAN2_SQUARE_LAYOUT=YES
 COMPACT_KEYBOARD_LAYOUT=YES
+THREE_PAGE_START_MODEL=YES
+LEFT_PAGE_GLANCE_WIDGETS=YES
+RIGHT_PAGE_HUB=YES
+BASE_QUICK_BAR_CONFIGURABLE=YES
 FUNCTIONAL_REFERENCE_ONLY=YES
 CODE_IMPORT=NO
 ```
@@ -221,6 +226,9 @@ Keyboard-first product design now covers:
 - Settings structure compatible with Android user expectations;
 - Settings search aliases for profile, diagnostics and factory-test concepts;
 - Start screen app privacy summaries and keyboard app actions;
+- Sable Start three-page Center/Glance/Hub page model;
+- configurable base quick bar with required fallback paths;
+- curated Sable glance widgets with Weather as first Home candidate;
 - critical text-entry fallback for setup, pairing and lockscreen flows;
 - gated diagnostics bridge for hardware/factory test surfaces;
 - common Sable Keyboard/IME boundary;
