@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1500" viewBox="0 0 2400 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Media / Gallery Titan 2 visual target</title>
+  <desc id="desc">Four Titan 2 states for media now playing, queue library, gallery contact sheet and gallery viewer.</desc>
+  <rect width="2400" height="1500" fill="#08090d"/>
+  <text x="80" y="70" fill="#f5f7fb" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">Sable Media / Gallery UX · Titan 2</text>
+  <text x="80" y="112" fill="#aeb6c8" font-family="Inter, Arial, sans-serif" font-size="22">Hybrid: Zune/Windows-inspired media playback + keyboard-first Gallery contact sheet/viewer</text>
+
+  <defs>
+    <style>
+      .device { fill:#11131a; stroke:#323747; stroke-width:4; }
+      .screen { fill:#0b0d12; stroke:#4d5368; stroke-width:3; }
+      .key { fill:#1b1f2b; stroke:#3a4052; stroke-width:2; rx:8; }
+      .label { fill:#f5f7fb; font-family:Inter, Arial, sans-serif; font-weight:700; }
+      .muted { fill:#aeb6c8; font-family:Inter, Arial, sans-serif; }
+      .soft { fill:#7e879c; font-family:Inter, Arial, sans-serif; }
+      .accent { fill:#7dd3fc; }
+      .focus { fill:none; stroke:#7dd3fc; stroke-width:4; }
+      .panel { fill:#151925; stroke:#313749; stroke-width:2; rx:16; }
+      .thumb { fill:#22283a; stroke:#4a5268; stroke-width:2; rx:8; }
+      .warn { fill:#fca5a5; }
+    </style>
+  </defs>
+
+  <!-- helper: device shell repeated manually -->
+  <g transform="translate(80 160)">
+    <rect class="device" width="500" height="610" rx="38"/>
+    <rect class="screen" x="34" y="34" width="432" height="432" rx="18"/>
+    <text class="label" x="58" y="72" font-size="18">12:00</text>
+    <text class="label" x="188" y="72" font-size="18">Now Playing</text>
+    <text class="muted" x="358" y="72" font-size="16">87%</text>
+    <rect class="panel" x="114" y="100" width="272" height="190" rx="22"/>
+    <text class="label" x="176" y="197" font-size="26">ALBUM ART</text>
+    <text class="label" x="58" y="326" font-size="28">Track title</text>
+    <text class="muted" x="58" y="356" font-size="18">Artist · Album · Local</text>
+    <rect x="58" y="382" width="330" height="8" fill="#293042" rx="4"/>
+    <rect x="58" y="382" width="176" height="8" class="accent" rx="4"/>
+    <text class="muted" x="58" y="416" font-size="17">[J Prev] [Space Play] [K Next]</text>
+    <text class="soft" x="58" y="445" font-size="15">current item and controls always visible</text>
+    <g transform="translate(52 492)">
+      <rect class="key" width="50" height="34"/><rect class="key" x="60" width="50" height="34"/><rect class="key" x="120" width="50" height="34"/><rect class="key" x="180" width="50" height="34"/><rect class="key" x="240" width="50" height="34"/><rect class="key" x="300" width="50" height="34"/><rect class="key" x="360" width="50" height="34"/>
+      <rect class="key" y="44" width="50" height="34"/><rect class="key" x="60" y="44" width="50" height="34"/><rect class="key" x="120" y="44" width="50" height="34"/><rect class="key" x="180" y="44" width="50" height="34"/><rect class="key" x="240" y="44" width="50" height="34"/><rect class="key" x="300" y="44" width="50" height="34"/><rect class="key" x="360" y="44" width="50" height="34"/>
+    </g>
+    <text class="label" x="28" y="650" font-size="22">1 · MEDIA_NOW_PLAYING</text>
+  </g>
+
+  <g transform="translate(670 160)">
+    <rect class="device" width="500" height="610" rx="38"/>
+    <rect class="screen" x="34" y="34" width="432" height="432" rx="18"/>
+    <text class="label" x="58" y="72" font-size="18">12:00</text>
+    <text class="label" x="174" y="72" font-size="18">Queue · Library</text>
+    <text class="muted" x="358" y="72" font-size="16">87%</text>
+    <text class="label" x="58" y="116" font-size="24">Up next</text>
+    <rect class="focus" x="54" y="138" width="354" height="58" rx="10"/>
+    <text class="label" x="72" y="171" font-size="18">▶ Current track · 01:24</text>
+    <rect class="panel" x="58" y="214" width="350" height="54" rx="12"/>
+    <text class="muted" x="76" y="248" font-size="18">Next track · Artist</text>
+    <rect class="panel" x="58" y="280" width="350" height="54" rx="12"/>
+    <text class="muted" x="76" y="314" font-size="18">Podcast episode · Saved</text>
+    <rect class="panel" x="58" y="346" width="350" height="54" rx="12"/>
+    <text class="muted" x="76" y="380" font-size="18">Video clip · Downloads</text>
+    <text class="soft" x="58" y="432" font-size="15">queue and library are explicit modes</text>
+    <g transform="translate(52 492)">
+      <rect class="key" width="50" height="34"/><rect class="key" x="60" width="50" height="34"/><rect class="key" x="120" width="50" height="34"/><rect class="key" x="180" width="50" height="34"/><rect class="key" x="240" width="50" height="34"/><rect class="key" x="300" width="50" height="34"/><rect class="key" x="360" width="50" height="34"/>
+      <rect class="key" y="44" width="50" height="34"/><rect class="key" x="60" y="44" width="50" height="34"/><rect class="key" x="120" y="44" width="50" height="34"/><rect class="key" x="180" y="44" width="50" height="34"/><rect class="key" x="240" y="44" width="50" height="34"/><rect class="key" x="300" y="44" width="50" height="34"/><rect class="key" x="360" y="44" width="50" height="34"/>
+    </g>
+    <text class="label" x="28" y="650" font-size="22">2 · MEDIA_QUEUE_LIBRARY</text>
+  </g>
+
+  <g transform="translate(1260 160)">
+    <rect class="device" width="500" height="610" rx="38"/>
+    <rect class="screen" x="34" y="34" width="432" height="432" rx="18"/>
+    <text class="label" x="58" y="72" font-size="18">12:00</text>
+    <text class="label" x="196" y="72" font-size="18">Gallery · Today</text>
+    <text class="muted" x="358" y="72" font-size="16">87%</text>
+    <text class="label" x="58" y="112" font-size="22">Latest</text>
+    <rect class="focus" x="56" y="134" width="82" height="82" rx="10"/>
+    <rect class="thumb" x="62" y="140" width="70" height="70"/>
+    <rect class="thumb" x="150" y="140" width="70" height="70"/>
+    <rect class="thumb" x="238" y="140" width="70" height="70"/>
+    <rect class="thumb" x="326" y="140" width="70" height="70"/>
+    <rect class="thumb" x="62" y="228" width="70" height="70"/>
+    <rect class="thumb" x="150" y="228" width="70" height="70"/>
+    <rect class="thumb" x="238" y="228" width="70" height="70"/>
+    <rect class="thumb" x="326" y="228" width="70" height="70"/>
+    <rect class="panel" x="58" y="322" width="350" height="72" rx="12"/>
+    <text class="label" x="76" y="350" font-size="18">IMG_2042 · 12:42</text>
+    <text class="muted" x="76" y="376" font-size="15">[Enter Open] [J/K Prev/Next] [I Info]</text>
+    <text class="soft" x="58" y="432" font-size="15">latest media visible on open</text>
+    <g transform="translate(52 492)">
+      <rect class="key" width="50" height="34"/><rect class="key" x="60" width="50" height="34"/><rect class="key" x="120" width="50" height="34"/><rect class="key" x="180" width="50" height="34"/><rect class="key" x="240" width="50" height="34"/><rect class="key" x="300" width="50" height="34"/><rect class="key" x="360" width="50" height="34"/>
+      <rect class="key" y="44" width="50" height="34"/><rect class="key" x="60" y="44" width="50" height="34"/><rect class="key" x="120" y="44" width="50" height="34"/><rect class="key" x="180" y="44" width="50" height="34"/><rect class="key" x="240" y="44" width="50" height="34"/><rect class="key" x="300" y="44" width="50" height="34"/><rect class="key" x="360" y="44" width="50" height="34"/>
+    </g>
+    <text class="label" x="28" y="650" font-size="22">3 · GALLERY_LATEST_CONTACT_SHEET</text>
+  </g>
+
+  <g transform="translate(1850 160)">
+    <rect class="device" width="500" height="610" rx="38"/>
+    <rect class="screen" x="34" y="34" width="432" height="432" rx="18"/>
+    <text class="label" x="58" y="72" font-size="18">12:00</text>
+    <text class="label" x="180" y="72" font-size="18">IMG_2042</text>
+    <text class="muted" x="358" y="72" font-size="16">87%</text>
+    <rect class="panel" x="58" y="104" width="350" height="250" rx="20"/>
+    <text class="label" x="144" y="236" font-size="26">FULL MEDIA</text>
+    <rect class="panel" x="58" y="374" width="350" height="46" rx="12"/>
+    <text class="muted" x="74" y="404" font-size="16">[J Prev] [K Next] [Z Zoom] [D Del]</text>
+    <text class="soft" x="58" y="448" font-size="15">zoom, pan and metadata are explicit</text>
+    <g transform="translate(52 492)">
+      <rect class="key" width="50" height="34"/><rect class="key" x="60" width="50" height="34"/><rect class="key" x="120" width="50" height="34"/><rect class="key" x="180" width="50" height="34"/><rect class="key" x="240" width="50" height="34"/><rect class="key" x="300" width="50" height="34"/><rect class="key" x="360" width="50" height="34"/>
+      <rect class="key" y="44" width="50" height="34"/><rect class="key" x="60" y="44" width="50" height="34"/><rect class="key" x="120" y="44" width="50" height="34"/><rect class="key" x="180" y="44" width="50" height="34"/><rect class="key" x="240" y="44" width="50" height="34"/><rect class="key" x="300" y="44" width="50" height="34"/><rect class="key" x="360" y="44" width="50" height="34"/>
+    </g>
+    <text class="label" x="28" y="650" font-size="22">4 · GALLERY_VIEWER</text>
+  </g>
+
+  <g transform="translate(90 1020)">
+    <rect class="panel" width="2220" height="300" rx="24"/>
+    <text class="label" x="36" y="56" font-size="28">Validation encoded by this visual target</text>
+    <text class="muted" x="36" y="100" font-size="22">MEDIA_PLAYER_STYLE=ZUNE_WINDOWS_INSPIRED · GALLERY_STYLE=KEYBOARD_FIRST_CONTACT_SHEET_AND_VIEWER</text>
+    <text class="muted" x="36" y="140" font-size="22">CURRENT_OR_LATEST_RELEVANT_CONTENT_ALWAYS_VISIBLE=YES · CONTINUOUS_SCROLL_REQUIRED_FOR_CURRENT_CONTENT=NO</text>
+    <text class="muted" x="36" y="180" font-size="22">TEXT_INPUT_ALWAYS_WINS=YES · SINGLE_KEY_SHORTCUTS_DISABLED_WHILE_TYPING=YES</text>
+    <text class="muted" x="36" y="220" font-size="22">CUSTOM_MEDIASTORE_PROVIDER=NO · CUSTOM_CODEC_STACK=NO · CUSTOM_DRM_STACK=NO</text>
+    <text class="soft" x="36" y="260" font-size="18">Design-only artifact: no build code, device code or flash enablement.</text>
+  </g>
+</svg>
