@@ -1,12 +1,11 @@
 # Portability rules
 
-> **K1/K2 implementation status — 2026-09-24:** the multi-device artifact registry and common-policy/device-transport deployment split described here are now implemented in the private integration baseline. Panther is the qualified target-files/A-B adapter; Titan-family and Q27 mutation remain blocked.
-
+Status: **current normative portability model — 2026-09-26**
 
 ## Core rule
 
 One Sable product core, multiple hardware adapters, multiple interaction
-profiles.
+profiles and multiple capability profiles.
 
 ## Common vs device-specific
 
@@ -18,13 +17,17 @@ Common source owns:
 - Hub/People/Messages behavior;
 - Camera core/capability model;
 - Keyboard/IME text composition;
+- command/hub/shortcut semantics;
 - build evidence and artifact contracts.
 
-Device adapters own:
+Device adapters/profiles own:
 
-- display/inset/cutout quirks;
+- display geometry, panel type, refresh and power behavior;
+- AOD/pulse/attention-surface capability;
+- secondary display association and policy;
 - physical-keyboard scan/keylayout/keycharacter behavior;
-- Fn/Sym/vendor keys and keyboard backlight;
+- Fn/Sym/Alt/Ctrl/vendor keys and keyboard backlight;
+- touch surface, capacitive keyboard, trackpad and mouse mode behavior;
 - camera device profile and proven privileged-camera requirement;
 - boot/vendor/AVB/VINTF integration;
 - telephony/IMS/device firmware;
@@ -33,7 +36,7 @@ Device adapters own:
 ## Current roles
 
 - **Panther / Pixel 7:** frozen accepted touch-first reference.
-- **Titan 2:** active keyboard-first PORTABILITY/N0 target.
+- **Titan 2:** active keyboard-first PORTABILITY / `TITAN2_N0_A16` planning target.
 - **Titan 2 Elite:** independent keyboard-first PORTABILITY/N0 candidate.
 - **Q27:** RESEARCH / future product candidate.
 - **Bramble:** historical reference.
@@ -48,6 +51,7 @@ same qualified common application source/artifacts
 + isolated target OUT_DIRs/artifact descriptors
 + bounded device adapters
 + interaction-profile-specific presentation
++ hardware/display/input/attention profiles
 + target-specific runtime acceptance
 + no common application fork
 ```
@@ -82,7 +86,29 @@ Required common behavior:
 - shortcuts/command palette;
 - no focus traps;
 - touch as a secondary path;
-- square/near-square responsive layouts.
+- display-profile-aware square/compact/touch layouts.
+
+Required device-specific behavior:
+
+- physical-keyboard identity and scan/keycode evidence;
+- modifier behavior for Shift/Alt/Sym/Ctrl/Fn/vendor keys;
+- software keyboard fallback;
+- Bluetooth pairing and setup-critical text entry;
+- pointer/touch-surface behavior where present;
+- per-device keyboard and pointer profiles.
+
+## Display and attention portability
+
+AOD, pulse, rear display, LED, keyboard backlight, haptics and sound are separate
+attention surfaces.
+
+AOD is never inherited from device family membership:
+
+```text
+Titan 2       AOD_DEFAULT=NO
+Titan 2 Elite AOD=CANDIDATE_REQUIRES_VALIDATION
+Q27           AOD=CANDIDATE_REQUIRES_VALIDATION
+```
 
 ## Camera portability
 
@@ -111,3 +137,11 @@ userspace/UX compatibility. N1 adds owned device/product/VINTF/SELinux/vendor
 integration. N2 additionally closes security/update/AVB/signing/recovery and
 production runtime gates.
 
+## Evidence inheritance rule
+
+```text
+Panther PASS != Titan 2 PASS
+Titan 2 PASS != Titan 2 Elite PASS
+Titan 2 PASS != Q27 PASS
+Public specification != release evidence
+```
