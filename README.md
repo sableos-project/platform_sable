@@ -102,6 +102,8 @@ install closure proves or supersedes them.
 - [Sable Command visual confirmation](docs/design/COMMAND_SEARCH_VISUAL_CONFIRMATION.md)
 - [Quick Settings / Notification Shade UX](docs/design/QUICK_SETTINGS_NOTIFICATION_SHADE_UX.md)
 - [Quick Settings visual confirmation](docs/design/QUICK_SETTINGS_VISUAL_CONFIRMATION.md)
+- [Lockscreen / Secure Entry UX](docs/design/LOCKSCREEN_SECURE_ENTRY_UX.md)
+- [Lockscreen visual confirmation](docs/design/LOCKSCREEN_VISUAL_CONFIRMATION.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -270,6 +272,30 @@ TITAN2_HARDWARE_TEMPLATE=YES
 Unsupported profile-dependent controls, including AOD on Titan 2, must not appear
 as working tiles until the relevant hardware/display/attention path is validated.
 
+## Lockscreen / Secure Entry UX posture
+
+Lockscreen / Secure Entry preserves Android's secure-entry expectations while
+making Titan 2 physical-keyboard unlock, notification privacy, emergency access
+and critical text-entry gates explicit.
+
+```text
+LOCKSCREEN_SECURE_ENTRY_UX=YES
+ANDROID_LOCKSCREEN_MENTAL_MODEL=KEEP
+KEYBOARD_FIRST_UNLOCK=YES
+PHYSICAL_KEYBOARD_PIN_PASSWORD_ENTRY=YES
+ALT_SYM_FN_TEXT_ENTRY=YES
+SOFTWARE_KEYBOARD_FALLBACK=YES
+NOTIFICATION_PRIVACY_REDACTION=YES
+HUB_PRIVATE_MODE_COMPATIBLE=YES
+EMERGENCY_CALL_PATH_REQUIRED=YES
+LOCKSCREEN_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+TITAN2_HARDWARE_TEMPLATE=YES
+```
+
+No lockscreen keyboard, pointer or notification path may unlock, open private
+content, launch apps or send replies without successful authentication unless
+Android/platform policy explicitly allows that action while locked.
+
 ## Visual artifact rule
 
 Titan 2 UI validation artifacts must use Titan 2 proportions unless the artifact
@@ -283,7 +309,8 @@ NO_STRETCHED_SCREEN_TARGET=YES
 ```
 
 This rule applies to Sable Start, Settings, Hub, All Apps, Command/Search, Quick
-Settings / Notification Shade and subsequent Titan 2 visual design artifacts.
+Settings / Notification Shade, Lockscreen / Secure Entry and subsequent Titan 2
+visual design artifacts.
 
 ## K1/K2 boundary
 
@@ -359,6 +386,10 @@ Keyboard-first product design now covers:
 - Quick Settings dark-theme propagation into Sable apps;
 - Quick Settings profile-gated keyboard backlight, SubScreen and AOD controls;
 - Notification Shade privacy redaction and Hub handoff;
+- source-controlled Lockscreen / Secure Entry visual artifact;
+- lockscreen physical-keyboard PIN/password entry;
+- lockscreen Alt/Sym/Fn and software-keyboard fallback gates;
+- lockscreen notification privacy redaction and emergency access;
 - Titan 2 visual-template rule for square display plus physical keyboard;
 - configurable base quick bar with required fallback paths;
 - curated Sable glance widgets with Weather as first Home candidate;

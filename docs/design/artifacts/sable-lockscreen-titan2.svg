@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Lockscreen / Secure Entry Titan 2 visual target</title>
+  <desc id="desc">Titan 2 hardware-template visual reference for lockscreen glance, secure entry and privacy redaction.</desc>
+  <defs>
+    <style>
+      .bg{fill:#081018}.panel{fill:#0f1a24;stroke:#2b3b4c;stroke-width:2}.phone{fill:#101820;stroke:#445466;stroke-width:3}.screen{fill:#111b25;stroke:#5b6b7c;stroke-width:2}.kb{fill:#17212c;stroke:#435466;stroke-width:2}.key{fill:#24313e;stroke:#5a6c7e;stroke-width:1}.txt{font-family:Inter,Arial,sans-serif;fill:#eef5ff}.muted{fill:#9aa9b8}.accent{fill:#66d9ef}.warn{fill:#ffc857}.danger{fill:#ff6b6b}.ok{fill:#7ee787}.focus{fill:none;stroke:#66d9ef;stroke-width:3}.card{fill:#172433;stroke:#2d4053;stroke-width:2}.pill{fill:#203246;stroke:#34506b;stroke-width:1}.small{font-size:16px}.tiny{font-size:13px}.med{font-size:20px}.large{font-size:34px}.huge{font-size:62px;font-weight:700}.label{font-size:18px;font-weight:700}.kbdhint{font-size:14px;fill:#b9c7d6}.title{font-size:30px;font-weight:800}.subtitle{font-size:18px;fill:#b9c7d6}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.deviceLabel{font-size:16px;fill:#cbd7e3;font-weight:700}
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="980"/>
+  <text x="48" y="52" class="txt title">Sable Lockscreen / Secure Entry UX</text>
+  <text x="48" y="82" class="subtitle">Titan 2 template: square display + physical keyboard · secure entry · privacy redaction · no unlock bypass</text>
+
+  <g transform="translate(45 120)">
+    <rect class="phone" x="0" y="0" width="365" height="760" rx="34"/>
+    <rect class="screen" x="24" y="28" width="317" height="317" rx="18"/>
+    <text x="182" y="64" text-anchor="middle" class="muted tiny">Fri, Sep 26 · 99%</text>
+    <text x="182" y="144" text-anchor="middle" class="txt huge">10:46</text>
+    <text x="182" y="180" text-anchor="middle" class="muted med">Locked</text>
+    <rect class="card" x="48" y="210" width="269" height="48" rx="12"/>
+    <text x="64" y="239" class="txt small">2 Messages · 1 Mail · 1 Missed call</text>
+    <rect class="card" x="48" y="268" width="269" height="50" rx="12"/>
+    <text x="64" y="290" class="muted tiny">Private mode</text>
+    <text x="64" y="309" class="txt small">Counts only until unlock</text>
+    <rect class="focus" x="46" y="208" width="273" height="52" rx="14"/>
+    <text x="182" y="374" text-anchor="middle" class="deviceLabel">Locked glance</text>
+    <rect class="kb" x="24" y="372" width="317" height="342" rx="20"/>
+    <text x="182" y="402" text-anchor="middle" class="muted small">Physical keyboard area</text>
+    <g transform="translate(49 430)">
+      <rect class="key" x="0" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="20" y="18" text-anchor="middle">Q</text>
+      <rect class="key" x="47" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="67" y="18" text-anchor="middle">W</text>
+      <rect class="key" x="94" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="114" y="18" text-anchor="middle">E</text>
+      <rect class="key" x="141" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="161" y="18" text-anchor="middle">R</text>
+      <rect class="key" x="188" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="208" y="18" text-anchor="middle">T</text>
+      <rect class="key" x="235" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="255" y="18" text-anchor="middle">Y</text>
+      <rect class="key" x="22" y="38" width="41" height="28" rx="6"/><text class="txt tiny" x="42" y="56" text-anchor="middle">A</text>
+      <rect class="key" x="69" y="38" width="41" height="28" rx="6"/><text class="txt tiny" x="89" y="56" text-anchor="middle">S</text>
+      <rect class="key" x="116" y="38" width="41" height="28" rx="6"/><text class="txt tiny" x="136" y="56" text-anchor="middle">D</text>
+      <rect class="key" x="163" y="38" width="41" height="28" rx="6"/><text class="txt tiny" x="183" y="56" text-anchor="middle">F</text>
+      <rect class="key" x="210" y="38" width="41" height="28" rx="6"/><text class="txt tiny" x="230" y="56" text-anchor="middle">G</text>
+      <rect class="key" x="0" y="86" width="58" height="28" rx="6"/><text class="accent tiny" x="29" y="104" text-anchor="middle">Enter</text>
+      <rect class="key" x="66" y="86" width="58" height="28" rx="6"/><text class="warn tiny" x="95" y="104" text-anchor="middle">E</text>
+      <rect class="key" x="132" y="86" width="58" height="28" rx="6"/><text class="txt tiny" x="161" y="104" text-anchor="middle">Back</text>
+      <rect class="key" x="198" y="86" width="78" height="28" rx="6"/><text class="txt tiny" x="237" y="104" text-anchor="middle">Alt/Sym/Fn</text>
+    </g>
+    <text x="182" y="624" text-anchor="middle" class="kbdhint">Enter unlock · E emergency · ↑↓ notifications</text>
+  </g>
+
+  <g transform="translate(520 120)">
+    <rect class="phone" x="0" y="0" width="365" height="760" rx="34"/>
+    <rect class="screen" x="24" y="28" width="317" height="317" rx="18"/>
+    <text x="182" y="64" text-anchor="middle" class="muted tiny">Secure entry</text>
+    <text x="182" y="103" text-anchor="middle" class="txt large">Enter PIN</text>
+    <text x="182" y="135" text-anchor="middle" class="muted small">Physical keyboard active</text>
+    <rect class="pill" x="74" y="159" width="217" height="58" rx="18"/>
+    <circle cx="125" cy="188" r="8" fill="#eef5ff"/>
+    <circle cx="160" cy="188" r="8" fill="#eef5ff"/>
+    <circle cx="195" cy="188" r="8" fill="#eef5ff"/>
+    <circle cx="230" cy="188" r="8" fill="#516475"/>
+    <rect class="focus" x="71" y="156" width="223" height="64" rx="20"/>
+    <text x="182" y="247" text-anchor="middle" class="kbdhint">Digits PIN · letters password · Enter submit</text>
+    <rect class="card" x="42" y="270" width="281" height="44" rx="12"/>
+    <text x="58" y="296" class="warn small">Emergency</text>
+    <text x="182" y="374" text-anchor="middle" class="deviceLabel">PIN / password entry</text>
+    <rect class="kb" x="24" y="372" width="317" height="342" rx="20"/>
+    <text x="182" y="402" text-anchor="middle" class="muted small">Alt · Sym · Fn required</text>
+    <g transform="translate(49 430)">
+      <rect class="key" x="0" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="20" y="18" text-anchor="middle">1</text>
+      <rect class="key" x="47" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="67" y="18" text-anchor="middle">2</text>
+      <rect class="key" x="94" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="114" y="18" text-anchor="middle">3</text>
+      <rect class="key" x="141" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="161" y="18" text-anchor="middle">4</text>
+      <rect class="key" x="188" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="208" y="18" text-anchor="middle">5</text>
+      <rect class="key" x="235" y="0" width="41" height="28" rx="6"/><text class="txt tiny" x="255" y="18" text-anchor="middle">6</text>
+      <rect class="key" x="22" y="40" width="58" height="28" rx="6"/><text class="accent tiny" x="51" y="58" text-anchor="middle">Enter</text>
+      <rect class="key" x="88" y="40" width="72" height="28" rx="6"/><text class="txt tiny" x="124" y="58" text-anchor="middle">Backspace</text>
+      <rect class="key" x="168" y="40" width="58" height="28" rx="6"/><text class="txt tiny" x="197" y="58" text-anchor="middle">Back</text>
+      <rect class="key" x="0" y="88" width="80" height="28" rx="6"/><text class="warn tiny" x="40" y="106" text-anchor="middle">Alt</text>
+      <rect class="key" x="88" y="88" width="80" height="28" rx="6"/><text class="warn tiny" x="128" y="106" text-anchor="middle">Sym</text>
+      <rect class="key" x="176" y="88" width="100" height="28" rx="6"/><text class="warn tiny" x="226" y="106" text-anchor="middle">Fn</text>
+    </g>
+    <text x="182" y="624" text-anchor="middle" class="kbdhint">Software keyboard fallback required</text>
+  </g>
+
+  <g transform="translate(995 120)">
+    <rect class="phone" x="0" y="0" width="365" height="760" rx="34"/>
+    <rect class="screen" x="24" y="28" width="317" height="317" rx="18"/>
+    <text x="182" y="64" text-anchor="middle" class="muted tiny">Notifications while locked</text>
+    <rect class="card" x="48" y="91" width="269" height="56" rx="12"/>
+    <text x="64" y="113" class="txt small">Messages</text>
+    <text x="64" y="133" class="muted tiny">2 new · content hidden</text>
+    <rect class="focus" x="46" y="89" width="273" height="60" rx="14"/>
+    <rect class="card" x="48" y="159" width="269" height="56" rx="12"/>
+    <text x="64" y="181" class="txt small">Mail</text>
+    <text x="64" y="201" class="muted tiny">1 new · unlock to read</text>
+    <rect class="card" x="48" y="227" width="269" height="56" rx="12"/>
+    <text x="64" y="249" class="txt small">Missed call</text>
+    <text x="64" y="269" class="muted tiny">details hidden</text>
+    <text x="182" y="318" text-anchor="middle" class="danger tiny">Open/reply requires unlock</text>
+    <text x="182" y="374" text-anchor="middle" class="deviceLabel">Private notification state</text>
+    <rect class="kb" x="24" y="372" width="317" height="342" rx="20"/>
+    <text x="182" y="402" text-anchor="middle" class="muted small">No private action without auth</text>
+    <g transform="translate(49 430)">
+      <rect class="key" x="0" y="0" width="64" height="28" rx="6"/><text class="txt tiny" x="32" y="18" text-anchor="middle">↑/↓</text>
+      <rect class="key" x="72" y="0" width="64" height="28" rx="6"/><text class="txt tiny" x="104" y="18" text-anchor="middle">Space</text>
+      <rect class="key" x="144" y="0" width="64" height="28" rx="6"/><text class="txt tiny" x="176" y="18" text-anchor="middle">Enter</text>
+      <rect class="key" x="216" y="0" width="60" height="28" rx="6"/><text class="txt tiny" x="246" y="18" text-anchor="middle">Back</text>
+      <rect class="key" x="0" y="44" width="80" height="28" rx="6"/><text class="warn tiny" x="40" y="62" text-anchor="middle">Emergency</text>
+      <rect class="key" x="88" y="44" width="88" height="28" rx="6"/><text class="danger tiny" x="132" y="62" text-anchor="middle">No reply</text>
+      <rect class="key" x="184" y="44" width="92" height="28" rx="6"/><text class="ok tiny" x="230" y="62" text-anchor="middle">Unlock first</text>
+    </g>
+    <text x="182" y="624" text-anchor="middle" class="kbdhint">Counts only · content redacted · no bypass</text>
+  </g>
+
+  <g transform="translate(45 905)">
+    <rect class="panel" x="0" y="0" width="1315" height="48" rx="12"/>
+    <text x="18" y="31" class="txt small">Validation: KEYBOARD_FIRST_UNLOCK · ALT_SYM_FN_TEXT_ENTRY · SOFTWARE_KEYBOARD_FALLBACK · EMERGENCY_CALL_PATH · NOTIFICATION_PRIVACY_REDACTION · NO_UNLOCK_BYPASS</text>
+  </g>
+</svg>
