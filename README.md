@@ -87,6 +87,7 @@ install closure proves or supersedes them.
 - [Device capability matrix](docs/device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
 - [Keyboard-first Settings UX](docs/design/KEYBOARD_FIRST_SETTINGS_UX.md)
 - [Settings search UX](docs/design/SETTINGS_SEARCH_UX.md)
+- [Settings visual confirmation](docs/design/SETTINGS_VISUAL_CONFIRMATION.md)
 - [Hardware diagnostics and dialer-code UX](docs/design/HARDWARE_DIAGNOSTICS_AND_DIALER_CODES.md)
 - [Sable Start keyboard-first UX](docs/design/SABLE_START_KEYBOARD_FIRST_UX.md)
 - [Sable Start screen design](docs/design/SABLE_START_SCREEN_DESIGN.md)
@@ -133,6 +134,8 @@ and diagnostics surfaces.
 ANDROID_SETTINGS_STRUCTURE=PRIMARY
 SETTINGS_SEARCH_REQUIRED=YES
 KEYBOARD_NAVIGATION_REQUIRED=YES
+SETTINGS_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+START_BASE_QUICK_BAR_IN_SETTINGS=NO
 HARDWARE_DIAGNOSTICS_BRIDGE=GATED
 RAW_FACTORY_TEST_DIRECT_LAUNCH=NO_BY_DEFAULT
 ```
@@ -227,6 +230,7 @@ Keyboard-first product design now covers:
 - per-device keyboard and pointer-surface profiles;
 - Settings structure compatible with Android user expectations;
 - Settings search aliases for profile, diagnostics and factory-test concepts;
+- source-controlled Settings visual confirmation artifact;
 - Start screen app privacy summaries and keyboard app actions;
 - Sable Start three-page Center/Glance/Hub page model;
 - source-controlled Sable Start visual confirmation artifact;
