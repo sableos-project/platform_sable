@@ -1,161 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-  <title id="title">Sable Start Titan 2 three-page visual contract</title>
-  <desc id="desc">Visual design target for Sable Start on Titan 2: left Glance widgets page, center Start page, right Hub page, with a configurable base quick bar.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Start Titan 2 visual contract</title>
+  <desc id="desc">Titan 2 hardware-proportion visual target for Sable Start. All launcher panels use a square display above a physical keyboard, matching Titan 2 validation expectations.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07111c"/>
-      <stop offset="1" stop-color="#10283b"/>
-    </linearGradient>
-    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0d1b29"/>
-      <stop offset="1" stop-color="#050a10"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#14324a"/>
-      <stop offset="1" stop-color="#0a1622"/>
-    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07111c"/><stop offset="1" stop-color="#0b2740"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f1d2b"/><stop offset="1" stop-color="#05090e"/></linearGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2027"/><stop offset="1" stop-color="#050608"/></linearGradient>
     <style>
-      .title { font: 700 42px system-ui, -apple-system, Segoe UI, sans-serif; fill: #eaf4ff; }
-      .subtitle { font: 400 20px system-ui, -apple-system, Segoe UI, sans-serif; fill: #b8c7d8; }
-      .section { font: 700 22px system-ui, -apple-system, Segoe UI, sans-serif; fill: #f2f7ff; }
-      .label { font: 600 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #f3f7ff; }
-      .small { font: 400 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #aebbd0; }
-      .tiny { font: 400 11px system-ui, -apple-system, Segoe UI, sans-serif; fill: #99a8bc; }
-      .accent { fill: #1788ff; }
-      .green { fill: #20c36b; }
-      .orange { fill: #f4a62a; }
-      .red { fill: #ff4d5e; }
-      .yellow { fill: #ffcc33; }
-      .panel { fill: rgba(255,255,255,0.04); stroke: #25445f; stroke-width: 1.5; }
-      .phone { fill: #05070a; stroke: #2d3d4d; stroke-width: 4; }
-      .screen { fill: url(#screen); stroke: #21364c; stroke-width: 2; }
-      .row { fill: rgba(255,255,255,0.055); stroke: rgba(255,255,255,0.09); stroke-width: 1; }
-      .focus { fill: #0f5f9e; stroke: #58b6ff; stroke-width: 2; }
-      .quick { fill: #0b1723; stroke: #2a4054; stroke-width: 1.5; }
-      .quickOn { fill: #096fc3; stroke: #65c1ff; stroke-width: 1.5; }
+      .title{font:800 44px system-ui,Segoe UI,sans-serif;fill:#f2f8ff}.subtitle{font:400 22px system-ui,Segoe UI,sans-serif;fill:#c0d3e5}.section{font:800 18px system-ui,Segoe UI,sans-serif;fill:#f4f9ff}.label{font:700 12px system-ui,Segoe UI,sans-serif;fill:#f6fbff}.small{font:500 10px system-ui,Segoe UI,sans-serif;fill:#c3d2e2}.tiny{font:500 8px system-ui,Segoe UI,sans-serif;fill:#aebfd0}.panel{fill:rgba(255,255,255,.045);stroke:#2c526f;stroke-width:1.5}.device{fill:url(#phone);stroke:#323b46;stroke-width:3}.screen{fill:url(#screen);stroke:#2e4155;stroke-width:1.5}.key{fill:#080a0d;stroke:#343b44;stroke-width:.8}.row{fill:rgba(255,255,255,.055);stroke:rgba(255,255,255,.12);stroke-width:.8}.focus{fill:#0a66b3;stroke:#69c3ff;stroke-width:1.5}.blue{fill:#1687ff}.green{fill:#20c46a}.red{fill:#ff5168}.orange{fill:#f6a524}.yellow{fill:#ffd14a}.purple{fill:#7b65ff}.gray{fill:#697888}.hint{fill:#0b1723;stroke:#31516b;stroke-width:1}
     </style>
+    <g id="titan2-frame">
+      <rect x="0" y="0" width="210" height="360" rx="22" class="device"/>
+      <rect x="16" y="20" width="178" height="160" rx="9" class="screen"/>
+      <path d="M55 4h100v14H55z" fill="#090b0e" stroke="#394552" stroke-width="1"/><path d="M134 5h38v20h-38z" fill="#090b0e" stroke="#394552" stroke-width="1"/>
+      <g transform="translate(16 188)"><rect width="178" height="28" fill="#0b0d11" stroke="#303842"/><rect x="4" y="5" width="34" height="18" rx="3" class="key"/><rect x="42" y="5" width="34" height="18" rx="3" class="key"/><rect x="80" y="5" width="34" height="18" rx="3" class="key"/><rect x="118" y="5" width="24" height="18" rx="3" class="key"/><rect x="146" y="5" width="28" height="18" rx="3" class="key"/><text x="13" y="18" class="tiny">⌂</text><text x="50" y="18" class="tiny">sym</text><text x="91" y="18" class="tiny">◁</text><text x="126" y="18" class="tiny">fn</text><text x="153" y="18" class="tiny">alt</text></g>
+      <g transform="translate(16 220)"><rect width="178" height="118" fill="#06070a" stroke="#303842"/>
+        <g transform="translate(4 5)"><rect width="23" height="20" rx="3" class="key"/><rect x="26" width="23" height="20" rx="3" class="key"/><rect x="52" width="23" height="20" rx="3" class="key"/><rect x="78" width="23" height="20" rx="3" class="key"/><rect x="104" width="23" height="20" rx="3" class="key"/><rect x="130" width="23" height="20" rx="3" class="key"/><rect x="156" width="18" height="20" rx="3" class="key"/><text x="7" y="15" class="tiny">Q</text><text x="33" y="15" class="tiny">W</text><text x="59" y="15" class="tiny">E</text><text x="85" y="15" class="tiny">R</text><text x="111" y="15" class="tiny">T</text><text x="137" y="15" class="tiny">Y</text></g>
+        <g transform="translate(4 31)"><rect width="23" height="20" rx="3" class="key"/><rect x="26" width="23" height="20" rx="3" class="key"/><rect x="52" width="23" height="20" rx="3" class="key"/><rect x="78" width="23" height="20" rx="3" class="key"/><rect x="104" width="23" height="20" rx="3" class="key"/><rect x="130" width="23" height="20" rx="3" class="key"/><rect x="156" width="18" height="20" rx="3" class="key"/><text x="7" y="15" class="tiny">A</text><text x="33" y="15" class="tiny">S</text><text x="59" y="15" class="tiny">D</text><text x="85" y="15" class="tiny">F</text><text x="111" y="15" class="tiny">G</text><text x="137" y="15" class="tiny">H</text></g>
+        <g transform="translate(4 57)"><rect width="23" height="20" rx="3" class="key"/><rect x="26" width="23" height="20" rx="3" class="key"/><rect x="52" width="23" height="20" rx="3" class="key"/><rect x="78" width="50" height="20" rx="3" class="key"/><rect x="131" width="22" height="20" rx="3" class="key"/><rect x="156" width="18" height="20" rx="3" class="key"/><text x="7" y="15" class="tiny">Z</text><text x="33" y="15" class="tiny">X</text><text x="59" y="15" class="tiny">C</text><text x="93" y="15" class="tiny">—</text><text x="137" y="15" class="tiny">B</text></g>
+      </g>
+    </g>
   </defs>
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <text x="32" y="48" class="title">Sable Start — Keyboard-First Launcher UX</text>
+  <text x="34" y="78" class="subtitle">Titan 2 visual template: square display + physical keyboard for every validation screen</text>
 
-  <rect width="1440" height="900" fill="url(#bg)"/>
-  <text x="38" y="56" class="title">Sable Start — Titan 2 Three-Page Launcher Contract</text>
-  <text x="40" y="89" class="subtitle">Left: Glance widgets · Center: Start · Right: Hub · configurable base quick bar · keyboard-first, touch/pointer secondary</text>
+  <g transform="translate(24 104)"><rect width="296" height="500" rx="12" class="panel"/><text x="18" y="29" class="section">1. Glance Widgets — Left Page</text><text x="18" y="48" class="small">Swipe right or Fn+Left from Start</text><use href="#titan2-frame" x="43" y="66"/>
+    <g transform="translate(59 86)"><text x="10" y="20" class="tiny">10:46  ⚙</text><text x="128" y="20" class="tiny">5G 99%</text><rect x="10" y="36" width="158" height="34" rx="7" class="focus"/><circle cx="27" cy="53" r="10" class="yellow"/><text x="43" y="50" class="label">72° Partly cloudy</text><text x="43" y="63" class="tiny">Seattle · H 75 / L 61</text><rect x="10" y="78" width="158" height="32" rx="7" class="row"/><rect x="18" y="85" width="18" height="18" rx="4" class="blue"/><text x="44" y="98" class="label">Calendar</text><text x="106" y="98" class="tiny">Team Sync</text><rect x="10" y="118" width="158" height="32" rx="7" class="row"/><rect x="18" y="125" width="18" height="18" rx="4" class="green"/><text x="44" y="138" class="label">Battery</text><text x="103" y="138" class="tiny">99%</text></g>
+    <text x="18" y="474" class="small">Curated widgets: Weather, Calendar, Battery, Media.</text></g>
 
-  <g transform="translate(36,120)">
-    <rect x="0" y="0" width="425" height="625" rx="16" class="panel"/>
-    <text x="22" y="38" class="section">1. Left Page — Glance Widgets</text>
-    <g transform="translate(93,62)">
-      <rect x="0" y="0" width="240" height="510" rx="22" class="phone"/>
-      <rect x="14" y="20" width="212" height="470" rx="12" class="screen"/>
-      <text x="28" y="48" class="tiny">10:46</text>
-      <text x="150" y="48" class="tiny">Wi‑Fi  90%</text>
-      <text x="28" y="80" class="label">Glance</text>
-      <rect x="28" y="100" width="184" height="86" rx="10" class="focus"/>
-      <circle cx="55" cy="132" r="18" class="yellow"/>
-      <text x="82" y="130" class="label">72° Partly cloudy</text>
-      <text x="82" y="153" class="small">Weather widget · Enter opens Weather</text>
-      <rect x="28" y="198" width="184" height="54" rx="9" class="row"/>
-      <rect x="40" y="212" width="28" height="28" rx="7" class="accent"/>
-      <text x="82" y="222" class="label">Calendar</text>
-      <text x="82" y="242" class="small">Next: Team sync 2:00 PM</text>
-      <rect x="28" y="262" width="184" height="54" rx="9" class="row"/>
-      <rect x="40" y="276" width="28" height="28" rx="7" class="green"/>
-      <text x="82" y="286" class="label">Battery</text>
-      <text x="82" y="306" class="small">90% · charging</text>
-      <rect x="28" y="326" width="184" height="54" rx="9" class="row"/>
-      <rect x="40" y="340" width="28" height="28" rx="7" class="orange"/>
-      <text x="82" y="350" class="label">Media</text>
-      <text x="82" y="370" class="small">Nothing playing</text>
-      <rect x="28" y="400" width="184" height="64" rx="10" class="quick"/>
-      <text x="48" y="425" class="small">Fn+Right → Start</text>
-      <text x="48" y="450" class="small">Swipe right → Start</text>
-    </g>
-    <text x="22" y="600" class="small">Curated Sable widgets only by default. Weather is the first Home/Glance widget candidate.</text>
-  </g>
+  <g transform="translate(336 104)"><rect width="296" height="500" rx="12" class="panel"/><text x="18" y="29" class="section">2. Home / Start — Center Page</text><text x="18" y="48" class="small">Weather replaces logo; user apps + base bar</text><use href="#titan2-frame" x="43" y="66"/>
+    <g transform="translate(59 86)"><text x="10" y="20" class="tiny">10:46  ⚙</text><text x="128" y="20" class="tiny">5G 99%</text><rect x="10" y="36" width="158" height="34" rx="7" class="row"/><circle cx="27" cy="53" r="10" class="yellow"/><text x="43" y="50" class="label">72° Cloudy</text><text x="43" y="63" class="tiny">Weather widget</text><rect x="10" y="78" width="158" height="26" rx="6" class="focus"/><rect x="18" y="84" width="15" height="15" rx="3" class="blue"/><text x="43" y="96" class="label">Messages</text><text x="146" y="96" class="tiny">⋮</text><rect x="10" y="108" width="158" height="26" rx="6" class="row"/><rect x="18" y="114" width="15" height="15" rx="3" class="red"/><text x="43" y="126" class="label">Mail</text><text x="146" y="126" class="tiny">⋮</text><rect x="10" y="138" width="158" height="26" rx="6" class="row"/><rect x="18" y="144" width="15" height="15" rx="3" class="green"/><text x="43" y="156" class="label">Phone</text><text x="146" y="156" class="tiny">⋮</text><rect x="10" y="174" width="158" height="34" rx="7" class="hint"/><rect x="17" y="181" width="24" height="22" rx="5" class="green"/><rect x="53" y="181" width="24" height="22" rx="5" class="blue"/><rect x="89" y="181" width="24" height="22" rx="5" class="focus"/><rect x="125" y="181" width="24" height="22" rx="5" class="gray"/><text x="15" y="215" class="tiny">Phone</text><text x="55" y="215" class="tiny">Hub</text><text x="82" y="215" class="tiny">Command</text><text x="128" y="215" class="tiny">Apps</text></g>
+    <text x="18" y="474" class="small">Base bar is configurable; Hub slot may be replaced.</text></g>
 
-  <g transform="translate(508,120)">
-    <rect x="0" y="0" width="425" height="625" rx="16" class="panel"/>
-    <text x="22" y="38" class="section">2. Center Page — Start</text>
-    <g transform="translate(93,62)">
-      <rect x="0" y="0" width="240" height="510" rx="22" class="phone"/>
-      <rect x="14" y="20" width="212" height="470" rx="12" class="screen"/>
-      <text x="28" y="48" class="tiny">10:46</text>
-      <text x="150" y="48" class="tiny">Wi‑Fi  90%</text>
-      <rect x="28" y="70" width="184" height="54" rx="10" class="row"/>
-      <circle cx="55" cy="96" r="16" class="yellow"/>
-      <text x="82" y="91" class="label">72° Cloudy</text>
-      <text x="82" y="111" class="small">Seattle · H 75 / L 61</text>
-      <rect x="28" y="137" width="184" height="36" rx="9" class="row"/>
-      <text x="42" y="161" class="small">🔎 Search or command</text>
-      <rect x="28" y="189" width="184" height="34" rx="8" class="focus"/>
-      <rect x="40" y="197" width="22" height="22" rx="5" class="accent"/>
-      <text x="72" y="211" class="label">Messages</text>
-      <text x="197" y="211" class="small">⋮</text>
-      <rect x="28" y="229" width="184" height="34" rx="8" class="row"/>
-      <rect x="40" y="237" width="22" height="22" rx="5" class="red"/>
-      <text x="72" y="251" class="label">Mail</text>
-      <text x="197" y="251" class="small">⋮</text>
-      <rect x="28" y="269" width="184" height="34" rx="8" class="row"/>
-      <rect x="40" y="277" width="22" height="22" rx="5" class="green"/>
-      <text x="72" y="291" class="label">Phone</text>
-      <text x="197" y="291" class="small">⋮</text>
-      <rect x="28" y="309" width="184" height="34" rx="8" class="row"/>
-      <rect x="40" y="317" width="22" height="22" rx="5" class="orange"/>
-      <text x="72" y="331" class="label">Browser</text>
-      <text x="197" y="331" class="small">⋮</text>
-      <rect x="28" y="355" width="184" height="54" rx="10" class="quick"/>
-      <g transform="translate(36,364)">
-        <rect width="34" height="36" rx="8" class="green"/><text x="8" y="23" class="tiny" fill="#fff">☎</text><text x="2" y="49" class="tiny">Phone</text>
-        <rect x="46" width="34" height="36" rx="8" class="accent"/><text x="55" y="23" class="tiny" fill="#fff">◇</text><text x="51" y="49" class="tiny">Hub</text>
-        <rect x="92" width="34" height="36" rx="8" class="quickOn"/><text x="102" y="23" class="tiny" fill="#fff">⌕</text><text x="88" y="49" class="tiny">Command</text>
-        <rect x="138" width="34" height="36" rx="8" class="quick"/><text x="148" y="23" class="tiny" fill="#fff">▦</text><text x="137" y="49" class="tiny">Apps</text>
-      </g>
-      <text x="31" y="464" class="tiny">Configurable: Hub may be replaced by Browser, Camera, etc.</text>
-    </g>
-    <text x="22" y="600" class="small">Center Start keeps launch/search/app access primary. Branding is replaced by useful Weather content.</text>
-  </g>
+  <g transform="translate(648 104)"><rect width="296" height="500" rx="12" class="panel"/><text x="18" y="29" class="section">3. Edit / Reorder Home</text><text x="18" y="48" class="small">Reorder apps and base quick bar</text><use href="#titan2-frame" x="43" y="66"/>
+    <g transform="translate(59 86)"><text x="10" y="20" class="tiny">10:46</text><text x="138" y="20" class="tiny">Done</text><text x="10" y="44" class="label">Edit Home</text><text x="10" y="61" class="tiny">Drag or use keyboard order</text><rect x="10" y="70" width="158" height="26" rx="6" class="focus"/><circle cx="22" cy="83" r="6" class="red"/><text x="42" y="87" class="label">Messages</text><text x="146" y="87" class="tiny">⠿</text><rect x="10" y="100" width="158" height="26" rx="6" class="row"/><circle cx="22" cy="113" r="6" class="red"/><text x="42" y="117" class="label">Mail</text><text x="146" y="117" class="tiny">⠿</text><rect x="10" y="130" width="158" height="26" rx="6" class="row"/><circle cx="22" cy="143" r="6" class="red"/><text x="42" y="147" class="label">Calendar</text><text x="146" y="147" class="tiny">⠿</text><rect x="10" y="166" width="158" height="42" rx="7" class="hint"/><text x="17" y="181" class="tiny">Base Quick Bar</text><rect x="17" y="187" width="24" height="17" rx="4" class="green"/><rect x="53" y="187" width="24" height="17" rx="4" class="blue"/><rect x="89" y="187" width="24" height="17" rx="4" class="focus"/><rect x="125" y="187" width="24" height="17" rx="4" class="gray"/></g>
+    <text x="18" y="474" class="small">Keyboard: Menu for actions, Fn+arrows to reorder.</text></g>
 
-  <g transform="translate(980,120)">
-    <rect x="0" y="0" width="425" height="625" rx="16" class="panel"/>
-    <text x="22" y="38" class="section">3. Right Page — Hub</text>
-    <g transform="translate(93,62)">
-      <rect x="0" y="0" width="240" height="510" rx="22" class="phone"/>
-      <rect x="14" y="20" width="212" height="470" rx="12" class="screen"/>
-      <text x="28" y="48" class="tiny">10:46</text>
-      <text x="150" y="48" class="tiny">Wi‑Fi  90%</text>
-      <text x="28" y="80" class="label">Sable Hub</text>
-      <g transform="translate(28,98)">
-        <rect width="42" height="26" rx="8" class="quickOn"/><text x="13" y="18" class="tiny" fill="#fff">All</text>
-        <rect x="48" width="70" height="26" rx="8" class="quick"/><text x="60" y="18" class="tiny">Messages</text>
-        <rect x="124" width="54" height="26" rx="8" class="quick"/><text x="136" y="18" class="tiny">Calls</text>
-      </g>
-      <rect x="28" y="137" width="184" height="54" rx="9" class="focus"/>
-      <rect x="40" y="151" width="28" height="28" rx="7" class="accent"/>
-      <text x="82" y="161" class="label">Messages</text>
-      <text x="82" y="181" class="small">2 unread</text>
-      <rect x="28" y="201" width="184" height="54" rx="9" class="row"/>
-      <rect x="40" y="215" width="28" height="28" rx="7" class="red"/>
-      <text x="82" y="225" class="label">Mail</text>
-      <text x="82" y="245" class="small">1 unread</text>
-      <rect x="28" y="265" width="184" height="54" rx="9" class="row"/>
-      <rect x="40" y="279" width="28" height="28" rx="7" class="green"/>
-      <text x="82" y="289" class="label">Missed call</text>
-      <text x="82" y="309" class="small">+1 (555) 123-4567</text>
-      <rect x="28" y="329" width="184" height="54" rx="9" class="row"/>
-      <rect x="40" y="343" width="28" height="28" rx="7" class="yellow"/>
-      <text x="82" y="353" class="label">Notifications</text>
-      <text x="82" y="373" class="small">3 new</text>
-      <rect x="28" y="400" width="184" height="64" rx="10" class="quick"/>
-      <text x="48" y="425" class="small">Fn+Left → Start</text>
-      <text x="48" y="450" class="small">Swipe left → Start</text>
-    </g>
-    <text x="22" y="600" class="small">Hub remains one page away even when the base quick-bar slot is user-replaced.</text>
-  </g>
+  <g transform="translate(960 104)"><rect width="296" height="500" rx="12" class="panel"/><text x="18" y="29" class="section">4. Command / Search</text><text x="18" y="48" class="small">Type to find apps, settings, actions</text><use href="#titan2-frame" x="43" y="66"/>
+    <g transform="translate(59 86)"><text x="10" y="20" class="tiny">10:46</text><text x="128" y="20" class="tiny">5G 99%</text><rect x="10" y="36" width="158" height="28" rx="7" class="row"/><text x="22" y="54" class="small">⌕ set</text><text x="154" y="54" class="small">×</text><rect x="10" y="76" width="158" height="34" rx="7" class="focus"/><rect x="20" y="84" width="18" height="18" rx="4" class="gray"/><text x="47" y="91" class="label">Settings</text><text x="47" y="104" class="tiny">Open Settings</text><rect x="10" y="116" width="158" height="28" rx="6" class="row"/><text x="22" y="134" class="label">Set Alarm</text><rect x="10" y="150" width="158" height="28" rx="6" class="row"/><text x="22" y="168" class="label">Security &amp; privacy</text><rect x="10" y="184" width="158" height="28" rx="6" class="row"/><text x="22" y="202" class="label">Set up Wi‑Fi</text></g>
+    <text x="18" y="474" class="small">Works from Home or shortcut. Enter opens selected result.</text></g>
 
-  <g transform="translate(36,780)">
-    <rect width="1368" height="82" rx="14" class="panel"/>
-    <text x="24" y="32" class="label">Build validation target</text>
-    <text x="24" y="58" class="small">Required: three pages, Weather widget, configurable base quick bar, Hub reachable by right page, keyboard page navigation, touch swipe navigation, visible focus, no build/device/flash enablement in design PR.</text>
-    <text x="960" y="32" class="label">Keyboard</text>
-    <text x="960" y="58" class="small">Fn+Left / Fn+Right page navigation · Fn+1..5 quick slots · Enter opens · Space peeks · Back returns</text>
-  </g>
+  <g transform="translate(1272 104)"><rect width="296" height="500" rx="12" class="panel"/><text x="18" y="29" class="section">5. Hub — Right Page</text><text x="18" y="48" class="small">Swipe left or Fn+Right from Start</text><use href="#titan2-frame" x="43" y="66"/>
+    <g transform="translate(59 86)"><text x="10" y="20" class="tiny">10:46</text><text x="128" y="20" class="tiny">5G 99%</text><text x="10" y="44" class="label">Sable Hub</text><rect x="10" y="58" width="30" height="20" rx="5" class="focus"/><text x="20" y="72" class="tiny">All</text><rect x="46" y="58" width="54" height="20" rx="5" class="row"/><text x="52" y="72" class="tiny">Messages</text><rect x="106" y="58" width="38" height="20" rx="5" class="row"/><text x="117" y="72" class="tiny">Calls</text><rect x="10" y="92" width="158" height="34" rx="7" class="focus"/><rect x="19" y="100" width="18" height="18" rx="4" class="blue"/><text x="48" y="107" class="label">Messages</text><text x="48" y="120" class="tiny">2 unread</text><rect x="10" y="134" width="158" height="34" rx="7" class="row"/><rect x="19" y="142" width="18" height="18" rx="4" class="red"/><text x="48" y="149" class="label">Mail</text><text x="48" y="162" class="tiny">1 unread</text><rect x="10" y="176" width="158" height="34" rx="7" class="row"/><rect x="19" y="184" width="18" height="18" rx="4" class="yellow"/><text x="48" y="191" class="label">Notifications</text><text x="48" y="204" class="tiny">3 new</text></g>
+    <text x="18" y="474" class="small">Hub is still reachable even if removed from base bar.</text></g>
+
+  <g transform="translate(24 632)"><rect width="360" height="128" rx="12" class="panel"/><text x="16" y="28" class="section">Three-page model</text><text x="16" y="56" class="small">Left = Glance widgets · Center = Start · Right = Hub</text><text x="16" y="86" class="small">Swipe left/right or Fn+Left/Fn+Right to switch pages</text></g>
+  <g transform="translate(400 632)"><rect width="360" height="128" rx="12" class="panel"/><text x="16" y="28" class="section">Keyboard interactions</text><text x="16" y="56" class="small">↑↓ move focus · Enter open · Back close · Menu actions</text><text x="16" y="86" class="small">Fn+1..5 activate configurable base-bar slots</text></g>
+  <g transform="translate(776 632)"><rect width="360" height="128" rx="12" class="panel"/><text x="16" y="28" class="section">Mouse / pointer</text><text x="16" y="56" class="small">Hover does not steal focus · click activates · scroll lists</text><text x="16" y="86" class="small">Keyboard after pointer returns to keyboard focus mode</text></g>
+  <g transform="translate(1152 632)"><rect width="416" height="128" rx="12" class="panel"/><text x="16" y="28" class="section">Validation target</text><text x="16" y="56" class="small">All screens use Titan 2 proportions: square display plus physical keyboard.</text><text x="16" y="86" class="small">No slab-phone visual target for Titan 2 implementation.</text></g>
 </svg>
