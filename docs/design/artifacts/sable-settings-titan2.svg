@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Settings Titan 2 visual target</title>
+  <desc id="desc">Keyboard-first Settings visual reference for Titan 2. It keeps Android Settings structure, top search, visible focus, and no Sable Start base quick bar inside Settings.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#07131d"/>
+      <stop offset="1" stop-color="#0b2234"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#08111a"/>
+      <stop offset="1" stop-color="#101d2a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <style><![CDATA[
+      .title { font-family: Inter, Arial, sans-serif; font-size: 42px; font-weight: 800; fill: #f4f9ff; }
+      .subtitle { font-family: Inter, Arial, sans-serif; font-size: 20px; fill: #c7d7e8; }
+      .label { font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #f4f9ff; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #c7d7e8; }
+      .tiny { font-family: Inter, Arial, sans-serif; font-size: 11px; fill: #a8bbcc; }
+      .phoneText { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #edf5ff; }
+      .phoneSub { font-family: Inter, Arial, sans-serif; font-size: 10.5px; fill: #b7c7d8; }
+      .badge { font-family: Inter, Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #ffffff; }
+      .panel { fill: rgba(255,255,255,0.05); stroke: rgba(255,255,255,0.16); stroke-width: 1; }
+      .phone { fill: #05070a; stroke: #222a33; stroke-width: 7; }
+      .bezel { fill: #11151b; stroke: #384450; stroke-width: 2; }
+      .screen { fill: url(#screen); stroke: #2a3b4f; stroke-width: 1.5; }
+      .search { fill: #1c2b3a; stroke: #33485c; stroke-width: 1; }
+      .row { fill: rgba(255,255,255,0.035); stroke: rgba(255,255,255,0.075); stroke-width: 1; }
+      .focus { fill: rgba(38,129,226,0.28); stroke: #4eb0ff; stroke-width: 2.3; }
+      .iconBlue { fill: #1687ff; }
+      .iconGreen { fill: #21c063; }
+      .iconOrange { fill: #f6a524; }
+      .iconPurple { fill: #7964ff; }
+      .iconRed { fill: #ff5168; }
+      .iconGray { fill: #6d7d8f; }
+      .warn { fill: #ffd05a; }
+      .ok { fill: #58e6a0; }
+    ]]></style>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <text x="34" y="54" class="title">Sable Settings — Keyboard-First Visual Target</text>
+  <text x="36" y="88" class="subtitle">Titan 2 square profile · Android-compatible Settings structure · visible focus · no launcher base quick bar inside Settings</text>
+
+  <g transform="translate(34 122)">
+    <rect class="panel" x="0" y="0" width="410" height="710" rx="18"/>
+    <text x="18" y="32" class="label">1. Settings top level</text>
+    <g transform="translate(80 56)" filter="url(#shadow)">
+      <rect class="phone" x="0" y="0" width="260" height="610" rx="26"/>
+      <rect class="bezel" x="14" y="14" width="232" height="582" rx="16"/>
+      <rect class="screen" x="23" y="26" width="214" height="430" rx="8"/>
+      <text x="34" y="49" class="tiny">10:46</text>
+      <text x="66" y="49" class="tiny">⚙</text>
+      <text x="196" y="49" class="tiny">5G 99%</text>
+      <text x="34" y="78" class="label" style="font-size:19px">Settings</text>
+      <rect class="search" x="34" y="94" width="192" height="38" rx="12"/>
+      <text x="50" y="118" class="phoneSub">⌕  Search settings</text>
+
+      <g transform="translate(34 146)">
+        <rect class="row" x="0" y="0" width="192" height="32" rx="6"/>
+        <circle class="iconBlue" cx="15" cy="16" r="12"/><text x="34" y="15" class="phoneText">Network &amp; internet</text><text x="34" y="27" class="phoneSub">Wi‑Fi, mobile, data</text><text x="180" y="21" class="phoneText">›</text>
+        <rect class="row" x="0" y="36" width="192" height="32" rx="6"/>
+        <circle class="iconGreen" cx="15" cy="52" r="12"/><text x="34" y="51" class="phoneText">Connected devices</text><text x="34" y="63" class="phoneSub">Bluetooth, pairing</text><text x="180" y="57" class="phoneText">›</text>
+        <rect class="row" x="0" y="72" width="192" height="32" rx="6"/>
+        <circle class="iconGray" cx="15" cy="88" r="12"/><text x="34" y="87" class="phoneText">Apps</text><text x="34" y="99" class="phoneSub">Default apps, permissions</text><text x="180" y="93" class="phoneText">›</text>
+        <rect class="row" x="0" y="108" width="192" height="32" rx="6"/>
+        <circle class="iconOrange" cx="15" cy="124" r="12"/><text x="34" y="123" class="phoneText">Notifications</text><text x="34" y="135" class="phoneSub">History, conversations</text><text x="180" y="129" class="phoneText">›</text>
+        <rect class="row" x="0" y="144" width="192" height="32" rx="6"/>
+        <circle class="iconGreen" cx="15" cy="160" r="12"/><text x="34" y="159" class="phoneText">Battery</text><text x="34" y="171" class="phoneSub">99% · charging</text><text x="180" y="165" class="phoneText">›</text>
+        <rect class="row" x="0" y="180" width="192" height="32" rx="6"/>
+        <circle class="iconOrange" cx="15" cy="196" r="12"/><text x="34" y="195" class="phoneText">Display</text><text x="34" y="207" class="phoneSub">Brightness, dark theme</text><text x="180" y="201" class="phoneText">›</text>
+        <rect class="focus" x="-4" y="216" width="200" height="36" rx="8"/>
+        <circle class="iconBlue" cx="15" cy="234" r="12"/><text x="34" y="232" class="phoneText" style="font-weight:700">Keyboard &amp; input</text><text x="34" y="244" class="phoneSub">Physical keyboard, typing</text><text x="180" y="238" class="phoneText">›</text>
+        <rect class="row" x="0" y="256" width="192" height="32" rx="6"/>
+        <circle class="iconPurple" cx="15" cy="272" r="12"/><text x="34" y="271" class="phoneText">Security &amp; privacy</text><text x="34" y="283" class="phoneSub">Screen lock, permissions</text><text x="180" y="277" class="phoneText">›</text>
+      </g>
+      <text x="36" y="438" class="tiny">↑↓ focus · Enter open · letters type-ahead · / search</text>
+    </g>
+    <text x="18" y="690" class="small">Top-level Settings keeps Android category names. Keyboard &amp; input and Diagnostics are Sable additions, not replacements.</text>
+  </g>
+
+  <g transform="translate(478 122)">
+    <rect class="panel" x="0" y="0" width="410" height="710" rx="18"/>
+    <text x="18" y="32" class="label">2. Search and type-ahead</text>
+    <g transform="translate(80 56)" filter="url(#shadow)">
+      <rect class="phone" x="0" y="0" width="260" height="610" rx="26"/>
+      <rect class="bezel" x="14" y="14" width="232" height="582" rx="16"/>
+      <rect class="screen" x="23" y="26" width="214" height="430" rx="8"/>
+      <text x="34" y="49" class="tiny">10:46</text><text x="196" y="49" class="tiny">5G 99%</text>
+      <text x="34" y="78" class="label" style="font-size:19px">Settings</text>
+      <rect class="search" x="34" y="94" width="192" height="38" rx="12"/>
+      <text x="50" y="118" class="phoneSub">⌕ sy</text><text x="210" y="118" class="phoneSub">×</text>
+      <text x="34" y="151" class="tiny">Type-ahead focus result</text>
+      <rect class="focus" x="30" y="164" width="200" height="40" rx="8"/>
+      <circle class="iconGray" cx="49" cy="184" r="12"/><text x="68" y="181" class="phoneText" style="font-weight:700">System</text><text x="68" y="194" class="phoneSub">Languages, date, backup</text><text x="214" y="188" class="phoneText">›</text>
+      <text x="34" y="224" class="tiny">Full search results</text>
+      <g transform="translate(34 238)">
+        <rect class="row" x="0" y="0" width="192" height="38" rx="6"/>
+        <circle class="iconBlue" cx="15" cy="19" r="12"/><text x="34" y="17" class="phoneText">Keyboard shortcuts</text><text x="34" y="30" class="phoneSub">Keyboard &amp; input</text>
+        <rect class="row" x="0" y="44" width="192" height="38" rx="6"/>
+        <circle class="iconOrange" cx="15" cy="63" r="12"/><text x="34" y="61" class="phoneText">Sound &amp; vibration</text><text x="34" y="74" class="phoneSub">Volume, haptics</text>
+        <rect class="row" x="0" y="88" width="192" height="38" rx="6"/>
+        <circle class="iconRed" cx="15" cy="107" r="12"/><text x="34" y="105" class="phoneText">Diagnostics</text><text x="34" y="118" class="phoneSub">Factory-test bridge</text>
+      </g>
+      <text x="34" y="438" class="tiny">S then Y ⇒ System · / ⇒ full search</text>
+    </g>
+    <text x="18" y="690" class="small">Settings uses type-ahead row focus plus explicit full search. Text fields disable type-ahead and accept Alt/Sym/Fn input.</text>
+  </g>
+
+  <g transform="translate(922 122)">
+    <rect class="panel" x="0" y="0" width="444" height="710" rx="18"/>
+    <text x="18" y="32" class="label">3. Diagnostics bridge — no launcher base bar</text>
+    <g transform="translate(98 56)" filter="url(#shadow)">
+      <rect class="phone" x="0" y="0" width="260" height="610" rx="26"/>
+      <rect class="bezel" x="14" y="14" width="232" height="582" rx="16"/>
+      <rect class="screen" x="23" y="26" width="214" height="430" rx="8"/>
+      <text x="34" y="49" class="tiny">10:46</text><text x="196" y="49" class="tiny">5G 99%</text>
+      <text x="34" y="78" class="label" style="font-size:18px">Diagnostics</text>
+      <text x="34" y="98" class="phoneSub">Hardware tests and reports</text>
+      <g transform="translate(34 116)">
+        <rect class="focus" x="-3" y="-3" width="93" height="47" rx="8"/><rect class="row" x="0" y="0" width="87" height="41" rx="7"/><circle class="iconOrange" cx="18" cy="21" r="10"/><text x="34" y="25" class="phoneSub" style="fill:#fff">Display</text>
+        <rect class="row" x="105" y="0" width="87" height="41" rx="7"/><circle class="iconBlue" cx="123" cy="21" r="10"/><text x="139" y="25" class="phoneSub" style="fill:#fff">Keyboard</text>
+        <rect class="row" x="0" y="51" width="87" height="41" rx="7"/><circle class="iconPurple" cx="18" cy="72" r="10"/><text x="34" y="76" class="phoneSub" style="fill:#fff">TouchPad</text>
+        <rect class="row" x="105" y="51" width="87" height="41" rx="7"/><circle class="iconGreen" cx="123" cy="72" r="10"/><text x="139" y="76" class="phoneSub" style="fill:#fff">Sensors</text>
+        <rect class="row" x="0" y="102" width="87" height="41" rx="7"/><circle class="iconRed" cx="18" cy="123" r="10"/><text x="34" y="127" class="phoneSub" style="fill:#fff">Audio</text>
+        <rect class="row" x="105" y="102" width="87" height="41" rx="7"/><circle class="iconGray" cx="123" cy="123" r="10"/><text x="139" y="127" class="phoneSub" style="fill:#fff">Radio</text>
+        <rect class="row" x="0" y="153" width="192" height="46" rx="7"/><circle class="warn" cx="18" cy="176" r="10"/><text x="34" y="173" class="phoneSub" style="fill:#fff">Factory-test bridge</text><text x="34" y="187" class="tiny">*#*#3377#*#* · gated</text>
+        <rect class="row" x="0" y="209" width="192" height="46" rx="7"/><circle class="iconGreen" cx="18" cy="232" r="10"/><text x="34" y="229" class="phoneSub" style="fill:#fff">Export diagnostic report</text><text x="34" y="243" class="tiny">redacted, share-safe</text>
+      </g>
+      <text x="34" y="438" class="tiny">No Start base bar · Back/Home use system navigation</text>
+    </g>
+    <g transform="translate(22 610)">
+      <rect x="0" y="0" width="398" height="72" rx="12" fill="rgba(255,255,255,0.045)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="16" y="25" class="small" style="fill:#fff;font-weight:700">Settings base-bar decision</text>
+      <text x="16" y="47" class="small">Do not show the Sable Start quick bar in Settings. Use Settings search, visible focus, Back/Home, and optional shortcut hints.</text>
+    </g>
+  </g>
+
+  <g transform="translate(34 848)">
+    <text class="small">Validation targets: Android Settings structure · no launcher base bar · visible focus · full search · type-ahead · diagnostics bridge gated · keyboard/pointer safe.</text>
+  </g>
+</svg>
