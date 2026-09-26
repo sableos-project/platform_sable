@@ -87,8 +87,8 @@ install closure proves or supersedes them.
 - [Device capability matrix](docs/device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
 - [Keyboard-first Settings UX](docs/design/KEYBOARD_FIRST_SETTINGS_UX.md)
 - [Settings search UX](docs/design/SETTINGS_SEARCH_UX.md)
-- [Settings visual confirmation](docs/design/SETTINGS_VISUAL_CONFIRMATION.md)
 - [Hardware diagnostics and dialer-code UX](docs/design/HARDWARE_DIAGNOSTICS_AND_DIALER_CODES.md)
+- [Settings visual confirmation](docs/design/SETTINGS_VISUAL_CONFIRMATION.md)
 - [Sable Start keyboard-first UX](docs/design/SABLE_START_KEYBOARD_FIRST_UX.md)
 - [Sable Start screen design](docs/design/SABLE_START_SCREEN_DESIGN.md)
 - [Sable Start three-page model](docs/design/SABLE_START_THREE_PAGE_MODEL.md)
@@ -134,10 +134,11 @@ and diagnostics surfaces.
 ANDROID_SETTINGS_STRUCTURE=PRIMARY
 SETTINGS_SEARCH_REQUIRED=YES
 KEYBOARD_NAVIGATION_REQUIRED=YES
-SETTINGS_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
-START_BASE_QUICK_BAR_IN_SETTINGS=NO
 HARDWARE_DIAGNOSTICS_BRIDGE=GATED
 RAW_FACTORY_TEST_DIRECT_LAUNCH=NO_BY_DEFAULT
+START_BASE_QUICK_BAR_IN_SETTINGS=NO
+SETTINGS_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+TITAN2_HARDWARE_TEMPLATE=YES
 ```
 
 Titan 2 factory-test evidence, including the `*#*#3377#*#*` hardware test path,
@@ -162,6 +163,7 @@ LEFT_PAGE_GLANCE_WIDGETS=YES
 RIGHT_PAGE_HUB=YES
 BASE_QUICK_BAR_CONFIGURABLE=YES
 VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+TITAN2_HARDWARE_TEMPLATE=YES
 FUNCTIONAL_REFERENCE_ONLY=YES
 CODE_IMPORT=NO
 ```
@@ -171,6 +173,21 @@ Launcher/Pixel Launcher/Launcher3, Niagara-style vertical access, BlackBerry OS7
 keyboard shortcuts, BlackBerry OS10 Hub/Peek/Flow, Windows Phone/Metro/Zune visual
 structure, OpenMiniLaunch/Mink command-box ideas, Commander command overlay, and
 keyboard/pointer learnings from Pastiera/Plektra and q25toolbox.
+
+## Visual artifact rule
+
+Titan 2 UI validation artifacts must use Titan 2 proportions unless the artifact
+is explicitly for a different device profile.
+
+```text
+TITAN2_TEMPLATE_FOR_VISUAL_VALIDATION=YES
+SQUARE_DISPLAY_PLUS_PHYSICAL_KEYBOARD=YES
+NO_SLAB_PHONE_VISUAL_TARGET=YES
+NO_STRETCHED_SCREEN_TARGET=YES
+```
+
+This rule applies to Sable Start, Settings and subsequent Titan 2 visual design
+artifacts.
 
 ## K1/K2 boundary
 
@@ -234,6 +251,7 @@ Keyboard-first product design now covers:
 - Start screen app privacy summaries and keyboard app actions;
 - Sable Start three-page Center/Glance/Hub page model;
 - source-controlled Sable Start visual confirmation artifact;
+- Titan 2 visual-template rule for square display plus physical keyboard;
 - configurable base quick bar with required fallback paths;
 - curated Sable glance widgets with Weather as first Home candidate;
 - critical text-entry fallback for setup, pairing and lockscreen flows;
