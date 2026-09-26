@@ -1,0 +1,177 @@
+# Messages / Conversation visual confirmation
+
+Status: visual and behavioral confirmation checklist for Messages / Conversation
+UX on Titan 2.
+
+The active visual artifact is:
+
+```text
+docs/design/artifacts/sable-messages-conversation-titan2.svg
+```
+
+## Required visual target
+
+The visual target must show Titan 2 proportions: square display above a physical
+keyboard. It must not use a generic slab-phone or stretched phone layout.
+
+```text
+TITAN2_HARDWARE_TEMPLATE=PASS
+SQUARE_DISPLAY_PLUS_PHYSICAL_KEYBOARD=PASS
+NO_SLAB_PHONE_VISUAL_TARGET=PASS
+NO_STRETCHED_SCREEN_TARGET=PASS
+```
+
+## Latest-anchor requirement
+
+Messages / Conversation visual validation must prove that the latest message is
+always visible and that scrolling is not required to see the current state.
+
+```text
+LATEST_ANCHORED_CONVERSATION=PASS
+LATEST_MESSAGE_ALWAYS_VISIBLE=PASS
+OPEN_THREAD_AT_LATEST=PASS
+RESTORE_THREAD_AT_LATEST=PASS
+AUTO_ADVANCE_TO_LATEST_ON_INCOMING=PASS
+AUTO_ADVANCE_TO_LATEST_ON_SEND=PASS
+SCROLLING_REQUIRED_TO_SEE_LATEST_MESSAGE=NO
+CONTINUOUS_TOUCHPAD_SCROLLING_REQUIRED=NO
+```
+
+The conversation panel must show:
+
+- newest message visible in the current viewport;
+- composer visible with the newest message;
+- sent message staying visible immediately after send;
+- incoming message automatically advancing the current viewport;
+- no touchpad-style scroll dependency.
+
+## Keyboard and onscreen text entry
+
+```text
+KEYBOARD_FIRST_COMPOSITION=PASS
+PHYSICAL_KEYBOARD_COMPOSITION=PASS
+ALT_SYM_FN_TEXT_ENTRY=PASS
+ONSCREEN_KEYBOARD_FALLBACK=PASS
+PHYSICAL_AND_ONSCREEN_DRAFT_SHARE_STATE=PASS
+```
+
+The visual target must show both physical keyboard composition and onscreen
+fallback. If the onscreen keyboard appears, it must not lose the draft or hide the
+latest message without a clear focused continuation path.
+
+## Explicit history/search mode
+
+Older messages may be available through explicit history/search, but not as a
+required free-scroll transcript.
+
+```text
+HISTORY_ACCESS_EXPLICIT=PASS
+SEARCH_IN_CONVERSATION=PASS
+JUMP_TO_UNREAD=PASS
+RETURN_TO_LATEST_KEY=PASS
+HISTORY_MODE_SHOWS_NEW_MESSAGE_INDICATOR=PASS
+```
+
+The visual target must show a clear return-to-latest affordance such as:
+
+```text
+New message — Enter to latest
+```
+
+## Conversation list
+
+```text
+CONVERSATION_LIST_LATEST_FIRST=PASS
+OPEN_SELECTED_THREAD_AT_LATEST=PASS
+NO_TOUCHPAD_SCROLL_DEPENDENCY=PASS
+TYPE_TO_FILTER_OR_SEARCH=PASS
+```
+
+The conversation list must be latest-first and keyboard navigable.
+
+## Privacy and source policy
+
+```text
+LOCKED_MODE_REDACTION=PASS
+PRIVATE_MODE_REDACTION=PASS
+SOURCE_RESTRICTED_MODE=PASS
+MESSAGE_BODY_HIDDEN_WHEN_LOCKED=PASS
+CONTACT_NAME_POLICY_AWARE=PASS
+```
+
+The visual target must show a locked/private state where message body content is
+redacted.
+
+## Provider-safe actions
+
+```text
+MESSAGE_ACTIONS_KEYBOARD_ACCESSIBLE=PASS
+CONTACTS_HANDOFF=PASS
+PHONE_HANDOFF=PASS
+HUB_HANDOFF=PASS
+COMMAND_SEARCH_HANDOFF=PASS
+NOTIFICATION_SHADE_HANDOFF=PASS
+UNSUPPORTED_PROVIDER_ACTIONS=NO
+```
+
+Actions must be provider-safe and keyboard reachable.
+
+## Fail-closed exclusions
+
+```text
+CUSTOM_SMS_STACK=NO
+CUSTOM_RCS_STACK=NO
+CUSTOM_MMS_STACK=NO
+CUSTOM_CARRIER_STACK=NO
+UNSUPPORTED_PROVIDER_ACTIONS=NO
+SILENT_MESSAGE_IMPORT=NO
+```
+
+## Release validation block
+
+```text
+MESSAGES_CONVERSATION_UX=PASS
+MESSAGES_CONVERSATION_VISUAL_ARTIFACT_SOURCE_CONTROLLED=PASS
+TITAN2_MESSAGES_VISUAL_TARGET=PASS
+ANDROID_MESSAGES_MENTAL_MODEL=PASS
+KEYBOARD_FIRST_COMPOSITION=PASS
+PHYSICAL_KEYBOARD_COMPOSITION=PASS
+ONSCREEN_KEYBOARD_FALLBACK=PASS
+ALT_SYM_FN_TEXT_ENTRY=PASS
+LATEST_ANCHORED_CONVERSATION=PASS
+LATEST_MESSAGE_ALWAYS_VISIBLE=PASS
+OPEN_THREAD_AT_LATEST=PASS
+RESTORE_THREAD_AT_LATEST=PASS
+AUTO_ADVANCE_TO_LATEST_ON_INCOMING=PASS
+AUTO_ADVANCE_TO_LATEST_ON_SEND=PASS
+SCROLLING_REQUIRED_TO_SEE_LATEST_MESSAGE=NO
+CONTINUOUS_TOUCHPAD_SCROLLING_REQUIRED=NO
+HISTORY_ACCESS_EXPLICIT=PASS
+SEARCH_IN_CONVERSATION=PASS
+JUMP_TO_UNREAD=PASS
+RETURN_TO_LATEST_KEY=PASS
+CONVERSATION_LIST_LATEST_FIRST=PASS
+MESSAGE_ACTIONS_KEYBOARD_ACCESSIBLE=PASS
+CONTACTS_HANDOFF=PASS
+PHONE_HANDOFF=PASS
+HUB_HANDOFF=PASS
+COMMAND_SEARCH_HANDOFF=PASS
+NOTIFICATION_SHADE_HANDOFF=PASS
+LOCKSCREEN_PRIVACY_COMPATIBLE=PASS
+LOCKED_MODE_REDACTION=PASS
+PRIVATE_MODE_REDACTION=PASS
+SOURCE_RESTRICTED_MODE=PASS
+NO_FOCUS_TRAPS=PASS
+NO_MESSAGE_DEAD_ENDS=PASS
+CUSTOM_SMS_STACK=NO
+CUSTOM_RCS_STACK=NO
+CUSTOM_MMS_STACK=NO
+UNSUPPORTED_PROVIDER_ACTIONS=NO
+TITAN2_HARDWARE_TEMPLATE=PASS
+SQUARE_DISPLAY_PLUS_PHYSICAL_KEYBOARD=PASS
+NO_SLAB_PHONE_VISUAL_TARGET=PASS
+NO_STRETCHED_SCREEN_TARGET=PASS
+BUILD_CODE_CHANGED=NO
+DEVICE_CODE_CHANGED=NO
+FLASH_ENABLEMENT=NO
+```
