@@ -16,6 +16,7 @@ SABLE_KEYBOARD_FIRST_ADDITIONS=PROFILE_AWARE_EXTENSIONS
 SEARCH_REQUIRED=YES
 VISIBLE_FOCUS_REQUIRED=YES
 TOUCH_SECONDARY=YES
+TYPE_AHEAD_FOCUS_NAVIGATION=YES
 ```
 
 ## Core rule
@@ -222,6 +223,176 @@ Diagnostics
 Factory/engineering surfaces discovered through dialer codes should be treated as
 source evidence for Sable diagnostics, not as normal user settings.
 
+## Type-ahead focus navigation
+
+Settings should support fast, keyboard-native navigation without forcing every
+printable key into full search. When no text field is active and the Settings
+search box is not focused, printable letters form a short-lived type-ahead focus
+buffer.
+
+```text
+TYPE_AHEAD_FOCUS_NAVIGATION=REQUIRED
+TYPE_AHEAD_DEFAULT_SCOPE=visible_settings_rows_then_all_rows
+TYPE_AHEAD_TIMEOUT_MS=800
+TYPE_AHEAD_CASE_INSENSITIVE=YES
+TYPE_AHEAD_ACCENT_INSENSITIVE=YES
+TYPE_AHEAD_WRAP=YES
+TYPE_AHEAD_VISIBLE_FEEDBACK=YES
+```
+
+Example on the top-level Settings list:
+
+```text
+initial focus: Search settings or first top-level row
+press S:
+  focus Sound & vibration
+
+press S then Y before timeout:
+  buffer = sy
+  focus System
+
+press S after timeout:
+  buffer = s
+  focus Sound & vibration again
+
+press S repeatedly:
+  cycle through rows whose normalized title starts with s
+  e.g. Sound & vibration -> Security & emergency -> System, if present
+```
+
+Type-ahead must use normalized Settings titles and aliases. This allows renamed
+or localized settings to remain discoverable without inventing a separate
+keyboard-only taxonomy.
+
+```text
+Sound & vibration:
+  sound
+  volume
+  vibration
+  do not disturb
+
+System:
+  system
+  language
+  date
+  time
+  backup
+  reset
+
+Keyboard & input:
+  keyboard
+  keys
+  qwerty
+  fn
+  alt
+  sym
+  input
+```
+
+Type-ahead is focus navigation, not search results. It should move the visible
+focus ring to the best matching Settings row and keep the user in the current
+screen. Enter then opens the focused row.
+
+## Search versus type-ahead
+
+Sable Settings has two keyboard discovery paths:
+
+```text
+type-ahead focus navigation:
+  fast row jump within the current Settings screen
+
+Settings search:
+  full indexed search across all Settings screens and aliases
+```
+
+Recommended trigger behavior:
+
+```text
+Printable key, no text field focused:
+  type-ahead focus navigation
+
+/ or Search key or Ctrl+K / Command+K where available:
+  open/focus Settings search
+
+Enter on Search settings row:
+  open/focus Settings search
+
+Typing while Settings search is focused:
+  edit the search query
+
+Back while Settings search is active:
+  close search and restore previous focus
+```
+
+This keeps Android's familiar visible search box while making physical-keyboard
+navigation fast enough for one-handed use.
+
+## Mouse and pointer interaction
+
+Pointer support must not break keyboard navigation. Settings should use a
+last-input-wins focus model with separate pointer hover and keyboard focus.
+
+```text
+LAST_INPUT_WINS=YES
+POINTER_HOVER_DOES_NOT_STEAL_KEYBOARD_FOCUS=YES
+POINTER_CLICK_MOVES_FOCUS_AND_ACTIVATES=YES
+KEYBOARD_TYPE_AHEAD_MOVES_FOCUS_NOT_POINTER=YES
+```
+
+When a mouse, touchpad or touch surface is used:
+
+```text
+pointer move:
+  show pointer / hover affordance
+  do not erase keyboard focus unless configured by accessibility setting
+
+pointer click / tap:
+  focus and activate the clicked row or control
+
+keyboard letter after pointer use:
+  return to keyboard focus mode
+  run type-ahead focus navigation unless a text field is active
+
+keyboard arrows after pointer use:
+  move from the last focused/clicked row
+```
+
+If a device exposes a keyboard-driven mouse-control mode, that mode must be
+explicit and reversible. While keyboard-driven mouse mode is active, letter keys
+used for pointer movement must not also trigger Settings type-ahead.
+
+```text
+MOUSE_CONTROL_MODE=EXPLICIT
+MOUSE_CONTROL_MODE_INDICATOR=REQUIRED
+TYPE_AHEAD_DISABLED_DURING_KEY_MOUSE_MODE=YES
+EXIT_MOUSE_MODE_REQUIRED=YES
+```
+
+Recommended behavior:
+
+```text
+Fn + pointer profile key:
+  toggle keyboard-driven mouse mode, if the device profile supports it
+
+Esc / Back:
+  exit mouse mode before leaving the screen, if no pointer drag/test is active
+
+Search key or /:
+  exit mouse mode and focus Settings search
+
+Enter / Space:
+  click/activate the pointer target in mouse mode
+```
+
+Text-entry fields always take priority over type-ahead and pointer shortcuts.
+
+```text
+TEXT_FIELD_FOCUSED=TEXT_ENTRY_MODE
+ALT_SYM_FN_TEXT_ENTRY_REQUIRED=YES
+TYPE_AHEAD_DISABLED_IN_TEXT_ENTRY=YES
+MOUSE_CONTROL_DISABLED_IN_TEXT_ENTRY_UNLESS_EXPLICIT=YES
+```
+
 ## Navigation requirements
 
 Settings must be fully operable with the physical keyboard.
@@ -231,7 +402,8 @@ VISIBLE_FOCUS=REQUIRED
 ARROW_NAVIGATION=REQUIRED
 ENTER_ACTIVATION=REQUIRED
 BACK_ESCAPE=REQUIRED
-TYPE_TO_SEARCH=REQUIRED
+TYPE_AHEAD_FOCUS_NAVIGATION=REQUIRED
+SETTINGS_SEARCH=REQUIRED
 FOCUS_RESTORATION=REQUIRED
 NO_FOCUS_TRAPS=REQUIRED
 TOUCH_SECONDARY=YES
@@ -267,7 +439,9 @@ CRITICAL_TEXT_ENTRY_TEST=REQUIRED
 ```text
 SETTINGS_STRUCTURE_ANDROID_COMPATIBLE=PASS
 SETTINGS_SEARCH_REQUIRED=PASS
+TYPE_AHEAD_FOCUS_NAVIGATION=PASS
 KEYBOARD_NAVIGATION_REQUIRED=PASS
+MOUSE_POINTER_INTERACTION_MODEL=PASS
 DISPLAY_PROFILE_AWARE=PASS
 ATTENTION_PROFILE_AWARE=PASS
 CRITICAL_TEXT_ENTRY_TEST_REQUIRED=PASS
