@@ -96,6 +96,8 @@ install closure proves or supersedes them.
 - [Sable Start functional references](docs/design/SABLE_START_REFERENCES.md)
 - [Sable Hub keyboard-first UX](docs/design/SABLE_HUB_KEYBOARD_FIRST_UX.md)
 - [Sable Hub visual confirmation](docs/design/SABLE_HUB_VISUAL_CONFIRMATION.md)
+- [All Apps privacy UX](docs/design/ALL_APPS_PRIVACY_UX.md)
+- [All Apps visual confirmation](docs/design/ALL_APPS_VISUAL_CONFIRMATION.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -198,6 +200,29 @@ TITAN2_HARDWARE_TEMPLATE=YES
 Hub must not invent unsupported provider actions. Inline reply is allowed only
 when the source exposes a safe reply path.
 
+## All Apps UX posture
+
+All Apps is the trusted app discovery and customization surface. It preserves the
+Android All Apps mental model while showing Sable privacy/security summaries
+under each app name.
+
+```text
+ALL_APPS_SURFACE=YES
+ANDROID_ALL_APPS_MENTAL_MODEL=KEEP
+APP_NAMES_PRIMARY=YES
+PACKAGE_NAMES_DEFAULT_VISIBLE=NO
+PRIVACY_SUMMARY_UNDER_APP=YES
+APP_ACTIONS_KEYBOARD_ACCESSIBLE=YES
+PIN_TO_START=YES
+ADD_TO_BASE_BAR=YES
+ALL_APPS_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+TITAN2_HARDWARE_TEMPLATE=YES
+```
+
+All Apps must not present raw package names or raw Android permission constants
+as the default user-facing model. Developer details remain available through App
+info / developer views.
+
 ## Visual artifact rule
 
 Titan 2 UI validation artifacts must use Titan 2 proportions unless the artifact
@@ -210,8 +235,8 @@ NO_SLAB_PHONE_VISUAL_TARGET=YES
 NO_STRETCHED_SCREEN_TARGET=YES
 ```
 
-This rule applies to Sable Start, Settings, Hub and subsequent Titan 2 visual
-design artifacts.
+This rule applies to Sable Start, Settings, Hub, All Apps and subsequent Titan 2
+visual design artifacts.
 
 ## K1/K2 boundary
 
@@ -277,6 +302,9 @@ Keyboard-first product design now covers:
 - source-controlled Sable Start visual confirmation artifact;
 - source-controlled Sable Hub visual confirmation artifact;
 - Sable Hub provider-safe row actions and privacy states;
+- source-controlled All Apps visual confirmation artifact;
+- All Apps privacy/security summaries under app names;
+- All Apps app actions, pin-to-Start and add-to-base-bar flows;
 - Titan 2 visual-template rule for square display plus physical keyboard;
 - configurable base quick bar with required fallback paths;
 - curated Sable glance widgets with Weather as first Home candidate;
