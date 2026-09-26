@@ -98,6 +98,8 @@ install closure proves or supersedes them.
 - [Sable Hub visual confirmation](docs/design/SABLE_HUB_VISUAL_CONFIRMATION.md)
 - [All Apps privacy UX](docs/design/ALL_APPS_PRIVACY_UX.md)
 - [All Apps visual confirmation](docs/design/ALL_APPS_VISUAL_CONFIRMATION.md)
+- [Sable Command / Search UX](docs/design/SABLE_COMMAND_SEARCH_UX.md)
+- [Sable Command visual confirmation](docs/design/COMMAND_SEARCH_VISUAL_CONFIRMATION.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -223,6 +225,28 @@ All Apps must not present raw package names or raw Android permission constants
 as the default user-facing model. Developer details remain available through App
 info / developer views.
 
+## Sable Command / Search UX posture
+
+Sable Command is the shared keyboard-first command/search surface used by Start,
+All Apps, Settings, Hub and other Sable apps. It provides local-first results and
+provider-safe actions without taking ownership of provider accounts or private
+databases.
+
+```text
+SABLE_COMMAND_SURFACE=YES
+GLOBAL_COMMAND_SEARCH=YES
+LOCAL_CONTEXT_COMMANDS=YES
+KEYBOARD_FIRST=YES
+TYPE_TO_COMMAND=YES
+PROVIDER_SAFE_ACTIONS=YES
+NO_UNSUPPORTED_PROVIDER_ACTIONS=YES
+COMMAND_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
+TITAN2_HARDWARE_TEMPLATE=YES
+```
+
+Command must respect locked/private modes and must not expose message bodies,
+contact details or provider actions when the source policy does not allow it.
+
 ## Visual artifact rule
 
 Titan 2 UI validation artifacts must use Titan 2 proportions unless the artifact
@@ -235,8 +259,8 @@ NO_SLAB_PHONE_VISUAL_TARGET=YES
 NO_STRETCHED_SCREEN_TARGET=YES
 ```
 
-This rule applies to Sable Start, Settings, Hub, All Apps and subsequent Titan 2
-visual design artifacts.
+This rule applies to Sable Start, Settings, Hub, All Apps, Command/Search and
+subsequent Titan 2 visual design artifacts.
 
 ## K1/K2 boundary
 
@@ -285,6 +309,8 @@ Keyboard-first product design now covers:
 - type-to-search;
 - type-to-launch from Sable Start;
 - command/shortcut navigation;
+- global Command/Search across Start, All Apps, Settings and Hub;
+- provider-safe command actions;
 - stable focus restoration;
 - square/near-square responsive layout;
 - compact AMOLED keyboard-device layouts;
@@ -305,6 +331,7 @@ Keyboard-first product design now covers:
 - source-controlled All Apps visual confirmation artifact;
 - All Apps privacy/security summaries under app names;
 - All Apps app actions, pin-to-Start and add-to-base-bar flows;
+- source-controlled Sable Command visual confirmation artifact;
 - Titan 2 visual-template rule for square display plus physical keyboard;
 - configurable base quick bar with required fallback paths;
 - curated Sable glance widgets with Weather as first Home candidate;
