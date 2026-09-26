@@ -89,6 +89,32 @@ install closure proves or supersedes them.
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
 
+## Keyboard-device capability posture
+
+The current profile model is intentionally not a generic keyboard-phone profile.
+Titan 2, Titan 2 Elite and Q27 must not inherit each other's display, AOD,
+keyboard, pointer, SubScreen, critical-input or release evidence.
+
+```text
+Titan 2
+  profile: square keyboard device + rear SubScreen candidate
+  AOD: no by default
+  status: N0_A16 planning, no Sable artifact/boot yet
+
+Titan 2 Elite
+  profile: compact AMOLED keyboard-device candidate
+  AOD: candidate, requires hardware/power/doze validation
+  status: independent baseline pending
+
+Q27
+  profile: compact AMOLED keyboard-device candidate
+  AOD: candidate, requires shipped/current hardware validation
+  status: research only
+```
+
+Public specifications are planning inputs only. They do not replace local
+hardware evidence, firmware binding, or release acceptance.
+
 ## K1/K2 boundary
 
 Artifact identity supports multiple artifact kinds and is independent of physical
@@ -118,7 +144,6 @@ Keyboard-first product design now covers:
 - touch as a secondary path;
 - per-device keyboard and pointer-surface profiles;
 - critical text-entry fallback for setup, pairing and lockscreen flows;
-- per-device capability matrix for Titan 2, Titan 2 Elite and Q27;
 - common Sable Keyboard/IME boundary;
 - common Sable Camera/system-image boundary.
 
