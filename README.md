@@ -88,6 +88,9 @@ install closure proves or supersedes them.
 - [Keyboard-first Settings UX](docs/design/KEYBOARD_FIRST_SETTINGS_UX.md)
 - [Settings search UX](docs/design/SETTINGS_SEARCH_UX.md)
 - [Hardware diagnostics and dialer-code UX](docs/design/HARDWARE_DIAGNOSTICS_AND_DIALER_CODES.md)
+- [Sable Start keyboard-first UX](docs/design/SABLE_START_KEYBOARD_FIRST_UX.md)
+- [Sable Start screen design](docs/design/SABLE_START_SCREEN_DESIGN.md)
+- [Sable Start functional references](docs/design/SABLE_START_REFERENCES.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -135,6 +138,30 @@ RAW_FACTORY_TEST_DIRECT_LAUNCH=NO_BY_DEFAULT
 Titan 2 factory-test evidence, including the `*#*#3377#*#*` hardware test path,
 is treated as a diagnostics input, not as a normal user Settings hierarchy.
 
+## Sable Start UX posture
+
+Sable Start remains the Sable HOME surface. It preserves Android Home / All Apps /
+app-info expectations while making type-to-launch, command entry, Hub glance,
+visible focus, app privacy summaries and pointer-mode boundaries first-class on
+keyboard devices.
+
+```text
+SABLE_START_HOME=YES
+ANDROID_HOME_MENTAL_MODEL=KEEP
+TYPE_TO_LAUNCH=YES
+COMMAND_SEARCH_ENTRY=YES
+TITAN2_SQUARE_LAYOUT=YES
+COMPACT_KEYBOARD_LAYOUT=YES
+FUNCTIONAL_REFERENCE_ONLY=YES
+CODE_IMPORT=NO
+```
+
+Functional inspirations are documented as behavior references only: Android
+Launcher/Pixel Launcher/Launcher3, Niagara-style vertical access, BlackBerry OS7
+keyboard shortcuts, BlackBerry OS10 Hub/Peek/Flow, Windows Phone/Metro/Zune visual
+structure, OpenMiniLaunch/Mink command-box ideas, Commander command overlay, and
+keyboard/pointer learnings from Pastiera/Plektra and q25toolbox.
+
 ## K1/K2 boundary
 
 Artifact identity supports multiple artifact kinds and is independent of physical
@@ -180,6 +207,7 @@ Keyboard-first product design now covers:
 - Enter/Space activation;
 - Back/Escape;
 - type-to-search;
+- type-to-launch from Sable Start;
 - command/shortcut navigation;
 - stable focus restoration;
 - square/near-square responsive layout;
@@ -188,9 +216,11 @@ Keyboard-first product design now covers:
 - AOD/pulse/attention-surface capability profiles;
 - keyboard-only accessibility;
 - touch as a secondary path;
+- explicit pointer/mouse mode boundaries;
 - per-device keyboard and pointer-surface profiles;
 - Settings structure compatible with Android user expectations;
 - Settings search aliases for profile, diagnostics and factory-test concepts;
+- Start screen app privacy summaries and keyboard app actions;
 - critical text-entry fallback for setup, pairing and lockscreen flows;
 - gated diagnostics bridge for hardware/factory test surfaces;
 - common Sable Keyboard/IME boundary;
