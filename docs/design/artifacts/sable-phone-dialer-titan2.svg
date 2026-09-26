@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1120" viewBox="0 0 1500 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Phone / Dialer Titan 2 visual target</title>
+  <desc id="desc">Six Titan 2 phone and dialer panels covering recents, physical keyboard dialing, onscreen dialpad, contacts handoff, in-call controls and privacy or emergency states.</desc>
+  <defs>
+    <style>
+      .bg { fill: #101114; }
+      .panel { fill: #17191e; stroke: #444b57; stroke-width: 2; rx: 24; }
+      .phone { fill: #20242b; stroke: #7a8494; stroke-width: 4; rx: 34; }
+      .screen { fill: #0b0d10; stroke: #56606f; stroke-width: 2; rx: 12; }
+      .keyboard { fill: #111318; stroke: #3a414b; stroke-width: 2; rx: 14; }
+      .key { fill: #252b34; stroke: #596473; stroke-width: 1; rx: 5; }
+      .text { fill: #eef3ff; font-family: Inter, Arial, sans-serif; font-size: 20px; }
+      .small { fill: #bcc6d8; font-family: Inter, Arial, sans-serif; font-size: 14px; }
+      .tiny { fill: #aab4c6; font-family: Inter, Arial, sans-serif; font-size: 11px; }
+      .muted { fill: #8792a5; font-family: Inter, Arial, sans-serif; font-size: 12px; }
+      .accent { fill: #76d7c4; }
+      .warn { fill: #ffcc66; }
+      .danger { fill: #ff7c7c; }
+      .chip { fill: #24313a; stroke: #50606d; stroke-width: 1; rx: 11; }
+      .focus { fill: #25363a; stroke: #76d7c4; stroke-width: 3; rx: 12; }
+      .row { fill: #151a20; stroke: #34404d; stroke-width: 1.5; rx: 10; }
+      .button { fill: #1d3840; stroke: #76d7c4; stroke-width: 1.5; rx: 12; }
+      .call { fill: #1d4d39; stroke: #6ee7a6; stroke-width: 1.5; rx: 12; }
+      .end { fill: #4d2328; stroke: #ff8b96; stroke-width: 1.5; rx: 12; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1500" height="1120" />
+  <text class="text" x="40" y="46">Sable Phone / Dialer — Titan 2 visual target</text>
+  <text class="small" x="40" y="72">Physical keyboard dialing + onscreen dialpad/software keyboard fallback. Design-only, no build/device/flash enablement.</text>
+
+  <!-- Panel 1 Recents -->
+  <g transform="translate(40 105)">
+    <rect class="panel" width="220" height="455" />
+    <rect class="phone" x="28" y="22" width="164" height="405" />
+    <rect class="screen" x="45" y="42" width="130" height="155" />
+    <text class="tiny" x="56" y="62">10:46  LTE  99%</text>
+    <text class="small" x="56" y="82">Phone</text>
+    <rect class="chip" x="56" y="93" width="50" height="18" />
+    <text class="tiny" x="64" y="106">Recents</text>
+    <rect class="focus" x="55" y="119" width="110" height="33" />
+    <text class="tiny" x="64" y="132">Missed call</text>
+    <text class="tiny" x="64" y="146">Contact hidden</text>
+    <rect class="row" x="55" y="158" width="110" height="25" />
+    <text class="tiny" x="64" y="174">Mom · outgoing</text>
+    <text class="muted" x="50" y="218">Focused row:</text>
+    <text class="tiny" x="50" y="236">Enter callback</text>
+    <text class="tiny" x="50" y="252">Space details</text>
+    <text class="tiny" x="50" y="268">Hub calls filter</text>
+    <rect class="keyboard" x="45" y="282" width="130" height="125" />
+    <text class="tiny" x="60" y="303">QWERTY + call keys</text>
+    <g transform="translate(56 318)">
+      <rect class="key" x="0" y="0" width="18" height="12"/><rect class="key" x="22" y="0" width="18" height="12"/><rect class="key" x="44" y="0" width="18" height="12"/><rect class="key" x="66" y="0" width="18" height="12"/>
+      <rect class="key" x="10" y="18" width="18" height="12"/><rect class="key" x="32" y="18" width="18" height="12"/><rect class="key" x="54" y="18" width="18" height="12"/><rect class="key" x="76" y="18" width="18" height="12"/>
+      <rect class="key" x="2" y="36" width="38" height="12"/><rect class="key" x="44" y="36" width="18" height="12"/><rect class="key" x="66" y="36" width="38" height="12"/>
+    </g>
+    <text class="small" x="52" y="438">1. Recents / missed</text>
+  </g>
+
+  <!-- Panel 2 Physical dialing -->
+  <g transform="translate(280 105)">
+    <rect class="panel" width="220" height="455" />
+    <rect class="phone" x="28" y="22" width="164" height="405" />
+    <rect class="screen" x="45" y="42" width="130" height="155" />
+    <text class="tiny" x="56" y="62">Phone · Dial</text>
+    <rect class="focus" x="56" y="76" width="108" height="32" />
+    <text class="small" x="64" y="98">+1 555 12</text>
+    <rect class="row" x="56" y="119" width="108" height="23" />
+    <text class="tiny" x="64" y="134">Match: Dad</text>
+    <rect class="call" x="84" y="153" width="52" height="26" />
+    <text class="tiny" x="98" y="170">Call</text>
+    <text class="muted" x="50" y="218">Physical keys:</text>
+    <text class="tiny" x="50" y="236">0-9 append digits</text>
+    <text class="tiny" x="50" y="252">* # + supported</text>
+    <text class="tiny" x="50" y="268">Backspace delete</text>
+    <text class="tiny" x="50" y="284">Enter call action</text>
+    <rect class="keyboard" x="45" y="302" width="130" height="105" />
+    <g transform="translate(53 318)">
+      <rect class="key" x="0" y="0" width="20" height="14"/><text class="tiny" x="7" y="11">1</text>
+      <rect class="key" x="24" y="0" width="20" height="14"/><text class="tiny" x="31" y="11">2</text>
+      <rect class="key" x="48" y="0" width="20" height="14"/><text class="tiny" x="55" y="11">3</text>
+      <rect class="key" x="72" y="0" width="20" height="14"/><text class="tiny" x="79" y="11">*</text>
+      <rect class="key" x="12" y="20" width="20" height="14"/><text class="tiny" x="19" y="31">4</text>
+      <rect class="key" x="36" y="20" width="20" height="14"/><text class="tiny" x="43" y="31">5</text>
+      <rect class="key" x="60" y="20" width="20" height="14"/><text class="tiny" x="67" y="31">6</text>
+      <rect class="key" x="84" y="20" width="20" height="14"/><text class="tiny" x="91" y="31">#</text>
+      <rect class="key" x="20" y="40" width="68" height="14"/><text class="tiny" x="42" y="51">Enter</text>
+    </g>
+    <text class="small" x="52" y="438">2. Physical dialing</text>
+  </g>
+
+  <!-- Panel 3 Onscreen dialpad -->
+  <g transform="translate(520 105)">
+    <rect class="panel" width="220" height="455" />
+    <rect class="phone" x="28" y="22" width="164" height="405" />
+    <rect class="screen" x="45" y="42" width="130" height="205" />
+    <text class="tiny" x="56" y="62">Dialpad</text>
+    <rect class="focus" x="56" y="75" width="108" height="28" />
+    <text class="small" x="76" y="94">555 0199</text>
+    <g transform="translate(58 113)">
+      <rect class="row" x="0" y="0" width="30" height="24"/><text class="tiny" x="11" y="16">1</text>
+      <rect class="row" x="38" y="0" width="30" height="24"/><text class="tiny" x="49" y="16">2</text>
+      <rect class="row" x="76" y="0" width="30" height="24"/><text class="tiny" x="87" y="16">3</text>
+      <rect class="row" x="0" y="30" width="30" height="24"/><text class="tiny" x="11" y="46">4</text>
+      <rect class="row" x="38" y="30" width="30" height="24"/><text class="tiny" x="49" y="46">5</text>
+      <rect class="row" x="76" y="30" width="30" height="24"/><text class="tiny" x="87" y="46">6</text>
+      <rect class="row" x="0" y="60" width="30" height="24"/><text class="tiny" x="11" y="76">7</text>
+      <rect class="row" x="38" y="60" width="30" height="24"/><text class="tiny" x="49" y="76">8</text>
+      <rect class="row" x="76" y="60" width="30" height="24"/><text class="tiny" x="87" y="76">9</text>
+      <rect class="row" x="0" y="90" width="30" height="24"/><text class="tiny" x="11" y="106">*</text>
+      <rect class="row" x="38" y="90" width="30" height="24"/><text class="tiny" x="49" y="106">0</text>
+      <rect class="row" x="76" y="90" width="30" height="24"/><text class="tiny" x="87" y="106">#</text>
+    </g>
+    <rect class="call" x="86" y="233" width="48" height="26" />
+    <text class="tiny" x="100" y="250">Call</text>
+    <text class="muted" x="50" y="286">Touch fallback:</text>
+    <text class="tiny" x="50" y="304">Full onscreen dialpad</text>
+    <text class="tiny" x="50" y="320">Delete + call visible</text>
+    <text class="tiny" x="50" y="336">No hardware required</text>
+    <rect class="keyboard" x="45" y="350" width="130" height="57" />
+    <text class="tiny" x="59" y="382">physical keyboard remains</text>
+    <text class="small" x="52" y="438">3. Onscreen dialpad</text>
+  </g>
+
+  <!-- Panel 4 Contacts -->
+  <g transform="translate(760 105)">
+    <rect class="panel" width="220" height="455" />
+    <rect class="phone" x="28" y="22" width="164" height="405" />
+    <rect class="screen" x="45" y="42" width="130" height="172" />
+    <text class="tiny" x="56" y="62">Phone · Search</text>
+    <rect class="focus" x="56" y="75" width="108" height="25" />
+    <text class="tiny" x="65" y="92">mom</text>
+    <rect class="row" x="56" y="112" width="108" height="32" />
+    <text class="tiny" x="64" y="125">Mom</text>
+    <text class="tiny" x="64" y="139">mobile · provider</text>
+    <rect class="button" x="56" y="153" width="49" height="24" />
+    <text class="tiny" x="66" y="169">Call</text>
+    <rect class="button" x="113" y="153" width="52" height="24" />
+    <text class="tiny" x="124" y="169">Open</text>
+    <text class="muted" x="50" y="236">Provider-safe:</text>
+    <text class="tiny" x="50" y="254">Contacts owns details</text>
+    <text class="tiny" x="50" y="270">Message only if route</text>
+    <text class="tiny" x="50" y="286">Edit via provider UI</text>
+    <rect class="keyboard" x="45" y="302" width="130" height="105" />
+    <text class="tiny" x="58" y="332">Software keyboard</text>
+    <text class="tiny" x="58" y="350">allowed for search</text>
+    <text class="small" x="52" y="438">4. Contacts handoff</text>
+  </g>
+
+  <!-- Panel 5 In-call -->
+  <g transform="translate(1000 105)">
+    <rect class="panel" width="220" height="455" />
+    <rect class="phone" x="28" y="22" width="164" height="405" />
+    <rect class="screen" x="45" y="42" width="130" height="182" />
+    <text class="tiny" x="56" y="62">Active call</text>
+    <text class="small" x="56" y="88">Mom</text>
+    <text class="tiny" x="56" y="106">02:14 · private</text>
+    <g transform="translate(56 120)">
+      <rect class="row" x="0" y="0" width="48" height="25"/><text class="tiny" x="12" y="17">Mute</text>
+      <rect class="row" x="60" y="0" width="48" height="25"/><text class="tiny" x="69" y="17">Audio</text>
+      <rect class="row" x="0" y="35" width="48" height="25"/><text class="tiny" x="10" y="52">Keypad</text>
+      <rect class="end" x="60" y="35" width="48" height="25"/><text class="tiny" x="73" y="52">End</text>
+    </g>
+    <text class="muted" x="50" y="246">In-call keys:</text>
+    <text class="tiny" x="50" y="264">Digits = DTMF only</text>
+    <text class="tiny" x="50" y="280">when keypad active</text>
+    <text class="tiny" x="50" y="296">End key if present</text>
+    <rect class="keyboard" x="45" y="315" width="130" height="92" />
+    <text class="tiny" x="58" y="348">Focus controls</text>
+    <text class="tiny" x="58" y="366">No accidental DTMF</text>
+    <text class="small" x="52" y="438">5. In-call controls</text>
+  </g>
+
+  <!-- Panel 6 Privacy emergency -->
+  <g transform="translate(1240 105)">
+    <rect class="panel" width="220" height="455" />
+    <rect class="phone" x="28" y="22" width="164" height="405" />
+    <rect class="screen" x="45" y="42" width="130" height="182" />
+    <text class="tiny" x="56" y="62">Locked · Phone</text>
+    <rect class="focus" x="56" y="78" width="108" height="34" />
+    <text class="tiny" x="64" y="91">2 missed calls</text>
+    <text class="tiny" x="64" y="105">details hidden</text>
+    <rect class="danger" x="56" y="132" width="108" height="28" rx="12" />
+    <text class="tiny" x="72" y="150">Emergency call</text>
+    <text class="muted" x="50" y="245">Locked/private:</text>
+    <text class="tiny" x="50" y="263">No contact leakage</text>
+    <text class="tiny" x="50" y="279">Emergency reachable</text>
+    <text class="tiny" x="50" y="295">Touch + physical input</text>
+    <rect class="keyboard" x="45" y="315" width="130" height="92" />
+    <text class="tiny" x="58" y="348">Onscreen path remains</text>
+    <text class="tiny" x="58" y="366">if keys fail</text>
+    <text class="small" x="52" y="438">6. Privacy / emergency</text>
+  </g>
+
+  <!-- Summary table -->
+  <g transform="translate(40 610)">
+    <text class="text" x="0" y="0">Required gates</text>
+    <rect class="panel" x="0" y="22" width="1420" height="420" />
+    <text class="small" x="24" y="60">Input</text>
+    <text class="tiny" x="24" y="86">PHYSICAL_KEYBOARD_DIALING=PASS</text>
+    <text class="tiny" x="24" y="106">ONSCREEN_DIALPAD=PASS</text>
+    <text class="tiny" x="24" y="126">SOFTWARE_KEYBOARD_FALLBACK=PASS</text>
+    <text class="tiny" x="24" y="146">PHYSICAL_AND_ONSCREEN_INPUT_SHARE_STATE=PASS</text>
+
+    <text class="small" x="360" y="60">Calling</text>
+    <text class="tiny" x="360" y="86">RECENTS_PRIVACY=PASS</text>
+    <text class="tiny" x="360" y="106">CONTACTS_HANDOFF=PASS</text>
+    <text class="tiny" x="360" y="126">DTMF_IN_CALL_KEYPAD=PASS</text>
+    <text class="tiny" x="360" y="146">NO_CALL_DEAD_ENDS=PASS</text>
+
+    <text class="small" x="695" y="60">Integration</text>
+    <text class="tiny" x="695" y="86">HUB_CALL_HANDOFF=PASS</text>
+    <text class="tiny" x="695" y="106">NOTIFICATION_SHADE_CALL_HANDOFF=PASS</text>
+    <text class="tiny" x="695" y="126">COMMAND_SEARCH_INTEGRATION=PASS</text>
+    <text class="tiny" x="695" y="146">PHONE_REMAINS_CALL_OWNER=PASS</text>
+
+    <text class="small" x="1040" y="60">Safety / privacy</text>
+    <text class="tiny" x="1040" y="86">EMERGENCY_CALL_PATH_PRESERVED=PASS</text>
+    <text class="tiny" x="1040" y="106">LOCKED_MODE_REDACTION=PASS</text>
+    <text class="tiny" x="1040" y="126">NO_CUSTOM_TELEPHONY_STACK=PASS</text>
+    <text class="tiny" x="1040" y="146">NO_CUSTOM_EMERGENCY_STACK=PASS</text>
+
+    <text class="small" x="24" y="210">Visual rule</text>
+    <text class="tiny" x="24" y="236">TITAN2_HARDWARE_TEMPLATE=PASS</text>
+    <text class="tiny" x="24" y="256">SQUARE_DISPLAY_PLUS_PHYSICAL_KEYBOARD=PASS</text>
+    <text class="tiny" x="24" y="276">NO_SLAB_PHONE_VISUAL_TARGET=PASS</text>
+    <text class="tiny" x="24" y="296">NO_STRETCHED_SCREEN_TARGET=PASS</text>
+
+    <text class="small" x="695" y="210">Implementation posture</text>
+    <text class="tiny" x="695" y="236">BUILD_CODE_CHANGED=NO</text>
+    <text class="tiny" x="695" y="256">DEVICE_CODE_CHANGED=NO</text>
+    <text class="tiny" x="695" y="276">FLASH_ENABLEMENT=NO</text>
+  </g>
+</svg>
