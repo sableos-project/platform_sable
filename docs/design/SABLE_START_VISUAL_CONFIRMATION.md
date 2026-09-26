@@ -1,6 +1,6 @@
 # Sable Start visual confirmation
 
-Status: **source-controlled visual target — PR #14**
+Status: **source-controlled visual target — PR #14 follow-up alignment**
 
 This document binds the Sable Start keyboard-first UX contract to a visual
 artifact that can be reviewed before implementation and used as a target for
@@ -17,11 +17,33 @@ launcher model that also informs Titan 2 Elite and Q27 compact profiles.
 VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
 CHAT_ONLY_IMAGE=NO
 TITAN2_SQUARE_VISUAL_TARGET=YES
+TITAN2_HARDWARE_TEMPLATE=REQUIRED
+SQUARE_DISPLAY_PLUS_PHYSICAL_KEYBOARD=REQUIRED
 THREE_PAGE_START_MODEL=YES
 BASE_QUICK_BAR_CONFIGURABLE=YES
 BUILD_CODE_CHANGED=NO
 DEVICE_CODE_CHANGED=NO
 FLASH_ENABLEMENT=NO
+```
+
+## Titan 2 visual-template requirement
+
+Sable Start visual validation must use Titan 2 hardware proportions unless the
+artifact is explicitly for another device profile.
+
+```text
+TITAN2_TEMPLATE_FOR_VISUAL_VALIDATION=YES
+NO_SLAB_PHONE_VISUAL_TARGET=YES
+NO_STRETCHED_SCREEN_TARGET=YES
+SCREEN_ABOVE_PHYSICAL_KEYBOARD=YES
+```
+
+Reason:
+
+```text
+Titan 2 has a square display and physical keyboard.
+Launcher density, base-bar placement and page navigation must be validated against that geometry.
+Slab-phone mockups hide layout failures that will appear on actual Titan 2 hardware.
 ```
 
 ## Required visual elements
@@ -121,6 +143,9 @@ Future implementation or visual review should produce evidence for:
 ```text
 SABLE_START_VISUAL_ARTIFACT_PRESENT=PASS
 SOURCE_CONTROLLED_VISUAL_TARGET=PASS
+TITAN2_HARDWARE_TEMPLATE=PASS
+NO_SLAB_PHONE_VISUAL_TARGET=PASS
+NO_STRETCHED_SCREEN_TARGET=PASS
 CENTER_WEATHER_WIDGET=PASS
 SABLEOS_BRANDING_NOT_CENTER_CONTENT=PASS
 THREE_PAGE_START_MODEL=PASS
