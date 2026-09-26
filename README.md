@@ -85,6 +85,9 @@ install closure proves or supersedes them.
 - [Critical text-entry gates](docs/CRITICAL_TEXT_ENTRY_GATES.md)
 - [Keyboard-first reference intake](docs/KEYBOARD_FIRST_REFERENCE_INTAKE.md)
 - [Device capability matrix](docs/device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
+- [Keyboard-first Settings UX](docs/design/KEYBOARD_FIRST_SETTINGS_UX.md)
+- [Settings search UX](docs/design/SETTINGS_SEARCH_UX.md)
+- [Hardware diagnostics and dialer-code UX](docs/design/HARDWARE_DIAGNOSTICS_AND_DIALER_CODES.md)
 
 Historical R8/R9 planning documents are retained with explicit superseded
 classification.
@@ -114,6 +117,23 @@ Q27
 
 Public specifications are planning inputs only. They do not replace local
 hardware evidence, firmware binding, or release acceptance.
+
+## Settings UX posture
+
+Sable Settings must preserve the familiar Android Settings structure while
+adding profile-aware keyboard, display, attention, SubScreen, critical text-entry
+and diagnostics surfaces.
+
+```text
+ANDROID_SETTINGS_STRUCTURE=PRIMARY
+SETTINGS_SEARCH_REQUIRED=YES
+KEYBOARD_NAVIGATION_REQUIRED=YES
+HARDWARE_DIAGNOSTICS_BRIDGE=GATED
+RAW_FACTORY_TEST_DIRECT_LAUNCH=NO_BY_DEFAULT
+```
+
+Titan 2 factory-test evidence, including the `*#*#3377#*#*` hardware test path,
+is treated as a diagnostics input, not as a normal user Settings hierarchy.
 
 ## K1/K2 boundary
 
@@ -169,7 +189,10 @@ Keyboard-first product design now covers:
 - keyboard-only accessibility;
 - touch as a secondary path;
 - per-device keyboard and pointer-surface profiles;
+- Settings structure compatible with Android user expectations;
+- Settings search aliases for profile, diagnostics and factory-test concepts;
 - critical text-entry fallback for setup, pairing and lockscreen flows;
+- gated diagnostics bridge for hardware/factory test surfaces;
 - common Sable Keyboard/IME boundary;
 - common Sable Camera/system-image boundary.
 
