@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Contacts / People UX — Titan 2 visual target</title>
+  <desc id="desc">Titan 2 square-screen visual artifact showing contacts list, alphabet shortcuts, person detail, search, actions and locked privacy states.</desc>
+  <defs>
+    <style>
+      .bg { fill: #111318; }
+      .ink { fill: #f4f1e8; font-family: Inter, Arial, sans-serif; }
+      .muted { fill: #b8b2a6; font-family: Inter, Arial, sans-serif; }
+      .dim { fill: #7f7a72; font-family: Inter, Arial, sans-serif; }
+      .line { stroke: #2b2f38; stroke-width: 2; fill: none; }
+      .accent { fill: #d7b46a; }
+      .accentLine { stroke: #d7b46a; stroke-width: 2; fill: none; }
+      .panel { fill: #181b22; stroke: #2d3440; stroke-width: 2; }
+      .screen { fill: #0f1116; stroke: #383f4a; stroke-width: 4; }
+      .key { fill: #20242c; stroke: #343a45; stroke-width: 1; }
+      .keyText { fill: #d9d4c9; font-family: Inter, Arial, sans-serif; font-size: 11px; text-anchor: middle; dominant-baseline: central; }
+      .small { font-size: 18px; }
+      .tiny { font-size: 14px; }
+      .micro { font-size: 12px; }
+      .h1 { font-size: 28px; font-weight: 700; }
+      .h2 { font-size: 20px; font-weight: 700; }
+      .label { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1200" class="bg" />
+  <text x="60" y="54" class="ink h1">Sable Contacts / People UX</text>
+  <text x="60" y="82" class="muted small">Titan 2 visual target · physical-keyboard alphabet shortcuts · provider-safe People model</text>
+
+  <!-- Device frame -->
+  <g transform="translate(60,120)">
+    <rect x="0" y="0" width="410" height="860" rx="42" fill="#090a0d" stroke="#343944" stroke-width="4" />
+    <rect x="36" y="38" width="338" height="338" rx="18" class="screen" />
+    <circle cx="205" cy="407" r="19" fill="#151922" stroke="#3d4654" stroke-width="2" />
+    <text x="205" y="407" class="muted tiny" text-anchor="middle" dominant-baseline="central">●</text>
+
+    <!-- Screen content -->
+    <g transform="translate(52,56)">
+      <text x="0" y="0" class="ink h2">People</text>
+      <rect x="0" y="20" width="304" height="32" rx="16" fill="#171b23" stroke="#303846" />
+      <text x="15" y="41" class="muted tiny">/ Search contacts</text>
+      <text x="278" y="41" class="accent tiny">A-Z</text>
+
+      <text x="0" y="78" class="label accent">Favorites</text>
+      <g transform="translate(0,92)">
+        <circle cx="14" cy="18" r="14" fill="#313849" />
+        <text x="44" y="15" class="ink tiny">Anika Rao</text>
+        <text x="44" y="31" class="muted micro">Phone · Mail · Hub</text>
+        <rect x="254" y="8" width="42" height="20" rx="10" fill="#2a2518" stroke="#d7b46a" />
+        <text x="275" y="22" class="accent micro" text-anchor="middle">A</text>
+      </g>
+      <line x1="0" y1="134" x2="300" y2="134" class="line" />
+      <g transform="translate(0,144)">
+        <circle cx="14" cy="18" r="14" fill="#313849" />
+        <text x="44" y="15" class="ink tiny">Dev Patel</text>
+        <text x="44" y="31" class="muted micro">Work source · Call</text>
+      </g>
+      <line x1="0" y1="186" x2="300" y2="186" class="line" />
+      <g transform="translate(0,196)">
+        <circle cx="14" cy="18" r="14" fill="#313849" />
+        <text x="44" y="15" class="ink tiny">Mina Chen</text>
+        <text x="44" y="31" class="muted micro">Personal · Message</text>
+      </g>
+      <g transform="translate(312,70)">
+        <text y="0" class="dim micro">A</text><text y="18" class="dim micro">B</text><text y="36" class="dim micro">C</text><text y="54" class="dim micro">D</text><text y="72" class="dim micro">E</text><text y="90" class="dim micro">F</text><text y="108" class="dim micro">G</text><text y="126" class="dim micro">H</text><text y="144" class="dim micro">I</text><text y="162" class="dim micro">J</text>
+      </g>
+      <text x="0" y="300" class="muted micro">A-Z jump · repeat cycles · Enter open</text>
+    </g>
+
+    <!-- Keyboard -->
+    <g transform="translate(36,450)">
+      <rect x="0" y="0" width="338" height="300" rx="20" fill="#11141a" stroke="#303640" />
+      <g transform="translate(18,24)">
+        <text x="151" y="-6" class="muted tiny" text-anchor="middle">Physical alphabet shortcuts</text>
+        <g>
+          <rect x="0" y="0" width="32" height="28" rx="6" class="key" /><text x="16" y="14" class="keyText">Q</text>
+          <rect x="38" y="0" width="32" height="28" rx="6" class="key" /><text x="54" y="14" class="keyText">W</text>
+          <rect x="76" y="0" width="32" height="28" rx="6" class="key" /><text x="92" y="14" class="keyText">E</text>
+          <rect x="114" y="0" width="32" height="28" rx="6" class="key" /><text x="130" y="14" class="keyText">R</text>
+          <rect x="152" y="0" width="32" height="28" rx="6" class="key" /><text x="168" y="14" class="keyText">T</text>
+          <rect x="190" y="0" width="32" height="28" rx="6" class="key" /><text x="206" y="14" class="keyText">Y</text>
+          <rect x="228" y="0" width="32" height="28" rx="6" class="key" /><text x="244" y="14" class="keyText">U</text>
+          <rect x="266" y="0" width="32" height="28" rx="6" class="key" /><text x="282" y="14" class="keyText">I</text>
+        </g>
+        <g transform="translate(18,40)">
+          <rect x="0" y="0" width="32" height="28" rx="6" class="key" /><text x="16" y="14" class="keyText">A</text>
+          <rect x="38" y="0" width="32" height="28" rx="6" class="key" /><text x="54" y="14" class="keyText">S</text>
+          <rect x="76" y="0" width="32" height="28" rx="6" class="key" /><text x="92" y="14" class="keyText">D</text>
+          <rect x="114" y="0" width="32" height="28" rx="6" class="key" /><text x="130" y="14" class="keyText">F</text>
+          <rect x="152" y="0" width="32" height="28" rx="6" class="key" /><text x="168" y="14" class="keyText">G</text>
+          <rect x="190" y="0" width="32" height="28" rx="6" class="key" /><text x="206" y="14" class="keyText">H</text>
+          <rect x="228" y="0" width="32" height="28" rx="6" class="key" /><text x="244" y="14" class="keyText">J</text>
+        </g>
+        <g transform="translate(40,80)">
+          <rect x="0" y="0" width="32" height="28" rx="6" class="key" /><text x="16" y="14" class="keyText">Z</text>
+          <rect x="38" y="0" width="32" height="28" rx="6" class="key" /><text x="54" y="14" class="keyText">X</text>
+          <rect x="76" y="0" width="32" height="28" rx="6" class="key" /><text x="92" y="14" class="keyText">C</text>
+          <rect x="114" y="0" width="32" height="28" rx="6" class="key" /><text x="130" y="14" class="keyText">V</text>
+          <rect x="152" y="0" width="32" height="28" rx="6" class="key" /><text x="168" y="14" class="keyText">B</text>
+          <rect x="190" y="0" width="32" height="28" rx="6" class="key" /><text x="206" y="14" class="keyText">N</text>
+          <rect x="228" y="0" width="32" height="28" rx="6" class="key" /><text x="244" y="14" class="keyText">M</text>
+        </g>
+        <text x="151" y="152" class="muted micro" text-anchor="middle">A jumps to Anika · repeat A cycles · / searches</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Panels -->
+  <g transform="translate(520,120)">
+    <rect x="0" y="0" width="480" height="250" rx="24" class="panel" />
+    <text x="28" y="38" class="ink h2">Alphabet shortcut contract</text>
+    <text x="28" y="72" class="muted tiny">List focus: A-Z jumps to matching contact bucket.</text>
+    <text x="28" y="100" class="muted tiny">Repeat same letter cycles visible matches.</text>
+    <text x="28" y="128" class="muted tiny">/ or Search enters full search mode.</text>
+    <text x="28" y="156" class="muted tiny">Letters never call, message, edit or delete alone.</text>
+    <rect x="28" y="184" width="410" height="40" rx="18" fill="#211c12" stroke="#d7b46a" />
+    <text x="48" y="210" class="accent tiny">PHYSICAL_KEYBOARD_A_TO_Z_JUMP=PASS</text>
+  </g>
+
+  <g transform="translate(1040,120)">
+    <rect x="0" y="0" width="480" height="250" rx="24" class="panel" />
+    <text x="28" y="38" class="ink h2">Person detail</text>
+    <circle cx="56" cy="78" r="22" fill="#313849" />
+    <text x="92" y="76" class="ink tiny">Anika Rao</text>
+    <text x="92" y="98" class="muted micro">Personal source · linked work source</text>
+    <g transform="translate(28,128)">
+      <rect x="0" y="0" width="86" height="34" rx="17" fill="#2a2518" stroke="#d7b46a" /><text x="43" y="22" class="accent micro" text-anchor="middle">Call</text>
+      <rect x="98" y="0" width="96" height="34" rx="17" fill="#20242c" stroke="#343a45" /><text x="146" y="22" class="ink micro" text-anchor="middle">Message</text>
+      <rect x="206" y="0" width="86" height="34" rx="17" fill="#20242c" stroke="#343a45" /><text x="249" y="22" class="ink micro" text-anchor="middle">Mail</text>
+      <rect x="304" y="0" width="86" height="34" rx="17" fill="#20242c" stroke="#343a45" /><text x="347" y="22" class="ink micro" text-anchor="middle">Hub</text>
+    </g>
+    <text x="28" y="202" class="muted tiny">Edit routes through provider / Android Contacts path.</text>
+  </g>
+
+  <g transform="translate(520,410)">
+    <rect x="0" y="0" width="480" height="250" rx="24" class="panel" />
+    <text x="28" y="38" class="ink h2">Search + onscreen fallback</text>
+    <rect x="28" y="64" width="420" height="42" rx="21" fill="#0f1116" stroke="#343a45" />
+    <text x="52" y="91" class="muted tiny">Search people, numbers, email…</text>
+    <text x="28" y="136" class="muted tiny">Physical keyboard and onscreen keyboard share query state.</text>
+    <text x="28" y="166" class="muted tiny">Search only exposes provider-allowed fields.</text>
+    <text x="28" y="196" class="muted tiny">Back/Esc exits search and restores list focus.</text>
+  </g>
+
+  <g transform="translate(1040,410)">
+    <rect x="0" y="0" width="480" height="250" rx="24" class="panel" />
+    <text x="28" y="38" class="ink h2">Privacy states</text>
+    <rect x="28" y="64" width="424" height="52" rx="14" fill="#0f1116" stroke="#343a45" />
+    <text x="48" y="88" class="ink tiny">3 people matched</text>
+    <text x="48" y="106" class="muted micro">Details hidden until unlock</text>
+    <rect x="28" y="132" width="424" height="52" rx="14" fill="#0f1116" stroke="#343a45" />
+    <text x="48" y="156" class="ink tiny">Private mode</text>
+    <text x="48" y="174" class="muted micro">Phone/email/message context redacted</text>
+    <text x="28" y="218" class="accent tiny">LOCKED_MODE_REDACTION=PASS</text>
+  </g>
+
+  <g transform="translate(520,700)">
+    <rect x="0" y="0" width="1000" height="310" rx="24" class="panel" />
+    <text x="28" y="40" class="ink h2">Provider-safe handoff model</text>
+    <g transform="translate(28,74)">
+      <rect x="0" y="0" width="150" height="56" rx="16" fill="#20242c" stroke="#343a45" /><text x="75" y="34" class="ink tiny" text-anchor="middle">Phone</text>
+      <rect x="170" y="0" width="150" height="56" rx="16" fill="#20242c" stroke="#343a45" /><text x="245" y="34" class="ink tiny" text-anchor="middle">Hub</text>
+      <rect x="340" y="0" width="150" height="56" rx="16" fill="#20242c" stroke="#343a45" /><text x="415" y="34" class="ink tiny" text-anchor="middle">Messages</text>
+      <rect x="510" y="0" width="150" height="56" rx="16" fill="#20242c" stroke="#343a45" /><text x="585" y="34" class="ink tiny" text-anchor="middle">Mail</text>
+      <rect x="680" y="0" width="220" height="56" rx="16" fill="#20242c" stroke="#343a45" /><text x="790" y="34" class="ink tiny" text-anchor="middle">Command/Search</text>
+    </g>
+    <text x="28" y="170" class="muted tiny">Contacts / People does not own provider accounts, sync engines, telephony, messaging or mail stacks.</text>
+    <text x="28" y="204" class="muted tiny">It displays source-aware people rows and routes safe actions to the owning source or Android platform path.</text>
+    <text x="28" y="248" class="accent tiny">PROVIDER_OWNERSHIP_RETAINED=PASS · CUSTOM_CONTACTS_PROVIDER=NO · SILENT_CONTACT_MERGE=NO</text>
+  </g>
+
+  <text x="60" y="1140" class="dim tiny">Validation: CONTACTS_PEOPLE_UX · ALPHABET_SHORTCUTS · ONSCREEN_KEYBOARD_SEARCH · PRIVACY_REDACTION · TITAN2_HARDWARE_TEMPLATE · BUILD_CODE_CHANGED=NO</text>
+</svg>
