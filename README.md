@@ -125,6 +125,32 @@ Panther is the qualified target-files/A-B adapter. Titan 2, Titan 2 Elite and
 Q27 remain fail-closed for release artifact registration/flash until independently
 qualified.
 
+## Cross-repository alignment
+
+Current adjacent repositories should use this repository as the common semantic
+and capability-contract authority:
+
+```text
+platform_manifest
+  exact composition and artifact identity
+
+build
+  public build/sign/verify/package/flash contracts
+
+device_sable_titan2
+  Titan 2 public device-adapter boundary
+
+aimindseye/unihertz-titan2
+  Titan-family research handoff and private-evidence boundary
+
+aimindseye/sableos
+  private integration and pre-public build-target work
+```
+
+Cross-repo references should not copy profile data as independent truth. They
+should link or cite the current platform_sable profile docs and keep release or
+flash gates fail-closed until evidence exists.
+
 ## Active design work
 
 Keyboard-first product design now covers:
