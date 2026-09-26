@@ -5,7 +5,7 @@ Status: **source-controlled visual target — keyboard-first Settings**
 This document binds the keyboard-first Settings UX contract to a durable visual
 artifact for Titan 2 square profile validation.
 
-![Sable Settings Titan 2 visual target](artifacts/sable-settings-titan2.svg)
+![Sable Settings Titan 2 approved visual target](artifacts/sable-settings-titan2-approved.svg)
 
 ## Scope
 
@@ -16,11 +16,33 @@ keyboard-first Settings model that should also inform Titan 2 Elite and Q27.
 SETTINGS_VISUAL_ARTIFACT_SOURCE_CONTROLLED=YES
 CHAT_ONLY_IMAGE=NO
 TITAN2_SETTINGS_VISUAL_TARGET=YES
+TITAN2_HARDWARE_TEMPLATE=REQUIRED
+SQUARE_DISPLAY_PLUS_PHYSICAL_KEYBOARD=REQUIRED
 ANDROID_SETTINGS_STRUCTURE=PRIMARY
 START_BASE_QUICK_BAR_IN_SETTINGS=NO
 BUILD_CODE_CHANGED=NO
 DEVICE_CODE_CHANGED=NO
 FLASH_ENABLEMENT=NO
+```
+
+## Titan 2 visual-template requirement
+
+All keyboard-device visual artifacts should use Titan 2 proportions unless the
+artifact is explicitly for another device profile.
+
+```text
+TITAN2_TEMPLATE_FOR_VISUAL_VALIDATION=YES
+NO_SLAB_PHONE_VISUAL_TARGET=YES
+NO_STRETCHED_SCREEN_TARGET=YES
+SCREEN_ABOVE_PHYSICAL_KEYBOARD=YES
+```
+
+Reason:
+
+```text
+Titan 2 has a square display and physical keyboard.
+Build/UI validation needs a target that matches the actual device geometry.
+Slab-phone mockups hide density, focus, navigation and keyboard-placement issues.
 ```
 
 ## Base-bar decision
@@ -120,6 +142,9 @@ Future implementation or visual review should produce evidence for:
 SETTINGS_VISUAL_ARTIFACT_PRESENT=PASS
 SETTINGS_TOP_LEVEL_ANDROID_STRUCTURE=PASS
 SETTINGS_SEARCH_VISIBLE=PASS
+TITAN2_HARDWARE_TEMPLATE=PASS
+NO_SLAB_PHONE_VISUAL_TARGET=PASS
+NO_STRETCHED_SCREEN_TARGET=PASS
 START_BASE_QUICK_BAR_IN_SETTINGS=NO
 VISIBLE_FOCUS=PASS
 KEYBOARD_INPUT_ROW_VISIBLE=PASS
