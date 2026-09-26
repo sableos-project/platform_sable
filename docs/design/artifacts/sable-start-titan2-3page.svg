@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Start Titan 2 three-page visual contract</title>
+  <desc id="desc">Visual design target for Sable Start on Titan 2: left Glance widgets page, center Start page, right Hub page, with a configurable base quick bar.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111c"/>
+      <stop offset="1" stop-color="#10283b"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1b29"/>
+      <stop offset="1" stop-color="#050a10"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14324a"/>
+      <stop offset="1" stop-color="#0a1622"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px system-ui, -apple-system, Segoe UI, sans-serif; fill: #eaf4ff; }
+      .subtitle { font: 400 20px system-ui, -apple-system, Segoe UI, sans-serif; fill: #b8c7d8; }
+      .section { font: 700 22px system-ui, -apple-system, Segoe UI, sans-serif; fill: #f2f7ff; }
+      .label { font: 600 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #f3f7ff; }
+      .small { font: 400 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #aebbd0; }
+      .tiny { font: 400 11px system-ui, -apple-system, Segoe UI, sans-serif; fill: #99a8bc; }
+      .accent { fill: #1788ff; }
+      .green { fill: #20c36b; }
+      .orange { fill: #f4a62a; }
+      .red { fill: #ff4d5e; }
+      .yellow { fill: #ffcc33; }
+      .panel { fill: rgba(255,255,255,0.04); stroke: #25445f; stroke-width: 1.5; }
+      .phone { fill: #05070a; stroke: #2d3d4d; stroke-width: 4; }
+      .screen { fill: url(#screen); stroke: #21364c; stroke-width: 2; }
+      .row { fill: rgba(255,255,255,0.055); stroke: rgba(255,255,255,0.09); stroke-width: 1; }
+      .focus { fill: #0f5f9e; stroke: #58b6ff; stroke-width: 2; }
+      .quick { fill: #0b1723; stroke: #2a4054; stroke-width: 1.5; }
+      .quickOn { fill: #096fc3; stroke: #65c1ff; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <text x="38" y="56" class="title">Sable Start — Titan 2 Three-Page Launcher Contract</text>
+  <text x="40" y="89" class="subtitle">Left: Glance widgets · Center: Start · Right: Hub · configurable base quick bar · keyboard-first, touch/pointer secondary</text>
+
+  <g transform="translate(36,120)">
+    <rect x="0" y="0" width="425" height="625" rx="16" class="panel"/>
+    <text x="22" y="38" class="section">1. Left Page — Glance Widgets</text>
+    <g transform="translate(93,62)">
+      <rect x="0" y="0" width="240" height="510" rx="22" class="phone"/>
+      <rect x="14" y="20" width="212" height="470" rx="12" class="screen"/>
+      <text x="28" y="48" class="tiny">10:46</text>
+      <text x="150" y="48" class="tiny">Wi‑Fi  90%</text>
+      <text x="28" y="80" class="label">Glance</text>
+      <rect x="28" y="100" width="184" height="86" rx="10" class="focus"/>
+      <circle cx="55" cy="132" r="18" class="yellow"/>
+      <text x="82" y="130" class="label">72° Partly cloudy</text>
+      <text x="82" y="153" class="small">Weather widget · Enter opens Weather</text>
+      <rect x="28" y="198" width="184" height="54" rx="9" class="row"/>
+      <rect x="40" y="212" width="28" height="28" rx="7" class="accent"/>
+      <text x="82" y="222" class="label">Calendar</text>
+      <text x="82" y="242" class="small">Next: Team sync 2:00 PM</text>
+      <rect x="28" y="262" width="184" height="54" rx="9" class="row"/>
+      <rect x="40" y="276" width="28" height="28" rx="7" class="green"/>
+      <text x="82" y="286" class="label">Battery</text>
+      <text x="82" y="306" class="small">90% · charging</text>
+      <rect x="28" y="326" width="184" height="54" rx="9" class="row"/>
+      <rect x="40" y="340" width="28" height="28" rx="7" class="orange"/>
+      <text x="82" y="350" class="label">Media</text>
+      <text x="82" y="370" class="small">Nothing playing</text>
+      <rect x="28" y="400" width="184" height="64" rx="10" class="quick"/>
+      <text x="48" y="425" class="small">Fn+Right → Start</text>
+      <text x="48" y="450" class="small">Swipe right → Start</text>
+    </g>
+    <text x="22" y="600" class="small">Curated Sable widgets only by default. Weather is the first Home/Glance widget candidate.</text>
+  </g>
+
+  <g transform="translate(508,120)">
+    <rect x="0" y="0" width="425" height="625" rx="16" class="panel"/>
+    <text x="22" y="38" class="section">2. Center Page — Start</text>
+    <g transform="translate(93,62)">
+      <rect x="0" y="0" width="240" height="510" rx="22" class="phone"/>
+      <rect x="14" y="20" width="212" height="470" rx="12" class="screen"/>
+      <text x="28" y="48" class="tiny">10:46</text>
+      <text x="150" y="48" class="tiny">Wi‑Fi  90%</text>
+      <rect x="28" y="70" width="184" height="54" rx="10" class="row"/>
+      <circle cx="55" cy="96" r="16" class="yellow"/>
+      <text x="82" y="91" class="label">72° Cloudy</text>
+      <text x="82" y="111" class="small">Seattle · H 75 / L 61</text>
+      <rect x="28" y="137" width="184" height="36" rx="9" class="row"/>
+      <text x="42" y="161" class="small">🔎 Search or command</text>
+      <rect x="28" y="189" width="184" height="34" rx="8" class="focus"/>
+      <rect x="40" y="197" width="22" height="22" rx="5" class="accent"/>
+      <text x="72" y="211" class="label">Messages</text>
+      <text x="197" y="211" class="small">⋮</text>
+      <rect x="28" y="229" width="184" height="34" rx="8" class="row"/>
+      <rect x="40" y="237" width="22" height="22" rx="5" class="red"/>
+      <text x="72" y="251" class="label">Mail</text>
+      <text x="197" y="251" class="small">⋮</text>
+      <rect x="28" y="269" width="184" height="34" rx="8" class="row"/>
+      <rect x="40" y="277" width="22" height="22" rx="5" class="green"/>
+      <text x="72" y="291" class="label">Phone</text>
+      <text x="197" y="291" class="small">⋮</text>
+      <rect x="28" y="309" width="184" height="34" rx="8" class="row"/>
+      <rect x="40" y="317" width="22" height="22" rx="5" class="orange"/>
+      <text x="72" y="331" class="label">Browser</text>
+      <text x="197" y="331" class="small">⋮</text>
+      <rect x="28" y="355" width="184" height="54" rx="10" class="quick"/>
+      <g transform="translate(36,364)">
+        <rect width="34" height="36" rx="8" class="green"/><text x="8" y="23" class="tiny" fill="#fff">☎</text><text x="2" y="49" class="tiny">Phone</text>
+        <rect x="46" width="34" height="36" rx="8" class="accent"/><text x="55" y="23" class="tiny" fill="#fff">◇</text><text x="51" y="49" class="tiny">Hub</text>
+        <rect x="92" width="34" height="36" rx="8" class="quickOn"/><text x="102" y="23" class="tiny" fill="#fff">⌕</text><text x="88" y="49" class="tiny">Command</text>
+        <rect x="138" width="34" height="36" rx="8" class="quick"/><text x="148" y="23" class="tiny" fill="#fff">▦</text><text x="137" y="49" class="tiny">Apps</text>
+      </g>
+      <text x="31" y="464" class="tiny">Configurable: Hub may be replaced by Browser, Camera, etc.</text>
+    </g>
+    <text x="22" y="600" class="small">Center Start keeps launch/search/app access primary. Branding is replaced by useful Weather content.</text>
+  </g>
+
+  <g transform="translate(980,120)">
+    <rect x="0" y="0" width="425" height="625" rx="16" class="panel"/>
+    <text x="22" y="38" class="section">3. Right Page — Hub</text>
+    <g transform="translate(93,62)">
+      <rect x="0" y="0" width="240" height="510" rx="22" class="phone"/>
+      <rect x="14" y="20" width="212" height="470" rx="12" class="screen"/>
+      <text x="28" y="48" class="tiny">10:46</text>
+      <text x="150" y="48" class="tiny">Wi‑Fi  90%</text>
+      <text x="28" y="80" class="label">Sable Hub</text>
+      <g transform="translate(28,98)">
+        <rect width="42" height="26" rx="8" class="quickOn"/><text x="13" y="18" class="tiny" fill="#fff">All</text>
+        <rect x="48" width="70" height="26" rx="8" class="quick"/><text x="60" y="18" class="tiny">Messages</text>
+        <rect x="124" width="54" height="26" rx="8" class="quick"/><text x="136" y="18" class="tiny">Calls</text>
+      </g>
+      <rect x="28" y="137" width="184" height="54" rx="9" class="focus"/>
+      <rect x="40" y="151" width="28" height="28" rx="7" class="accent"/>
+      <text x="82" y="161" class="label">Messages</text>
+      <text x="82" y="181" class="small">2 unread</text>
+      <rect x="28" y="201" width="184" height="54" rx="9" class="row"/>
+      <rect x="40" y="215" width="28" height="28" rx="7" class="red"/>
+      <text x="82" y="225" class="label">Mail</text>
+      <text x="82" y="245" class="small">1 unread</text>
+      <rect x="28" y="265" width="184" height="54" rx="9" class="row"/>
+      <rect x="40" y="279" width="28" height="28" rx="7" class="green"/>
+      <text x="82" y="289" class="label">Missed call</text>
+      <text x="82" y="309" class="small">+1 (555) 123-4567</text>
+      <rect x="28" y="329" width="184" height="54" rx="9" class="row"/>
+      <rect x="40" y="343" width="28" height="28" rx="7" class="yellow"/>
+      <text x="82" y="353" class="label">Notifications</text>
+      <text x="82" y="373" class="small">3 new</text>
+      <rect x="28" y="400" width="184" height="64" rx="10" class="quick"/>
+      <text x="48" y="425" class="small">Fn+Left → Start</text>
+      <text x="48" y="450" class="small">Swipe left → Start</text>
+    </g>
+    <text x="22" y="600" class="small">Hub remains one page away even when the base quick-bar slot is user-replaced.</text>
+  </g>
+
+  <g transform="translate(36,780)">
+    <rect width="1368" height="82" rx="14" class="panel"/>
+    <text x="24" y="32" class="label">Build validation target</text>
+    <text x="24" y="58" class="small">Required: three pages, Weather widget, configurable base quick bar, Hub reachable by right page, keyboard page navigation, touch swipe navigation, visible focus, no build/device/flash enablement in design PR.</text>
+    <text x="960" y="32" class="label">Keyboard</text>
+    <text x="960" y="58" class="small">Fn+Left / Fn+Right page navigation · Fn+1..5 quick slots · Enter opens · Space peeks · Back returns</text>
+  </g>
+</svg>
