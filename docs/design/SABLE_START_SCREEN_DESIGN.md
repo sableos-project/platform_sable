@@ -3,7 +3,20 @@
 Status: **screen design contract — launcher/home**
 
 This document records concrete Sable Start screen layouts for keyboard-first
-profiles. It complements `SABLE_START_KEYBOARD_FIRST_UX.md`.
+profiles. It complements `SABLE_START_KEYBOARD_FIRST_UX.md` and is visually bound
+by `SABLE_START_VISUAL_CONFIRMATION.md`.
+
+## Source-controlled visual artifact
+
+The visual target for the Titan 2 square three-page Start model is recorded in:
+
+```text
+docs/design/SABLE_START_VISUAL_CONFIRMATION.md
+docs/design/artifacts/sable-start-titan2-3page.svg
+```
+
+Future implementation validation should compare delivered UI against that visual
+artifact and this screen design contract.
 
 ## Shared components
 
@@ -82,24 +95,20 @@ communication and command access at the base.
 
 ```text
 ┌────────────────────────────────────────┐
-│ 10:46        Sable Start          99%  │
+│ 10:46        Weather              99%  │
+├────────────────────────────────────────┤
+│  72°  Partly cloudy · H 75 / L 61      │
 ├────────────────────────────────────────┤
 │  🔎 Search or command                  │
 │     type app, action, person, setting  │
 ├────────────────────────────────────────┤
-│  Today                                 │
-│  Hub: 2 priority · Weather · Battery   │
-├────────────────────────────────────────┤
-│  Pinned                                │
-│  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐  │
-│  │Msg   │ │Mail  │ │Browr │ │Camera│  │
-│  └──────┘ └──────┘ └──────┘ └──────┘  │
-│  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐  │
-│  │Media │ │Readr │ │Calc  │ │Setngs│  │
-│  └──────┘ └──────┘ └──────┘ └──────┘  │
-├────────────────────────────────────────┤
-│  All apps preview                      │
-│  ▸ Calendar     Camera     Contacts    │
+│  Home apps                             │
+│  ▸ Messages                            │
+│    Mail                                │
+│    Calendar                            │
+│    Contacts                            │
+│    Phone                               │
+│    Camera                              │
 ├────────────────────────────────────────┤
 │  ☎ Phone   ◇ Hub   🔎 Command   ▦ Apps │
 └────────────────────────────────────────┘
@@ -111,9 +120,10 @@ Design notes:
 Phone and Hub are always one focus step or shortcut away.
 Command/search remains visually central and has a base shortcut.
 All Apps is always visible at the base.
-Pinned tiles are still useful but no longer carry all primary access duties.
+Pinned/home apps are user-orderable.
 The focused row/tile/icon uses a strong Sable focus ring.
 Text labels are preferred over icon-only affordances on Titan 2.
+The top content is useful glance information, not SableOS logo/branding.
 ```
 
 ## Titan 2 square alternate: list-first minimal with base quick bar
@@ -122,7 +132,7 @@ For users who prefer faster keyboard use and less visual density:
 
 ```text
 ┌────────────────────────────────────────┐
-│ Sable Start                       99%  │
+│ Weather                           99%  │
 ├────────────────────────────────────────┤
 │ > Search or command                    │
 ├────────────────────────────────────────┤
@@ -149,16 +159,16 @@ still required, but it may use compact labels or icons depending on density.
 
 ```text
 ┌──────────────────────────────┐
-│ Sable Start              99% │
+│ Weather                  99% │
 ├──────────────────────────────┤
 │ 🔎 Search or command         │
 ├──────────────────────────────┤
-│ Hub                          │
-│ 2 priority · 5 messages      │
-├──────────────────────────────┤
-│ Favorites                    │
-│ Messages  Mail   Browser     │
-│ Camera    Media  Settings    │
+│ Home apps                    │
+│ Messages                     │
+│ Mail                         │
+│ Browser                      │
+│ Camera                       │
+│ Settings                     │
 ├──────────────────────────────┤
 │ All Apps                     │
 │ A                            │
@@ -212,7 +222,8 @@ Base quick bar remains reachable where space allows.
 ## Hub quick access behavior
 
 The Hub base icon is not just a shortcut to an app icon. It is a first-class
-communication entry point.
+communication entry point when present in the base quick bar, but it is still
+optional because the right Start page is Hub.
 
 ```text
 Enter on Hub quick icon
@@ -296,6 +307,7 @@ Before implementation, the design should be reviewed on at least a Titan 2 squar
 mockup and a compact keyboard-device mockup.
 
 ```text
+SABLE_START_VISUAL_ARTIFACT_PRESENT=PASS
 TITAN2_SQUARE_VISUAL_REVIEW=REQUIRED_BEFORE_IMPLEMENTATION
 COMPACT_KEYBOARD_VISUAL_REVIEW=REQUIRED_BEFORE_IMPLEMENTATION
 BASE_QUICK_BAR_VISUAL_REVIEW=REQUIRED_BEFORE_IMPLEMENTATION
