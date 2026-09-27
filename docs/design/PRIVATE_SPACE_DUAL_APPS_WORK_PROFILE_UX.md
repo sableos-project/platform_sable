@@ -1,0 +1,241 @@
+# Sable Private Space / Dual Apps / Work Profile / App Lock / Secure Vault UX
+
+## Purpose
+
+Define the SableOS identity and isolation surface: private apps and files, dual app instances, work profile visibility, app lock, and secure vault behavior.
+
+This is a security and privacy feature area, not a cosmetic clone of OEM features. SableOS should preserve Android profile boundaries, clearly badge identities, avoid APK-copy hacks, and give users predictable controls over app data, notifications, files, search, recents, launcher and sharing.
+
+```text
+PRIVATE_SPACE_DUAL_WORK_APP_LOCK_UX=YES
+PRIVATE_SPACE_INCLUDED=YES
+SECURE_VAULT_INCLUDED=YES
+DUAL_APPS_INCLUDED=YES
+WORK_PROFILE_INCLUDED=YES
+APP_LOCK_INCLUDED=YES
+ANDROID_PROFILE_MODEL=KEEP
+APK_COPY_HACK=NO
+PROFILE_BADGES_REQUIRED=YES
+SEARCH_RECENTS_LAUNCHER_BADGES_REQUIRED=YES
+```
+
+## Concepts
+
+```text
+PRIVATE_SPACE=hide_and_protect_sensitive_apps_files_media
+SECURE_VAULT=encrypted_local_content_area
+DUAL_APPS=second_instance_of_selected_apps_for_another_account
+WORK_PROFILE=managed_work_personal_separation
+APP_LOCK=extra_unlock_gate_for_selected_apps
+```
+
+## Product posture
+
+```text
+SABLE_PRIVATE_SPACE=YES
+SABLE_SECURE_VAULT=YES
+SABLE_DUAL_APPS=YES
+SABLE_WORK_PROFILE_UI=YES
+SABLE_APP_LOCK=YES
+LOCAL_FIRST_DEFAULT=YES
+REMOTE_SYNC_DEFAULT_OFF=YES
+CLEAR_BOUNDARIES_REQUIRED=YES
+NO_SILENT_PROFILE_CREATION=YES
+NO_SILENT_DATA_MERGE=YES
+```
+
+## Private Space
+
+Sable Private Space should combine the Titan-style private file vault mental model with the Android app-private-space/profile concept when the platform supports it.
+
+```text
+PRIVATE_SPACE_FILES=YES
+PRIVATE_SPACE_MEDIA=YES
+PRIVATE_SPACE_RECORDINGS=YES
+PRIVATE_SPACE_DOCUMENTS=YES
+PRIVATE_SPACE_APPS=YES_IF_ANDROID_PROFILE_SUPPORT_AVAILABLE
+PRIVATE_SPACE_AUTH=password_or_biometric
+PRIVATE_SPACE_AUTO_LOCK=YES
+PRIVATE_SPACE_LOCK_NOW=YES
+PRIVATE_SPACE_HIDE_FROM_LAUNCHER=USER_CONTROLLED
+PRIVATE_SPACE_HIDE_FROM_SEARCH=USER_CONTROLLED
+```
+
+Required entry points:
+
+```text
+SETTINGS_ENTRY=Settings > Security & Privacy > Private Space
+FILES_ENTRY=Files > Private
+GALLERY_ENTRY=Gallery > Private
+RECORDER_ENTRY=Recorder > Private recordings
+LAUNCHER_ENTRY=Private apps section optional
+```
+
+## Secure Vault
+
+Secure Vault is the file/content layer of Private Space. It must be clear whether a file is moved into the vault, copied into the vault, or exported out of the vault.
+
+```text
+SECURE_VAULT_ENCRYPTED_STORAGE=YES
+SECURE_VAULT_FILE_IMPORT=YES
+SECURE_VAULT_FOLDER_IMPORT=YES
+SECURE_VAULT_EXPORT_EXPLICIT=YES
+SECURE_VAULT_MOVE_DELETE_CONFIRM=YES
+SECURE_VAULT_NO_SILENT_UPLOAD=YES
+SECURE_VAULT_LOCAL_BACKUP_OPTIONAL=YES
+SECURE_VAULT_FORGOT_PASSWORD_RECOVERY=LIMITED_AND_EXPLICIT
+```
+
+Vault content types:
+
+```text
+PRIVATE_PHOTOS=YES
+PRIVATE_VIDEOS=YES
+PRIVATE_DOCUMENTS=YES
+PRIVATE_RECORDINGS=YES
+PRIVATE_DOWNLOADS=YES
+PRIVATE_NOTES=YES
+```
+
+## Dual Apps
+
+Dual Apps creates a second isolated app instance for account separation. Sable should use Android profile/user mechanisms where available, not clone APK bytes manually.
+
+```text
+SABLE_DUAL_APPS=YES
+IMPLEMENTATION=Android_clone_profile_first
+APK_COPY_HACK=NO
+SEPARATE_APP_DATA=YES
+SEPARATE_ACCOUNTS=YES
+SEPARATE_NOTIFICATIONS=YES
+SEPARATE_STORAGE_BOUNDARY=YES
+PRIMARY_APP_CANNOT_READ_DUAL_APP_DATA=YES
+DUAL_APP_CANNOT_READ_PRIMARY_APP_DATA=YES
+```
+
+Eligibility rules:
+
+```text
+DUAL_APPS_PRIMARY_TARGETS=messaging,email,social,business
+DUAL_APPS_SECONDARY_TARGETS=browsers,notes,selected_productivity
+DUAL_APPS_DEFAULT_DISABLED_FOR=banking,system_apps,dialer,sms_role_holder,device_admin_apps
+DUAL_APPS_POLICY_OVERRIDES=YES
+```
+
+Launcher/search rules:
+
+```text
+DUAL_APP_BADGE_REQUIRED=YES
+ALL_APPS_GROUP_PRIMARY_AND_DUAL=YES
+COMMAND_SEARCH_SHOWS_BOTH_INSTANCES=YES
+RECENTS_BADGE_REQUIRED=YES
+NOTIFICATION_BADGE_REQUIRED=YES
+SHARE_SHEET_BADGE_REQUIRED=YES
+```
+
+Titan 2 keyboard behavior:
+
+```text
+TYPE_APP_NAME_SHOWS_BOTH_INSTANCES=YES
+PRIMARY_INSTANCE_ACTION=Enter
+DUAL_INSTANCE_ACTION=Shift_Enter_OR_Long_Enter
+TEXT_INPUT_ALWAYS_WINS=YES
+```
+
+## Work Profile
+
+Work Profile support should expose the standard managed-profile mental model with Sable visual clarity.
+
+```text
+WORK_PROFILE_INCLUDED=YES
+WORK_PROFILE_BADGE_REQUIRED=YES
+WORK_PROFILE_PAUSE_CONTROL=YES
+WORK_PROFILE_SEPARATE_NOTIFICATIONS=YES
+WORK_PROFILE_SEPARATE_FILES=YES
+WORK_PROFILE_POLICY_DISCLOSURE=YES
+WORK_PROFILE_ADMIN_DISCLOSURE=YES
+WORK_PROFILE_DELETE_CONFIRM=YES
+```
+
+User-facing locations:
+
+```text
+SETTINGS_WORK_PROFILE=Settings > Security & Privacy > Work Profile
+QS_WORK_PROFILE_PAUSE_TILE=YES
+LAUNCHER_WORK_TAB_OR_FILTER=YES
+SEARCH_WORK_FILTER=YES
+SHARE_SHEET_WORK_BADGE=YES
+```
+
+## App Lock
+
+App Lock is not a substitute for Android profiles. It is an additional unlock gate over selected apps.
+
+```text
+APP_LOCK_INCLUDED=YES
+APP_LOCK_PASSWORD_OR_BIOMETRIC=YES
+APP_LOCK_AFTER_SCREEN_OFF=YES
+APP_LOCK_AFTER_TIMEOUT=YES
+APP_LOCK_LOCK_ALL_OPTION=YES
+APP_LOCK_CONVENIENT_UNLOCK_OPTION=YES
+APP_LOCK_NOT_SECURITY_BOUNDARY_ALONE=YES
+```
+
+App Lock should clearly state that it protects casual access but does not merge with Secure Vault or Work Profile storage boundaries unless those features are separately enabled.
+
+## Redaction and privacy surfaces
+
+```text
+LOCKSCREEN_REDACTION=YES
+RECENTS_REDACTION=YES
+SEARCH_REDACTION=YES
+SHARE_SHEET_REDACTION=YES
+SCREENSHOT_PREVIEW_REDACTION=YES
+NOTIFICATION_CONTENT_REDACTION=YES
+PRIVATE_SPACE_HIDDEN_FROM_BACKUP_BY_DEFAULT=YES
+```
+
+## File and share behavior
+
+```text
+FILES_PICKER_PROFILE_BOUNDARY=YES
+SHARE_ACROSS_PROFILES_EXPLICIT=YES
+COPY_TO_PRIVATE_SPACE_EXPLICIT=YES
+MOVE_TO_PRIVATE_SPACE_EXPLICIT=YES
+EXPORT_FROM_PRIVATE_SPACE_EXPLICIT=YES
+CONTACTS_SHARING_EXPLICIT=YES
+CLIPBOARD_POLICY_VISIBLE=YES
+```
+
+## Admin and policy behavior
+
+```text
+WORK_POLICY_VISIBLE=YES
+DEVICE_ADMIN_APPS_VISIBLE=YES
+PROFILE_OWNER_VISIBLE=YES
+SABLE_POLICY_NOT_SILENT=YES
+USER_CONTROL_BOUNDARIES_CLEAR=YES
+```
+
+## Acceptance checklist
+
+```text
+PRIVATE_SPACE_DUAL_WORK_APP_LOCK_UX=PASS
+PRIVATE_SPACE_INCLUDED=PASS
+SECURE_VAULT_INCLUDED=PASS
+DUAL_APPS_INCLUDED=PASS
+WORK_PROFILE_INCLUDED=PASS
+APP_LOCK_INCLUDED=PASS
+ANDROID_PROFILE_MODEL=PASS
+APK_COPY_HACK=NO
+PROFILE_BADGES_REQUIRED=PASS
+SEARCH_RECENTS_LAUNCHER_BADGES_REQUIRED=PASS
+PRIVATE_SPACE_REDACTION=PASS
+WORK_PROFILE_PAUSE_CONTROL=PASS
+LOCAL_FIRST_DEFAULT=PASS
+SILENT_UPLOAD_OR_EXPORT=NO
+SILENT_PROFILE_CREATION=NO
+BUILD_CODE_CHANGED=NO
+DEVICE_CODE_CHANGED=NO
+FLASH_ENABLEMENT=NO
+```

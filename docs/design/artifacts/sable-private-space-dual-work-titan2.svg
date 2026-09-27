@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1440" viewBox="0 0 1440 1440" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Private Space Dual Apps Work Profile Titan 2 UX</title>
+  <desc id="desc">Four state visual artifact for Private Space, Dual Apps, Work Profile and App Lock.</desc>
+  <rect width="1440" height="1440" fill="#101010"/>
+  <rect x="48" y="48" width="1344" height="1344" rx="72" fill="#171717" stroke="#4a4a4a" stroke-width="4"/>
+  <text x="96" y="122" fill="#f2f2f2" font-size="38" font-family="sans-serif">Sable Security · Identity &amp; Isolation</text>
+  <text x="1096" y="122" fill="#bdbdbd" font-size="28" font-family="sans-serif">Titan 2</text>
+  <line x1="96" y1="158" x2="1344" y2="158" stroke="#333" stroke-width="3"/>
+
+  <g transform="translate(96,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">1 · Private Space</text>
+    <text x="32" y="98" fill="#bdbdbd" font-size="22" font-family="sans-serif">Secure local vault · apps/files/media</text>
+    <rect x="72" y="142" width="456" height="210" rx="32" fill="#151515" stroke="#777"/>
+    <text x="120" y="205" fill="#fff" font-size="34" font-family="sans-serif">Locked Vault</text>
+    <text x="120" y="252" fill="#aaa" font-size="24" font-family="sans-serif">Photos · Documents · Recordings</text>
+    <text x="120" y="298" fill="#aaa" font-size="24" font-family="sans-serif">Import/export explicit</text>
+    <text x="32" y="398" fill="#d0d0d0" font-size="22" font-family="sans-serif">[Unlock] [Import] [Export] [Lock now]</text>
+  </g>
+
+  <g transform="translate(744,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">2 · Dual Apps</text>
+    <text x="32" y="98" fill="#bdbdbd" font-size="22" font-family="sans-serif">Second isolated app instance</text>
+    <rect x="80" y="145" width="190" height="190" rx="42" fill="#151515" stroke="#777"/>
+    <rect x="330" y="145" width="190" height="190" rx="42" fill="#151515" stroke="#777"/>
+    <text x="132" y="240" fill="#fff" font-size="28" font-family="sans-serif">Chat</text>
+    <text x="370" y="240" fill="#fff" font-size="28" font-family="sans-serif">Chat</text>
+    <rect x="430" y="286" width="72" height="32" rx="14" fill="#333" stroke="#aaa"/>
+    <text x="445" y="309" fill="#fff" font-size="17" font-family="sans-serif">Dual</text>
+    <text x="70" y="394" fill="#d0d0d0" font-size="22" font-family="sans-serif">Enter primary · Shift+Enter dual · data separated</text>
+  </g>
+
+  <g transform="translate(96,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">3 · Work Profile</text>
+    <text x="32" y="98" fill="#bdbdbd" font-size="22" font-family="sans-serif">Managed separation · visible policy</text>
+    <rect x="70" y="142" width="460" height="80" rx="24" fill="#151515" stroke="#777"/>
+    <text x="105" y="193" fill="#fff" font-size="28" font-family="sans-serif">Work profile: active</text>
+    <rect x="70" y="250" width="220" height="72" rx="22" fill="#2b2b2b" stroke="#aaa"/>
+    <rect x="310" y="250" width="220" height="72" rx="22" fill="#151515" stroke="#777"/>
+    <text x="120" y="296" fill="#fff" font-size="24" font-family="sans-serif">Pause work</text>
+    <text x="350" y="296" fill="#fff" font-size="24" font-family="sans-serif">View policy</text>
+    <text x="38" y="396" fill="#d0d0d0" font-size="22" font-family="sans-serif">Badged apps · work notifications · admin disclosure</text>
+  </g>
+
+  <g transform="translate(744,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">4 · App Lock</text>
+    <text x="32" y="98" fill="#bdbdbd" font-size="22" font-family="sans-serif">Extra unlock gate for selected apps</text>
+    <rect x="98" y="150" width="404" height="196" rx="32" fill="#151515" stroke="#777"/>
+    <text x="155" y="210" fill="#fff" font-size="30" font-family="sans-serif">Unlock Gallery</text>
+    <text x="155" y="254" fill="#aaa" font-size="22" font-family="sans-serif">Password or fingerprint</text>
+    <text x="155" y="300" fill="#aaa" font-size="20" font-family="sans-serif">App Lock is not a full profile boundary</text>
+    <text x="68" y="398" fill="#d0d0d0" font-size="22" font-family="sans-serif">Back cancels · redaction in recents/search/lockscreen</text>
+  </g>
+
+  <rect x="96" y="1246" width="1248" height="98" rx="28" fill="#202020" stroke="#555"/>
+  <text x="132" y="1308" fill="#e8e8e8" font-size="28" font-family="sans-serif">Command: / private · / dual · / work · badges required · text input always wins</text>
+</svg>
