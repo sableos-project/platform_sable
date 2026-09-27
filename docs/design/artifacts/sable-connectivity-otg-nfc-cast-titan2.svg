@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1440" viewBox="0 0 1440 1440" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Connectivity OTG NFC Cast Titan 2 UX</title>
+  <desc id="desc">Four state visual artifact for connected devices, USB OTG, NFC Cast Tethering, and compatibility controls.</desc>
+  <rect width="1440" height="1440" fill="#101010"/>
+  <rect x="48" y="48" width="1344" height="1344" rx="72" fill="#171717" stroke="#4a4a4a" stroke-width="4"/>
+  <text x="96" y="122" fill="#f2f2f2" font-size="38" font-family="sans-serif">Sable Connectivity · OTG · NFC · Cast</text>
+  <line x1="96" y1="158" x2="1344" y2="158" stroke="#333" stroke-width="3"/>
+
+  <g transform="translate(96,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">1 · Connected Devices</text>
+    <g fill="#151515" stroke="#777">
+      <rect x="48" y="120" width="220" height="70" rx="20"/>
+      <rect x="330" y="120" width="220" height="70" rx="20"/>
+      <rect x="48" y="220" width="220" height="70" rx="20"/>
+      <rect x="330" y="220" width="220" height="70" rx="20"/>
+    </g>
+    <text x="83" y="165" fill="#fff" font-size="24" font-family="sans-serif">USB / OTG</text>
+    <text x="375" y="165" fill="#fff" font-size="24" font-family="sans-serif">Bluetooth</text>
+    <text x="97" y="265" fill="#fff" font-size="24" font-family="sans-serif">NFC</text>
+    <text x="384" y="265" fill="#fff" font-size="24" font-family="sans-serif">Cast</text>
+    <text x="48" y="384" fill="#d0d0d0" font-size="22" font-family="sans-serif">Hub cards · hardware gates · explicit actions</text>
+  </g>
+
+  <g transform="translate(744,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">2 · USB / OTG</text>
+    <text x="52" y="142" fill="#fff" font-size="28" font-family="sans-serif">Mode: Transfer files</text>
+    <text x="52" y="196" fill="#d0d0d0" font-size="24" font-family="sans-serif">USB drive mounted</text>
+    <text x="52" y="248" fill="#d0d0d0" font-size="24" font-family="sans-serif">Files · copy · move · eject</text>
+    <text x="52" y="326" fill="#aaa" font-size="22" font-family="sans-serif">No silent Private Space export</text>
+  </g>
+
+  <g transform="translate(96,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">3 · NFC / Cast / Hotspot</text>
+    <text x="52" y="142" fill="#fff" font-size="28" font-family="sans-serif">NFC: hardware gated</text>
+    <text x="52" y="196" fill="#fff" font-size="28" font-family="sans-serif">Cast: searching displays</text>
+    <text x="52" y="250" fill="#fff" font-size="28" font-family="sans-serif">Hotspot: WPA2 password</text>
+    <text x="52" y="328" fill="#aaa" font-size="22" font-family="sans-serif">Stop cast · QR share · public hotspot warning</text>
+  </g>
+
+  <g transform="translate(744,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">4 · Compatibility</text>
+    <text x="52" y="142" fill="#fff" font-size="28" font-family="sans-serif">App orientation: Portrait</text>
+    <text x="52" y="196" fill="#fff" font-size="28" font-family="sans-serif">Mini Mode: available</text>
+    <text x="52" y="250" fill="#fff" font-size="28" font-family="sans-serif">Keyboard input: protected</text>
+    <text x="52" y="328" fill="#aaa" font-size="22" font-family="sans-serif">Fix awkward apps without breaking media/input</text>
+  </g>
+
+  <rect x="96" y="1246" width="1248" height="98" rx="28" fill="#202020" stroke="#555"/>
+  <text x="132" y="1308" fill="#e8e8e8" font-size="28" font-family="sans-serif">Command: / usb · / cast · / hotspot · / rotation · / mini mode · explicit export only</text>
+</svg>
