@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1440" viewBox="0 0 1440 1440" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Mobile Manager App Controls Titan 2 UX</title>
+  <desc id="desc">Four state visual artifact for app control center, network manager, freezer/background controls, and Student/Focus mode.</desc>
+  <rect width="1440" height="1440" fill="#101010"/>
+  <rect x="48" y="48" width="1344" height="1344" rx="72" fill="#171717" stroke="#4a4a4a" stroke-width="4"/>
+  <text x="96" y="122" fill="#f2f2f2" font-size="38" font-family="sans-serif">Sable Mobile Manager · App Controls</text>
+  <line x1="96" y1="158" x2="1344" y2="158" stroke="#333" stroke-width="3"/>
+
+  <g transform="translate(96,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">1 · App Control Center</text>
+    <rect x="48" y="125" width="504" height="54" rx="18" fill="#151515" stroke="#777"/>
+    <rect x="48" y="200" width="504" height="54" rx="18" fill="#151515" stroke="#777"/>
+    <rect x="48" y="275" width="504" height="54" rx="18" fill="#151515" stroke="#777"/>
+    <text x="74" y="160" fill="#fff" font-size="24" font-family="sans-serif">Mail · network allowed · background unrestricted</text>
+    <text x="74" y="235" fill="#fff" font-size="24" font-family="sans-serif">Chat · network allowed · notification risk</text>
+    <text x="74" y="310" fill="#fff" font-size="24" font-family="sans-serif">Game · frozen · hidden from launcher</text>
+    <text x="48" y="392" fill="#d0d0d0" font-size="22" font-family="sans-serif">Search apps · filters · privacy summary</text>
+  </g>
+
+  <g transform="translate(744,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">2 · Network Manager</text>
+    <text x="52" y="140" fill="#fff" font-size="28" font-family="sans-serif">App: Social</text>
+    <text x="52" y="196" fill="#d0d0d0" font-size="24" font-family="sans-serif">Cellular: allowed</text>
+    <text x="52" y="244" fill="#d0d0d0" font-size="24" font-family="sans-serif">Wi-Fi: allowed</text>
+    <text x="52" y="292" fill="#d0d0d0" font-size="24" font-family="sans-serif">Background data: blocked</text>
+    <text x="52" y="368" fill="#aaa" font-size="22" font-family="sans-serif">Warning: blocking can break notifications and sync</text>
+  </g>
+
+  <g transform="translate(96,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">3 · Freezer</text>
+    <text x="52" y="135" fill="#fff" font-size="28" font-family="sans-serif">Boot blocker</text>
+    <text x="52" y="185" fill="#fff" font-size="28" font-family="sans-serif">Start blocker</text>
+    <text x="52" y="235" fill="#fff" font-size="28" font-family="sans-serif">Background blocker</text>
+    <text x="52" y="285" fill="#fff" font-size="28" font-family="sans-serif">Hide unused app</text>
+    <text x="52" y="365" fill="#aaa" font-size="22" font-family="sans-serif">Freezer is not Private Space · restore may move icons</text>
+  </g>
+
+  <g transform="translate(744,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">4 · Student / Focus</text>
+    <rect x="64" y="126" width="472" height="72" rx="22" fill="#151515" stroke="#777"/>
+    <rect x="64" y="224" width="472" height="72" rx="22" fill="#151515" stroke="#777"/>
+    <rect x="64" y="322" width="472" height="72" rx="22" fill="#151515" stroke="#777"/>
+    <text x="92" y="172" fill="#fff" font-size="24" font-family="sans-serif">Whitelist: Mail, Calendar, Browser</text>
+    <text x="92" y="270" fill="#fff" font-size="24" font-family="sans-serif">Time: Weekdays 08:00-17:00</text>
+    <text x="92" y="368" fill="#fff" font-size="24" font-family="sans-serif">Network/site restrictions active</text>
+  </g>
+
+  <rect x="96" y="1246" width="1248" height="98" rx="28" fill="#202020" stroke="#555"/>
+  <text x="132" y="1308" fill="#e8e8e8" font-size="28" font-family="sans-serif">Command: / app controls · / network · / freezer · warnings before breaking sync</text>
+</svg>
