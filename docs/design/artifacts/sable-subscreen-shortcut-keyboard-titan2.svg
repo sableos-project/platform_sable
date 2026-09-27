@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1440" viewBox="0 0 1440 1440" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Sub-screen Shortcut Keyboard Titan 2 UX</title>
+  <desc id="desc">Four state visual artifact for sub-screen companion modes, shortcut keys, and keyboard gestures.</desc>
+  <rect width="1440" height="1440" fill="#101010"/>
+  <rect x="48" y="48" width="1344" height="1344" rx="72" fill="#171717" stroke="#4a4a4a" stroke-width="4"/>
+  <text x="96" y="122" fill="#f2f2f2" font-size="38" font-family="sans-serif">Sable Titan 2 · Sub-screen &amp; Keyboard</text>
+  <line x1="96" y1="158" x2="1344" y2="158" stroke="#333" stroke-width="3"/>
+
+  <g transform="translate(96,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">1 · Sub-screen Home</text>
+    <rect x="210" y="128" width="180" height="220" rx="50" fill="#151515" stroke="#777"/>
+    <text x="250" y="218" fill="#fff" font-size="42" font-family="sans-serif">12:00</text>
+    <text x="244" y="260" fill="#aaa" font-size="22" font-family="sans-serif">87% · 4 steps</text>
+    <circle cx="360" cy="168" r="10" fill="#aaa"/>
+    <text x="44" y="396" fill="#d0d0d0" font-size="22" font-family="sans-serif">Clock · notifications · redaction · curated modes</text>
+  </g>
+
+  <g transform="translate(744,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">2 · Companion Modes</text>
+    <rect x="70" y="130" width="130" height="160" rx="30" fill="#151515" stroke="#777"/>
+    <rect x="235" y="130" width="130" height="160" rx="30" fill="#151515" stroke="#777"/>
+    <rect x="400" y="130" width="130" height="160" rx="30" fill="#151515" stroke="#777"/>
+    <text x="96" y="218" fill="#fff" font-size="24" font-family="sans-serif">Cam</text>
+    <text x="258" y="218" fill="#fff" font-size="24" font-family="sans-serif">Music</text>
+    <text x="420" y="218" fill="#fff" font-size="24" font-family="sans-serif">Compass</text>
+    <text x="60" y="382" fill="#d0d0d0" font-size="22" font-family="sans-serif">No text input · no arbitrary app mirroring</text>
+  </g>
+
+  <g transform="translate(96,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">3 · Shortcut Keys</text>
+    <text x="48" y="130" fill="#fff" font-size="28" font-family="sans-serif">Func1: Sub-screen</text>
+    <text x="48" y="178" fill="#fff" font-size="28" font-family="sans-serif">Func2: Favorite action</text>
+    <text x="48" y="226" fill="#fff" font-size="28" font-family="sans-serif">Sym/Fn: Magic key</text>
+    <text x="48" y="274" fill="#fff" font-size="28" font-family="sans-serif">Space: call/camera/home</text>
+    <text x="48" y="322" fill="#fff" font-size="28" font-family="sans-serif">Letters: app/contact/widget</text>
+    <text x="48" y="394" fill="#d0d0d0" font-size="22" font-family="sans-serif">Short · long · double · non-editing only</text>
+  </g>
+
+  <g transform="translate(744,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">4 · Keyboard Gestures</text>
+    <rect x="72" y="140" width="456" height="160" rx="34" fill="#151515" stroke="#777"/>
+    <text x="116" y="208" fill="#fff" font-size="30" font-family="sans-serif">Scroll assistant</text>
+    <text x="116" y="254" fill="#aaa" font-size="24" font-family="sans-serif">Cursor assistant in editing</text>
+    <text x="70" y="382" fill="#d0d0d0" font-size="22" font-family="sans-serif">Text input wins · password fields disarm shortcuts</text>
+  </g>
+
+  <rect x="96" y="1246" width="1248" height="98" rx="28" fill="#202020" stroke="#555"/>
+  <text x="132" y="1308" fill="#e8e8e8" font-size="28" font-family="sans-serif">Command: / shortcuts · / sub-screen · Magic+letter · scroll/cursor gestures · text input always wins</text>
+</svg>
