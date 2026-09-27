@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2100" viewBox="0 0 1600 2100" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Files / Documents Titan 2 visual target</title>
+  <desc id="desc">Four Titan 2 visual states for Files home, downloads attachments, document reader, and file picker share export.</desc>
+  <defs>
+    <style>
+      .bg { fill: #07090d; }
+      .phone { fill: #11151c; stroke: #2a3340; stroke-width: 10; }
+      .screen { fill: #0c1017; stroke: #394658; stroke-width: 4; }
+      .panel { fill: #131a24; stroke: #273244; stroke-width: 2; }
+      .panel2 { fill: #0f1620; stroke: #283446; stroke-width: 2; }
+      .accent { fill: #77d9d0; }
+      .muted { fill: #8d99a8; }
+      .text { fill: #edf5ff; font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 17px; }
+      .xs { font-size: 14px; }
+      .title { font-size: 25px; font-weight: 700; }
+      .label { font-size: 19px; font-weight: 700; }
+      .hint { fill: #0b1118; stroke: #77d9d0; stroke-width: 2; }
+      .key { fill: #1b222d; stroke: #303b4c; stroke-width: 2; }
+      .keyText { fill: #c6d1df; font-family: Inter, Arial, sans-serif; font-size: 12px; text-anchor: middle; }
+      .danger { fill: #ffb4a8; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1600" height="2100"/>
+  <text class="text title" x="80" y="72">Sable Files / Documents UX · merged productivity surface</text>
+  <text class="muted small" x="80" y="104">Files + Documents + Downloads + Attachments + Picker + Share/Export + Captured Media handoff</text>
+
+  <!-- Device 1 -->
+  <g transform="translate(80,150)">
+    <rect class="phone" x="0" y="0" width="680" height="850" rx="44"/>
+    <rect class="screen" x="60" y="44" width="560" height="560" rx="18"/>
+    <text class="text small" x="86" y="80">12:00</text>
+    <text class="text label" x="220" y="80">Files · Recent</text>
+    <text class="muted xs" x="496" y="80">87%</text>
+    <rect class="panel" x="82" y="102" width="164" height="382" rx="12"/>
+    <text class="accent small" x="102" y="132">Recent</text>
+    <text class="text xs" x="102" y="164">Downloads</text>
+    <text class="text xs" x="102" y="196">Attachments</text>
+    <text class="text xs" x="102" y="228">Camera / Gallery</text>
+    <text class="text xs" x="102" y="260">Documents</text>
+    <text class="muted xs" x="102" y="292">Local storage</text>
+    <text class="muted xs" x="102" y="324">Provider locations</text>
+    <rect class="panel2" x="258" y="102" width="184" height="382" rx="12"/>
+    <text class="text xs" x="278" y="132">▸ R10 plan.pdf</text>
+    <text class="muted xs" x="294" y="154">Docs · local</text>
+    <text class="text xs" x="278" y="188">camera_2042.jpg</text>
+    <text class="muted xs" x="294" y="210">Camera · EXIF hidden</text>
+    <text class="text xs" x="278" y="244">invoice.eml.pdf</text>
+    <text class="muted xs" x="294" y="266">Mail attachment</text>
+    <text class="text xs" x="278" y="300">build-log.txt</text>
+    <text class="muted xs" x="294" y="322">Browser download</text>
+    <rect class="panel" x="454" y="102" width="144" height="382" rx="12"/>
+    <text class="text xs" x="472" y="132">Preview</text>
+    <rect class="screen" x="474" y="150" width="104" height="128" rx="8"/>
+    <text class="muted xs" x="484" y="302">R10 plan.pdf</text>
+    <text class="muted xs" x="484" y="324">12 pages</text>
+    <text class="muted xs" x="484" y="346">Source: local</text>
+    <text class="accent xs" x="484" y="380">Enter Open</text>
+    <text class="accent xs" x="484" y="404">I Info</text>
+    <text class="danger xs" x="484" y="428">D Delete?</text>
+    <rect class="hint" x="82" y="498" width="516" height="74" rx="12"/>
+    <text class="text xs" x="102" y="526">/ Search files, sources, attachments...</text>
+    <text class="accent xs" x="102" y="552">Enter Open · J/K Move · T Latest · E Export · O Open with</text>
+    <text class="text label" x="92" y="650">Files home / recents</text>
+    <text class="muted small" x="92" y="678">Current and latest files first; raw paths hidden by default.</text>
+    <g transform="translate(78,704)">
+      <rect class="key" x="0" y="0" width="54" height="34" rx="6"/><text class="keyText" x="27" y="22">Q</text>
+      <rect class="key" x="62" y="0" width="54" height="34" rx="6"/><text class="keyText" x="89" y="22">W</text>
+      <rect class="key" x="124" y="0" width="54" height="34" rx="6"/><text class="keyText" x="151" y="22">E</text>
+      <rect class="key" x="186" y="0" width="54" height="34" rx="6"/><text class="keyText" x="213" y="22">R</text>
+      <rect class="key" x="248" y="0" width="54" height="34" rx="6"/><text class="keyText" x="275" y="22">T</text>
+      <rect class="key" x="310" y="0" width="54" height="34" rx="6"/><text class="keyText" x="337" y="22">Y</text>
+      <rect class="key" x="31" y="42" width="54" height="34" rx="6"/><text class="keyText" x="58" y="64">A</text>
+      <rect class="key" x="93" y="42" width="54" height="34" rx="6"/><text class="keyText" x="120" y="64">S</text>
+      <rect class="key" x="155" y="42" width="54" height="34" rx="6"/><text class="keyText" x="182" y="64">D</text>
+      <rect class="key" x="217" y="42" width="54" height="34" rx="6"/><text class="keyText" x="244" y="64">F</text>
+      <rect class="key" x="279" y="42" width="54" height="34" rx="6"/><text class="keyText" x="306" y="64">G</text>
+      <rect class="key" x="70" y="84" width="240" height="34" rx="6"/><text class="keyText" x="190" y="106">SPACE preview</text>
+    </g>
+  </g>
+
+  <!-- Device 2 -->
+  <g transform="translate(840,150)">
+    <rect class="phone" x="0" y="0" width="680" height="850" rx="44"/>
+    <rect class="screen" x="60" y="44" width="560" height="560" rx="18"/>
+    <text class="text small" x="86" y="80">12:00</text>
+    <text class="text label" x="190" y="80">Downloads · Attachments</text>
+    <text class="muted xs" x="496" y="80">87%</text>
+    <rect class="panel" x="82" y="104" width="516" height="354" rx="12"/>
+    <text class="accent small" x="104" y="134">Latest sources</text>
+    <text class="text xs" x="108" y="172">▸ build-log.txt</text><text class="muted xs" x="402" y="172">Browser · 2m</text>
+    <text class="text xs" x="108" y="214">invoice.eml.pdf</text><text class="muted xs" x="402" y="214">Mail · 12m</text>
+    <text class="text xs" x="108" y="256">patch_v2.diff</text><text class="muted xs" x="402" y="256">Messages · 21m</text>
+    <text class="text xs" x="108" y="298">camera_2042.jpg</text><text class="muted xs" x="402" y="298">Camera · today</text>
+    <text class="text xs" x="108" y="340">export_gallery.zip</text><text class="muted xs" x="402" y="340">Gallery · today</text>
+    <rect class="panel2" x="104" y="374" width="470" height="54" rx="10"/>
+    <text class="text xs" x="124" y="406">Save as explicit · Share explicit · No silent upload</text>
+    <rect class="hint" x="82" y="474" width="516" height="88" rx="12"/>
+    <text class="text xs" x="102" y="504">/ filter downloads, attachments, source app...</text>
+    <text class="accent xs" x="102" y="532">Enter Open · A Attach · E Export · I Source info</text>
+    <text class="text label" x="92" y="650">Downloads / attachments</text>
+    <text class="muted small" x="92" y="678">Merged filter with visible source app and explicit export.</text>
+    <g transform="translate(78,704)">
+      <rect class="key" x="0" y="0" width="54" height="34" rx="6"/><text class="keyText" x="27" y="22">Q</text>
+      <rect class="key" x="62" y="0" width="54" height="34" rx="6"/><text class="keyText" x="89" y="22">W</text>
+      <rect class="key" x="124" y="0" width="54" height="34" rx="6"/><text class="keyText" x="151" y="22">E</text>
+      <rect class="key" x="186" y="0" width="54" height="34" rx="6"/><text class="keyText" x="213" y="22">R</text>
+      <rect class="key" x="248" y="0" width="54" height="34" rx="6"/><text class="keyText" x="275" y="22">T</text>
+      <rect class="key" x="310" y="0" width="54" height="34" rx="6"/><text class="keyText" x="337" y="22">Y</text>
+      <rect class="key" x="31" y="42" width="54" height="34" rx="6"/><text class="keyText" x="58" y="64">A</text>
+      <rect class="key" x="93" y="42" width="54" height="34" rx="6"/><text class="keyText" x="120" y="64">S</text>
+      <rect class="key" x="155" y="42" width="54" height="34" rx="6"/><text class="keyText" x="182" y="64">D</text>
+      <rect class="key" x="217" y="42" width="54" height="34" rx="6"/><text class="keyText" x="244" y="64">F</text>
+      <rect class="key" x="279" y="42" width="54" height="34" rx="6"/><text class="keyText" x="306" y="64">G</text>
+      <rect class="key" x="70" y="84" width="240" height="34" rx="6"/><text class="keyText" x="190" y="106">SPACE preview</text>
+    </g>
+  </g>
+
+  <!-- Device 3 -->
+  <g transform="translate(80,1060)">
+    <rect class="phone" x="0" y="0" width="680" height="850" rx="44"/>
+    <rect class="screen" x="60" y="44" width="560" height="560" rx="18"/>
+    <text class="text small" x="86" y="80">12:00</text>
+    <text class="text label" x="210" y="80">R10 plan.pdf</text>
+    <text class="muted xs" x="496" y="80">87%</text>
+    <rect class="panel" x="82" y="106" width="364" height="368" rx="12"/>
+    <text class="muted xs" x="108" y="136">Page 3 / 12 · current section visible</text>
+    <text class="text xs" x="112" y="174">R10 Titan 2 bring-up plan</text>
+    <line x1="112" y1="192" x2="406" y2="192" stroke="#394658"/>
+    <text class="muted xs" x="112" y="226">Current page is centered. Older/later</text>
+    <text class="muted xs" x="112" y="248">content uses page block movement,</text>
+    <text class="muted xs" x="112" y="270">outline, or find; not endless scroll.</text>
+    <text class="accent xs" x="112" y="326">Find: /</text>
+    <text class="accent xs" x="112" y="350">Next page: Space</text>
+    <text class="accent xs" x="112" y="374">Open with editor: O</text>
+    <rect class="panel2" x="460" y="106" width="138" height="368" rx="12"/>
+    <text class="text xs" x="478" y="136">Info</text>
+    <text class="muted xs" x="478" y="170">Local</text>
+    <text class="muted xs" x="478" y="198">PDF</text>
+    <text class="muted xs" x="478" y="226">12 pages</text>
+    <text class="muted xs" x="478" y="254">No cloud</text>
+    <text class="accent xs" x="478" y="310">I metadata</text>
+    <text class="accent xs" x="478" y="334">E export</text>
+    <text class="danger xs" x="478" y="358">D confirm</text>
+    <rect class="hint" x="82" y="498" width="516" height="74" rx="12"/>
+    <text class="text xs" x="102" y="526">/ find in document...</text>
+    <text class="accent xs" x="102" y="552">Space Page · O Open with · Back Files · I Info</text>
+    <text class="text label" x="92" y="650">Document reader / preview</text>
+    <text class="muted small" x="92" y="678">Current page visible; editing handed to provider app.</text>
+    <g transform="translate(78,704)">
+      <rect class="key" x="0" y="0" width="54" height="34" rx="6"/><text class="keyText" x="27" y="22">Q</text>
+      <rect class="key" x="62" y="0" width="54" height="34" rx="6"/><text class="keyText" x="89" y="22">W</text>
+      <rect class="key" x="124" y="0" width="54" height="34" rx="6"/><text class="keyText" x="151" y="22">E</text>
+      <rect class="key" x="186" y="0" width="54" height="34" rx="6"/><text class="keyText" x="213" y="22">R</text>
+      <rect class="key" x="248" y="0" width="54" height="34" rx="6"/><text class="keyText" x="275" y="22">T</text>
+      <rect class="key" x="310" y="0" width="54" height="34" rx="6"/><text class="keyText" x="337" y="22">Y</text>
+      <rect class="key" x="31" y="42" width="54" height="34" rx="6"/><text class="keyText" x="58" y="64">A</text>
+      <rect class="key" x="93" y="42" width="54" height="34" rx="6"/><text class="keyText" x="120" y="64">S</text>
+      <rect class="key" x="155" y="42" width="54" height="34" rx="6"/><text class="keyText" x="182" y="64">D</text>
+      <rect class="key" x="217" y="42" width="54" height="34" rx="6"/><text class="keyText" x="244" y="64">F</text>
+      <rect class="key" x="279" y="42" width="54" height="34" rx="6"/><text class="keyText" x="306" y="64">G</text>
+      <rect class="key" x="70" y="84" width="240" height="34" rx="6"/><text class="keyText" x="190" y="106">SPACE page</text>
+    </g>
+  </g>
+
+  <!-- Device 4 -->
+  <g transform="translate(840,1060)">
+    <rect class="phone" x="0" y="0" width="680" height="850" rx="44"/>
+    <rect class="screen" x="60" y="44" width="560" height="560" rx="18"/>
+    <text class="text small" x="86" y="80">12:00</text>
+    <text class="text label" x="178" y="80">Pick / Share / Export</text>
+    <text class="muted xs" x="496" y="80">87%</text>
+    <rect class="panel" x="82" y="104" width="246" height="354" rx="12"/>
+    <text class="accent small" x="104" y="134">Choose target</text>
+    <text class="text xs" x="108" y="174">▸ Documents</text>
+    <text class="text xs" x="108" y="214">Downloads</text>
+    <text class="text xs" x="108" y="254">Mail draft</text>
+    <text class="text xs" x="108" y="294">Messages</text>
+    <text class="muted xs" x="108" y="334">Provider: Drive</text>
+    <text class="muted xs" x="108" y="374">Provider: USB</text>
+    <rect class="panel2" x="342" y="104" width="256" height="354" rx="12"/>
+    <text class="text xs" x="362" y="134">Action</text>
+    <text class="muted xs" x="362" y="174">Export R10 plan.pdf</text>
+    <text class="muted xs" x="362" y="204">Target visible before write</text>
+    <text class="accent xs" x="362" y="250">Enter confirm</text>
+    <text class="accent xs" x="362" y="280">Back cancel</text>
+    <text class="danger xs" x="362" y="326">Delete requires confirm</text>
+    <rect class="hint" x="82" y="482" width="516" height="80" rx="12"/>
+    <text class="text xs" x="102" y="512">/ search destinations...</text>
+    <text class="accent xs" x="102" y="540">Enter Choose · E Export · O Open with · Back Cancel</text>
+    <text class="text label" x="92" y="650">File picker / share / export</text>
+    <text class="muted small" x="92" y="678">Destination and provider visible before externalizing data.</text>
+    <g transform="translate(78,704)">
+      <rect class="key" x="0" y="0" width="54" height="34" rx="6"/><text class="keyText" x="27" y="22">Q</text>
+      <rect class="key" x="62" y="0" width="54" height="34" rx="6"/><text class="keyText" x="89" y="22">W</text>
+      <rect class="key" x="124" y="0" width="54" height="34" rx="6"/><text class="keyText" x="151" y="22">E</text>
+      <rect class="key" x="186" y="0" width="54" height="34" rx="6"/><text class="keyText" x="213" y="22">R</text>
+      <rect class="key" x="248" y="0" width="54" height="34" rx="6"/><text class="keyText" x="275" y="22">T</text>
+      <rect class="key" x="310" y="0" width="54" height="34" rx="6"/><text class="keyText" x="337" y="22">Y</text>
+      <rect class="key" x="31" y="42" width="54" height="34" rx="6"/><text class="keyText" x="58" y="64">A</text>
+      <rect class="key" x="93" y="42" width="54" height="34" rx="6"/><text class="keyText" x="120" y="64">S</text>
+      <rect class="key" x="155" y="42" width="54" height="34" rx="6"/><text class="keyText" x="182" y="64">D</text>
+      <rect class="key" x="217" y="42" width="54" height="34" rx="6"/><text class="keyText" x="244" y="64">F</text>
+      <rect class="key" x="279" y="42" width="54" height="34" rx="6"/><text class="keyText" x="306" y="64">G</text>
+      <rect class="key" x="70" y="84" width="240" height="34" rx="6"/><text class="keyText" x="190" y="106">ENTER confirm</text>
+    </g>
+  </g>
+
+  <text class="muted small" x="80" y="2040">Validation: current/latest visible · keyboard-first · provider-safe · no silent upload/export · no custom filesystem stack</text>
+</svg>
