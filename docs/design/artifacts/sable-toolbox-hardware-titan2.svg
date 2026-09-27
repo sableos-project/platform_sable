@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1440" viewBox="0 0 1440 1440" role="img" aria-labelledby="title desc">
+  <title id="title">Sable Toolbox Hardware Utilities Titan 2 UX</title>
+  <desc id="desc">Four state visual artifact for Toolbox home, measurement tools, IR Remote, and FM Radio hardware gate.</desc>
+  <rect width="1440" height="1440" fill="#101010"/>
+  <rect x="48" y="48" width="1344" height="1344" rx="72" fill="#171717" stroke="#4a4a4a" stroke-width="4"/>
+  <text x="96" y="122" fill="#f2f2f2" font-size="38" font-family="sans-serif">Sable Toolbox · Hardware Utilities</text>
+  <text x="1080" y="122" fill="#bdbdbd" font-size="28" font-family="sans-serif">Titan 2 · local-first</text>
+  <line x1="96" y1="158" x2="1344" y2="158" stroke="#333" stroke-width="3"/>
+
+  <g transform="translate(96,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">1 · Toolbox Home</text>
+    <text x="32" y="98" fill="#bdbdbd" font-size="22" font-family="sans-serif">Sensor grid · capability badges</text>
+    <g fill="#2d2d2d" stroke="#777">
+      <rect x="32" y="130" width="160" height="90" rx="20"/>
+      <rect x="220" y="130" width="160" height="90" rx="20"/>
+      <rect x="408" y="130" width="160" height="90" rx="20"/>
+      <rect x="32" y="248" width="160" height="90" rx="20"/>
+      <rect x="220" y="248" width="160" height="90" rx="20"/>
+      <rect x="408" y="248" width="160" height="90" rx="20"/>
+    </g>
+    <text x="60" y="184" fill="#fff" font-size="24" font-family="sans-serif">Compass</text>
+    <text x="255" y="184" fill="#fff" font-size="24" font-family="sans-serif">Level</text>
+    <text x="438" y="184" fill="#fff" font-size="24" font-family="sans-serif">Remote</text>
+    <text x="60" y="302" fill="#fff" font-size="24" font-family="sans-serif">Noise</text>
+    <text x="255" y="302" fill="#fff" font-size="24" font-family="sans-serif">Magnify</text>
+    <text x="438" y="302" fill="#aaa" font-size="24" font-family="sans-serif">FM gate</text>
+    <text x="32" y="396" fill="#d0d0d0" font-size="22" font-family="sans-serif">[C Calibrate] [R Reset] [I Info]</text>
+  </g>
+
+  <g transform="translate(744,205)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">2 · Measurement</text>
+    <text x="32" y="98" fill="#bdbdbd" font-size="22" font-family="sans-serif">Compass · level · protractor</text>
+    <circle cx="300" cy="238" r="118" fill="#151515" stroke="#777" stroke-width="4"/>
+    <line x1="300" y1="238" x2="300" y2="132" stroke="#eee" stroke-width="8" stroke-linecap="round"/>
+    <line x1="300" y1="238" x2="375" y2="300" stroke="#777" stroke-width="8" stroke-linecap="round"/>
+    <text x="276" y="255" fill="#fff" font-size="34" font-family="sans-serif">37°</text>
+    <text x="48" y="382" fill="#d0d0d0" font-size="22" font-family="sans-serif">calibrated · uncertainty ±2° · source: sensor</text>
+  </g>
+
+  <g transform="translate(96,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">3 · IR Remote</text>
+    <text x="32" y="98" fill="#bdbdbd" font-size="22" font-family="sans-serif">Local appliance control</text>
+    <rect x="190" y="128" width="220" height="250" rx="48" fill="#161616" stroke="#777"/>
+    <circle cx="300" cy="190" r="34" fill="#303030" stroke="#aaa"/>
+    <rect x="240" y="248" width="120" height="46" rx="18" fill="#303030" stroke="#aaa"/>
+    <rect x="240" y="312" width="120" height="46" rx="18" fill="#303030" stroke="#aaa"/>
+    <text x="282" y="198" fill="#fff" font-size="20" font-family="sans-serif">⏻</text>
+    <text x="266" y="278" fill="#fff" font-size="18" font-family="sans-serif">MODE</text>
+    <text x="266" y="342" fill="#fff" font-size="18" font-family="sans-serif">TEMP</text>
+    <text x="32" y="408" fill="#d0d0d0" font-size="22" font-family="sans-serif">TV · AC · Projector · Custom · no cloud required</text>
+  </g>
+
+  <g transform="translate(744,700)">
+    <rect width="600" height="440" rx="36" fill="#202020" stroke="#555"/>
+    <text x="32" y="58" fill="#fff" font-size="34" font-family="sans-serif">4 · Media FM Gate</text>
+    <text x="32" y="98" fill="#bdbdbd" font-size="22" font-family="sans-serif">Radio appears only if hardware is proven</text>
+    <rect x="70" y="148" width="460" height="160" rx="32" fill="#151515" stroke="#777"/>
+    <text x="120" y="214" fill="#fff" font-size="42" font-family="sans-serif">FM Radio</text>
+    <text x="120" y="260" fill="#aaa" font-size="24" font-family="sans-serif">Hardware gate: pending</text>
+    <text x="70" y="372" fill="#d0d0d0" font-size="22" font-family="sans-serif">No fake streaming substitute · tuner/HAL required</text>
+  </g>
+
+  <rect x="96" y="1246" width="1248" height="98" rx="28" fill="#202020" stroke="#555"/>
+  <text x="132" y="1308" fill="#e8e8e8" font-size="28" font-family="sans-serif">Command: / search tools · C calibrate · R reset · H hold · Back exit · text input always wins</text>
+</svg>
