@@ -1,0 +1,129 @@
+# App Display Compatibility Profiles Visual Confirmation
+
+## Target
+
+Validate the Sable App Display Compatibility Profiles UX for Titan-family devices.
+
+```text
+VISUAL_CONFIRMATION=APP_DISPLAY_COMPATIBILITY_PROFILES
+TARGET_DEVICE_FAMILY=TITAN
+BUILD_CODE_CHANGED=NO
+DEVICE_CODE_CHANGED=NO
+FLASH_ENABLEMENT=NO
+```
+
+## Visual State 1: App display compatibility list
+
+The list view shows apps and their current display profile.
+
+```text
+SETTINGS_PATH_VISIBLE=Settings > Display > App display compatibility
+APP_LIST_VISIBLE=YES
+SEARCH_VISIBLE=YES
+PROFILE_BADGE_VISIBLE=YES
+NATIVE_PROFILE_BADGE=YES
+MINI_MODE_PROFILE_BADGE=YES
+16_9_PROFILE_BADGE=YES
+CUSTOM_PROFILE_BADGE=YES
+RESET_ALL_ACTION_VISIBLE=YES
+```
+
+Required example rows:
+
+```text
+APP_ROW_BROWSER=Native
+APP_ROW_VIDEO=16:9 Letterbox
+APP_ROW_MAPS=Square-safe
+APP_ROW_GAME=16:9 Fill, warning visible
+APP_ROW_TERMINAL=Keyboard-safe
+```
+
+## Visual State 2: Per-app profile editor
+
+The per-app editor presents clear reversible controls.
+
+```text
+APP_NAME_VISIBLE=YES
+CURRENT_PROFILE_VISIBLE=YES
+PROFILE_PICKER_VISIBLE=YES
+ASPECT_RATIO_CONTROL_VISIBLE=YES
+ORIENTATION_CONTROL_VISIBLE=YES
+SCALING_CONTROL_VISIBLE=YES
+KEYBOARD_SAFE_AREA_CONTROL_VISIBLE=YES
+FULLSCREEN_MEDIA_EXCEPTION_VISIBLE=YES
+RESET_THIS_APP_VISIBLE=YES
+```
+
+The profile editor must avoid advanced jargon in the default view.
+
+```text
+ADVANCED_OPTIONS_COLLAPSED_BY_DEFAULT=YES
+EXPLAINER_TEXT_VISIBLE=YES
+```
+
+## Visual State 3: 16:9 profile preview
+
+The 16:9 profile must show the user what will happen before the setting is applied.
+
+```text
+16_9_PREVIEW_VISIBLE=YES
+LETTERBOX_BARS_VISIBLE=YES
+FIT_OPTION_VISIBLE=YES
+FILL_OPTION_VISIBLE=YES
+CROP_WARNING_VISIBLE=YES
+BUTTON_CUTOFF_WARNING_VISIBLE=YES
+TRY_AND_REVERT_COPY_VISIBLE=YES
+```
+
+Required copy:
+
+```text
+COPY_16_9=Run this app in a 16:9 compatibility window.
+COPY_FILL_WARNING=Fill can crop app edges. Use Letterbox if text or buttons are missing.
+```
+
+## Visual State 4: Reset and recovery
+
+Users must be able to recover from a bad per-app display profile without opening the affected app.
+
+```text
+RESET_THIS_APP_VISIBLE=YES
+RESET_ALL_VISIBLE=YES
+SAFE_MODE_RESET_DOCUMENTED=YES
+LAST_CHANGED_TIMESTAMP_VISIBLE=YES
+PROFILE_CHANGE_AUDIT_LOCAL_ONLY=YES
+```
+
+## Keyboard validation
+
+```text
+TEXT_INPUT_ALWAYS_WINS=PASS
+SHORTCUTS_DISABLED_WHILE_TYPING=PASS
+CURSOR_ASSISTANT_NOT_BLOCKED=PASS
+SCROLL_ASSISTANT_NOT_BLOCKED=PASS
+SPACE_KEY_ACTIONS_DO_NOT_OVERRIDE_TEXT_FIELDS=PASS
+```
+
+## Safety validation
+
+```text
+DO_NOT_BREAK_ACCESSIBILITY=PASS
+DO_NOT_BREAK_AUTHENTICATOR_APPS=PASS
+DO_NOT_BREAK_CAMERA_PREVIEW=PASS
+DO_NOT_BREAK_FULLSCREEN_MEDIA=PASS
+RESET_OUTSIDE_APP=PASS
+```
+
+## Acceptance checklist
+
+```text
+APP_DISPLAY_COMPATIBILITY_LIST=PASS
+PER_APP_PROFILE_EDITOR=PASS
+CUSTOM_16_9_PREVIEW=PASS
+RESET_AND_RECOVERY=PASS
+KEYBOARD_SAFE_VALIDATION=PASS
+IMPLEMENTATION_BACKEND_GATED=PASS
+BUILD_CODE_CHANGED=NO
+DEVICE_CODE_CHANGED=NO
+FLASH_ENABLEMENT=NO
+```
