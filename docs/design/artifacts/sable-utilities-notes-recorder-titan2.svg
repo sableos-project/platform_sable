@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1800" viewBox="0 0 1800 1800" role="img" aria-labelledby="title desc">
+  <title id="title">SableOS Utilities Notes Recorder Titan 2 UX</title>
+  <desc id="desc">Four Titan 2 visual states for the merged Utilities, Notes, Recorder, Clock, Calculator and Tasks UX.</desc>
+  <defs>
+    <style>
+      .bg { fill: #071014; }
+      .phone { fill: #101820; stroke: #26343d; stroke-width: 8; }
+      .screen { fill: #0c151b; stroke: #2a3b46; stroke-width: 4; }
+      .key { fill: #151f27; stroke: #33434d; stroke-width: 2; }
+      .keyText { fill: #a9bbc4; font: 14px sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .label { fill: #eef7fb; font: 28px sans-serif; font-weight: 700; }
+      .small { fill: #a9bbc4; font: 17px sans-serif; }
+      .tiny { fill: #7f939d; font: 13px sans-serif; }
+      .accent { fill: #6ee7f5; }
+      .accent2 { fill: #c0ff6b; }
+      .warn { fill: #ffcc66; }
+      .danger { fill: #ff7c7c; }
+      .tile { fill: #13232c; stroke: #27414e; stroke-width: 3; rx: 18; }
+      .tile2 { fill: #172b35; stroke: #31505f; stroke-width: 3; rx: 18; }
+      .focus { fill: none; stroke: #6ee7f5; stroke-width: 5; rx: 20; }
+      .dock { fill: #0a1116; stroke: #2a3b46; stroke-width: 3; }
+      .line { stroke: #6ee7f5; stroke-width: 4; stroke-linecap: round; fill: none; }
+      .mutedLine { stroke: #425762; stroke-width: 3; stroke-linecap: round; fill: none; }
+      .bar { fill: #22323c; }
+      .gridLine { stroke: #23323b; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1800" height="1800"/>
+  <text x="70" y="70" class="label">SableOS Utilities / Notes / Recorder UX · Titan 2</text>
+  <text x="70" y="103" class="small">Merged daily utilities: Notes, Recorder, Clock, Calculator/Converter, Tasks, optional provider cards</text>
+
+  <g transform="translate(70,145)">
+    <text x="0" y="0" class="label">1 · Utilities Home</text>
+    <rect x="0" y="25" width="760" height="710" rx="48" class="phone"/>
+    <rect x="40" y="55" width="680" height="520" rx="24" class="screen"/>
+    <text x="68" y="92" class="small">20:07</text>
+    <text x="240" y="92" class="small">Utilities · Today</text>
+    <text x="630" y="92" class="small">87%</text>
+    <line x1="40" y1="110" x2="720" y2="110" class="mutedLine"/>
+
+    <rect x="68" y="135" width="298" height="120" class="tile2"/>
+    <text x="88" y="168" class="small">Active</text>
+    <text x="88" y="206" class="label">Timer 08:14</text>
+    <text x="88" y="238" class="tiny">Space pause · T timers</text>
+    <rect x="68" y="270" width="298" height="120" class="tile"/>
+    <text x="88" y="303" class="small">Recent note</text>
+    <text x="88" y="340" class="small">Titan 2 bring-up checklist</text>
+    <text x="88" y="370" class="tiny">N new · Enter open</text>
+
+    <rect x="382" y="135" width="300" height="120" class="tile"/>
+    <text x="402" y="168" class="small">Recorder</text>
+    <text x="402" y="206" class="label">Ready</text>
+    <text x="402" y="238" class="tiny">R record · mic explicit</text>
+    <rect x="382" y="270" width="300" height="120" class="tile"/>
+    <text x="402" y="303" class="small">Calculator</text>
+    <text x="402" y="340" class="small">128 GB → GiB</text>
+    <text x="402" y="370" class="tiny">C calculate · converter merged</text>
+
+    <rect x="68" y="405" width="190" height="82" class="tile"/>
+    <text x="88" y="437" class="small">Tasks</text>
+    <text x="88" y="466" class="tiny">5 open</text>
+    <rect x="274" y="405" width="190" height="82" class="tile"/>
+    <text x="294" y="437" class="small">Alarm</text>
+    <text x="294" y="466" class="tiny">07:30</text>
+    <rect x="480" y="405" width="202" height="82" class="tile"/>
+    <text x="500" y="437" class="small">Weather</text>
+    <text x="500" y="466" class="tiny">Provider off</text>
+    <rect x="63" y="130" width="308" height="130" class="focus"/>
+
+    <rect x="40" y="498" width="680" height="77" class="dock"/>
+    <text x="68" y="530" class="small">&gt; utility command...</text>
+    <text x="68" y="558" class="tiny">N Note · R Recorder · C Calc · A Alarm · / Search</text>
+
+    <g transform="translate(60,600)">
+      <rect x="0" y="0" width="640" height="110" rx="22" fill="#0b1116" stroke="#26343d" stroke-width="3"/>
+      <g transform="translate(30,25)">
+        <rect x="0" y="0" width="46" height="36" rx="7" class="key"/><text x="23" y="18" class="keyText">Q</text>
+        <rect x="55" y="0" width="46" height="36" rx="7" class="key"/><text x="78" y="18" class="keyText">W</text>
+        <rect x="110" y="0" width="46" height="36" rx="7" class="key"/><text x="133" y="18" class="keyText">E</text>
+        <rect x="165" y="0" width="46" height="36" rx="7" class="key"/><text x="188" y="18" class="keyText">R</text>
+        <rect x="220" y="0" width="46" height="36" rx="7" class="key"/><text x="243" y="18" class="keyText">T</text>
+        <rect x="275" y="0" width="46" height="36" rx="7" class="key"/><text x="298" y="18" class="keyText">Y</text>
+        <rect x="330" y="0" width="46" height="36" rx="7" class="key"/><text x="353" y="18" class="keyText">U</text>
+        <rect x="385" y="0" width="46" height="36" rx="7" class="key"/><text x="408" y="18" class="keyText">I</text>
+        <rect x="440" y="0" width="46" height="36" rx="7" class="key"/><text x="463" y="18" class="keyText">O</text>
+        <rect x="495" y="0" width="46" height="36" rx="7" class="key"/><text x="518" y="18" class="keyText">P</text>
+        <rect x="70" y="45" width="320" height="36" rx="7" class="key"/><text x="230" y="63" class="keyText">Space</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(970,145)">
+    <text x="0" y="0" class="label">2 · Notes Editor</text>
+    <rect x="0" y="25" width="760" height="710" rx="48" class="phone"/>
+    <rect x="40" y="55" width="680" height="520" rx="24" class="screen"/>
+    <text x="68" y="92" class="small">20:07</text>
+    <text x="240" y="92" class="small">Notes · Local</text>
+    <text x="625" y="92" class="small">saved</text>
+    <line x1="40" y1="110" x2="720" y2="110" class="mutedLine"/>
+    <rect x="68" y="132" width="210" height="338" class="tile"/>
+    <text x="88" y="165" class="small">Recent notes</text>
+    <text x="88" y="205" class="tiny">▶ Bring-up checklist</text>
+    <text x="88" y="235" class="tiny">Camera tests</text>
+    <text x="88" y="265" class="tiny">Files handoff</text>
+    <text x="88" y="295" class="tiny">Titan 2 TODO</text>
+    <rect x="296" y="132" width="386" height="338" class="tile2"/>
+    <text x="320" y="165" class="small">Titan 2 bring-up checklist</text>
+    <line x1="320" y1="190" x2="642" y2="190" class="mutedLine"/>
+    <text x="320" y="226" class="small"># N0 A16 prep</text>
+    <text x="320" y="262" class="small">[x] firmware inventory</text>
+    <text x="320" y="298" class="small">[ ] camera sample matrix</text>
+    <text x="320" y="334" class="small">[ ] first GSI preflight</text>
+    <text x="320" y="388" class="tiny">Text input owns printable keys</text>
+    <rect x="291" y="127" width="396" height="348" class="focus"/>
+    <rect x="40" y="498" width="680" height="77" class="dock"/>
+    <text x="68" y="530" class="small">&gt; find/export/share...</text>
+    <text x="68" y="558" class="tiny">Ctrl+F find · Ctrl+S checkpoint · Esc leave editor</text>
+    <g transform="translate(60,600)">
+      <rect x="0" y="0" width="640" height="110" rx="22" fill="#0b1116" stroke="#26343d" stroke-width="3"/>
+      <rect x="145" y="25" width="350" height="36" rx="7" class="key"/><text x="320" y="43" class="keyText">physical keyboard · editor focus</text>
+      <rect x="245" y="68" width="150" height="26" rx="7" fill="#11262f" stroke="#6ee7f5" stroke-width="2"/><text x="320" y="81" class="keyText">text input wins</text>
+    </g>
+  </g>
+
+  <g transform="translate(70,960)">
+    <text x="0" y="0" class="label">3 · Recorder Active / Review</text>
+    <rect x="0" y="25" width="760" height="710" rx="48" class="phone"/>
+    <rect x="40" y="55" width="680" height="520" rx="24" class="screen"/>
+    <text x="68" y="92" class="small">20:07</text>
+    <text x="235" y="92" class="small">Recorder · Local</text>
+    <text x="620" y="92" class="danger">MIC</text>
+    <line x1="40" y1="110" x2="720" y2="110" class="mutedLine"/>
+    <circle cx="110" cy="150" r="16" class="danger"/>
+    <text x="140" y="158" class="small">Recording · explicit foreground capture</text>
+    <text x="270" y="232" class="label">00:03:42</text>
+    <path d="M90 310 C120 260, 150 360, 180 300 S240 250, 270 320 S335 365, 370 300 S430 240, 470 315 S535 370, 585 285 S640 335, 670 300" class="line"/>
+    <rect x="90" y="365" width="580" height="70" class="tile"/>
+    <text x="112" y="397" class="small">Markers</text>
+    <text x="210" y="397" class="tiny">01:20 camera notes</text>
+    <text x="400" y="397" class="tiny">03:12 action item</text>
+    <text x="112" y="424" class="tiny">transcription provider optional · no silent upload</text>
+    <rect x="90" y="450" width="130" height="36" rx="10" fill="#1b333f" stroke="#6ee7f5" stroke-width="3"/>
+    <text x="110" y="474" class="small">Pause</text>
+    <rect x="235" y="450" width="130" height="36" rx="10" fill="#1b333f" stroke="#6ee7f5" stroke-width="3"/>
+    <text x="255" y="474" class="small">Marker</text>
+    <rect x="380" y="450" width="130" height="36" rx="10" fill="#1b333f" stroke="#6ee7f5" stroke-width="3"/>
+    <text x="400" y="474" class="small">Save</text>
+    <rect x="525" y="450" width="130" height="36" rx="10" fill="#331f22" stroke="#ff7c7c" stroke-width="3"/>
+    <text x="545" y="474" class="small">Stop</text>
+    <rect x="40" y="498" width="680" height="77" class="dock"/>
+    <text x="68" y="530" class="small">&gt; recorder command...</text>
+    <text x="68" y="558" class="tiny">Space pause · M marker · S save · E export · D delete confirm</text>
+    <g transform="translate(60,600)">
+      <rect x="0" y="0" width="640" height="110" rx="22" fill="#0b1116" stroke="#26343d" stroke-width="3"/>
+      <rect x="55" y="25" width="110" height="45" rx="9" class="key"/><text x="110" y="48" class="keyText">R record</text>
+      <rect x="195" y="25" width="160" height="45" rx="9" class="key"/><text x="275" y="48" class="keyText">Space pause</text>
+      <rect x="385" y="25" width="110" height="45" rx="9" class="key"/><text x="440" y="48" class="keyText">M mark</text>
+    </g>
+  </g>
+
+  <g transform="translate(970,960)">
+    <text x="0" y="0" class="label">4 · Clock / Calculator / Tasks</text>
+    <rect x="0" y="25" width="760" height="710" rx="48" class="phone"/>
+    <rect x="40" y="55" width="680" height="520" rx="24" class="screen"/>
+    <text x="68" y="92" class="small">20:07</text>
+    <text x="220" y="92" class="small">Utilities · Active Values</text>
+    <text x="625" y="92" class="small">local</text>
+    <line x1="40" y1="110" x2="720" y2="110" class="mutedLine"/>
+
+    <rect x="68" y="132" width="286" height="150" class="tile2"/>
+    <text x="90" y="165" class="small">Clock</text>
+    <text x="90" y="205" class="label">Alarm 07:30</text>
+    <text x="90" y="240" class="tiny">Timer 08:14 active · Space pause</text>
+    <rect x="375" y="132" width="307" height="150" class="tile"/>
+    <text x="397" y="165" class="small">Calculator / Converter</text>
+    <text x="397" y="205" class="label">128 GB = 119.2 GiB</text>
+    <text x="397" y="240" class="tiny">Enter evaluate · history explicit</text>
+
+    <rect x="68" y="304" width="614" height="135" class="tile"/>
+    <text x="90" y="337" class="small">Tasks / Checklists</text>
+    <text x="90" y="374" class="tiny">[ ] compare camera samples</text>
+    <text x="90" y="404" class="tiny">[ ] update build target notes</text>
+    <text x="380" y="374" class="tiny">Calendar handoff requires confirmation</text>
+    <text x="380" y="404" class="tiny">Remote task sync default off</text>
+    <rect x="63" y="127" width="296" height="160" class="focus"/>
+
+    <rect x="40" y="498" width="680" height="77" class="dock"/>
+    <text x="68" y="530" class="small">&gt; calc, alarm, timer, task...</text>
+    <text x="68" y="558" class="tiny">A alarm · T timer/tasks · C calc · Enter open · / search</text>
+    <g transform="translate(60,600)">
+      <rect x="0" y="0" width="640" height="110" rx="22" fill="#0b1116" stroke="#26343d" stroke-width="3"/>
+      <rect x="55" y="25" width="110" height="45" rx="9" class="key"/><text x="110" y="48" class="keyText">A alarm</text>
+      <rect x="195" y="25" width="110" height="45" rx="9" class="key"/><text x="250" y="48" class="keyText">T task</text>
+      <rect x="335" y="25" width="110" height="45" rx="9" class="key"/><text x="390" y="48" class="keyText">C calc</text>
+      <rect x="475" y="25" width="110" height="45" rx="9" class="key"/><text x="530" y="48" class="keyText">/ find</text>
+    </g>
+  </g>
+
+  <text x="70" y="1760" class="tiny">Rules: current utility visible · no continuous scroll required · text input wins · local-first · no silent recording/sync/upload/location</text>
+</svg>
