@@ -61,15 +61,23 @@ FILTER_RECENTLY_ACTIVE=YES
 
 ## Network Manager
 
-Sable Network Manager controls cellular and WLAN access per app.
+Sable Mobile Manager must reuse the existing Settings-owned Sable Network Manager capability. It must not introduce a second network blocker, a second policy store, or fake transport-specific controls.
+
+The Panther/R9 implementation authority is the Sable Network Manager in Settings. It uses the platform-revocable `android.permission.INTERNET` as one all-network per-app control. The base platform does not prove separate per-app cellular and per-app Wi-Fi enforcement, so Mobile Manager must not present separate Mobile/WLAN switches unless a future platform-backed transport-scoped enforcement path is proven and gated independently.
+
+Mobile Manager may summarize network state and deep-link to the same Settings-owned Network Manager screen.
 
 ```text
 PER_APP_NETWORK_CONTROL=YES
-PER_APP_CELLULAR_TOGGLE=YES
-PER_APP_WIFI_TOGGLE=YES
-PER_APP_BACKGROUND_DATA_TOGGLE=YES
-PER_APP_ROAMING_WARNING=YES
-NETWORK_BLOCKED_BADGE=YES
+NETWORK_CONTROL_AUTHORITY=SETTINGS_OWNED_SABLE_NETWORK_MANAGER
+NETWORK_CONTROL_IMPLEMENTATION=REVOCABLE_ANDROID_PERMISSION_INTERNET
+ALL_NETWORK_TOGGLE=YES
+MOBILE_MANAGER_DEEP_LINKS_TO_NETWORK_MANAGER=YES
+DUPLICATE_NETWORK_BLOCKER=NO
+DUPLICATE_NETWORK_POLICY_STORE=NO
+PER_APP_CELLULAR_TOGGLE=NO_UNLESS_PLATFORM_ENFORCEMENT_PROVEN
+PER_APP_WIFI_TOGGLE=NO_UNLESS_PLATFORM_ENFORCEMENT_PROVEN
+PER_APP_BACKGROUND_DATA_TOGGLE=NO_UNLESS_PLATFORM_ENFORCEMENT_PROVEN
 VPN_DNS_FIREWALL_BOUNDARY_VISIBLE=YES
 ```
 
@@ -172,6 +180,7 @@ TEXT_INPUT_ALWAYS_WINS=YES
 ```text
 SETTINGS_ENTRY=Settings > Privacy & Security > Mobile Manager
 NETWORK_MANAGER_ENTRY=Settings > Apps > Network access
+NETWORK_MANAGER_ENTRYPOINT_REUSES_SETTINGS_AUTHORITY=YES
 APP_BLOCKER_ENTRY=Settings > Apps > Background controls
 FREEZER_ENTRY=Settings > Apps > Freezer
 STUDENT_MODE_ENTRY=Settings > Digital Wellbeing > Student / Focus Mode
@@ -182,6 +191,13 @@ STUDENT_MODE_ENTRY=Settings > Digital Wellbeing > Student / Focus Mode
 ```text
 MOBILE_MANAGER_APP_CONTROLS_UX=PASS
 PER_APP_NETWORK_CONTROL=PASS
+NETWORK_CONTROL_AUTHORITY=PASS
+NETWORK_CONTROL_IMPLEMENTATION=PASS
+MOBILE_MANAGER_DEEP_LINKS_TO_NETWORK_MANAGER=PASS
+DUPLICATE_NETWORK_BLOCKER=NO
+DUPLICATE_NETWORK_POLICY_STORE=NO
+PER_APP_CELLULAR_TOGGLE=NO_UNLESS_PLATFORM_ENFORCEMENT_PROVEN
+PER_APP_WIFI_TOGGLE=NO_UNLESS_PLATFORM_ENFORCEMENT_PROVEN
 APP_AUTOSTART_CONTROL=PASS
 BACKGROUND_ACTIVITY_CONTROL=PASS
 FREEZER_OR_HIDE_UNUSED_APPS=PASS
