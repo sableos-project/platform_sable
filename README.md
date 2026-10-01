@@ -1,6 +1,6 @@
 # SableOS common platform contracts
 
-Status: **current common architecture — 2026-09-26**
+Status: **current common architecture — 2026-10-01**
 
 ```text
 Pixel 7 / panther   REFERENCE_FROZEN / R9 Hub V1 physical acceptance PASS
@@ -73,6 +73,7 @@ install closure proves or supersedes them.
 
 ## Current active architecture documents
 
+- [Titan 2 C3B integration boundary](docs/C3B_INTEGRATION_BOUNDARY.md) — clarifies Launcher3-hosted Sable Start runtime, N1D/C3B product authority, source-built handoff and canonical-integration ownership.
 - [Architecture](docs/ARCHITECTURE.md)
 - [Device support levels](docs/DEVICE_SUPPORT_LEVELS.md)
 - [Portability rules](docs/PORTABILITY_RULES.md)
@@ -158,13 +159,14 @@ is treated as a diagnostics input, not as a normal user Settings hierarchy.
 
 ## Sable Start UX posture
 
-Sable Start remains the Sable HOME surface. It preserves Android Home / All Apps /
+Sable Start remains the Sable-facing HOME product surface. The current canonical Android runtime hosts that presentation inside Launcher3/Launcher3QuickStep; this public UX contract does not require a standalone HOME APK. It preserves Android Home / All Apps /
 app-info expectations while making type-to-launch, command entry, Hub glance,
 visible focus, app privacy summaries and pointer-mode boundaries first-class on
 keyboard devices.
 
 ```text
-SABLE_START_HOME=YES
+SABLE_START_HOME_PRODUCT_SURFACE=YES
+SABLE_START_STANDALONE_HOME_RUNTIME_REQUIRED=NO
 ANDROID_HOME_MENTAL_MODEL=KEEP
 TYPE_TO_LAUNCH=YES
 COMMAND_SEARCH_ENTRY=YES

@@ -55,15 +55,23 @@ Normative profile docs:
 - [Keyboard-first reference intake](KEYBOARD_FIRST_REFERENCE_INTAKE.md)
 - [Device capability matrix](device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
 
-## Launcher
+## Launcher / HOME
 
-`org.sableos.launcher` / SableLauncher owns HOME and the Sable-facing
-Start/All Apps/Search/Peek/app-context experience.
+Sable Start owns the Sable-facing HOME **product semantics and presentation**:
+Start / All Apps / Search / Peek / app-context / keyboard-first navigation.
 
-Launcher3QuickStep remains a private platform dependency for
-Recents/Overview/task/gesture substrate. It is not HOME eligible.
+Runtime hosting is an integration decision, not a public design-module
+requirement. The current canonical implementation after the R9L8 cutover hosts
+Sable Start presentation/state source inside Launcher3/Launcher3QuickStep, which
+is the Android HOME runtime and Recents/Overview/task/gesture substrate.
 
-Historical SableStart source remains presentation/history reference.
+```text
+SABLE_START_PRODUCT_SURFACE=YES
+STANDALONE_SABLELAUNCHER_RUNTIME_REQUIRED=NO
+CURRENT_CANONICAL_HOME_RUNTIME=Launcher3QuickStep
+```
+
+See `C3B_INTEGRATION_BOUNDARY.md`.
 
 ## Appearance
 

@@ -1,5 +1,7 @@
 # Sable Start keyboard-first UX
 
+> **Integration note:** this document specifies the Sable-facing HOME product surface and interaction semantics. It does not require a standalone HOME APK. Current canonical integration hosts Sable Start presentation/state inside Launcher3/Launcher3QuickStep; see `../C3B_INTEGRATION_BOUNDARY.md`.
+
 Status: **design contract — keyboard-first launcher/home**
 
 This document defines the keyboard-first Sable Start / Launcher UX for Titan 2,
