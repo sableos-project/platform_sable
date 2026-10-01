@@ -1,5 +1,7 @@
 # Sable Start screen design
 
+> **Integration note:** these layouts are presentation/behavior contracts for the Sable HOME surface, not Android package ownership. Current canonical runtime hosting is Launcher3/Launcher3QuickStep; see `../C3B_INTEGRATION_BOUNDARY.md`.
+
 Status: **screen design contract — launcher/home**
 
 This document records concrete Sable Start screen layouts for keyboard-first
