@@ -207,15 +207,25 @@ MODDED_GCAM_SHIPPING_DEPENDENCY=NO
 ROOT_CAMERASERVER_PATCH_PRODUCT_DEPENDENCY=NO
 ```
 
-## Keyboard-first UX
+## Keyboard-first UX — Camera Control Deck
 
 Camera must be usable without touchpad-style interaction.
 
+The accepted interaction principle is:
+
+> **The screen is the viewfinder. The physical keyboard is the camera control
+> surface.**
+
 ```text
 KEYBOARD_FIRST_CAMERA=YES
+CAMERA_CONTROL_DECK=YES
+PORTRAIT_SUPPORTED=YES
+LANDSCAPE_CONTROL_DECK=YES
+GLOBAL_LANDSCAPE_LOCK=NO
 PHYSICAL_KEYBOARD_SHUTTER=YES
 ONSCREEN_SHUTTER_FALLBACK=YES
-TOUCH_OPTIONAL=YES
+TOUCH_SUPPORTED=YES
+TOUCH_REQUIRED_FOR_CORE_CAMERA_USE=NO
 VIEWFINDER_CURRENT_CONTENT_VISIBLE=YES
 CURRENT_CAPTURE_OR_REVIEW_ALWAYS_VISIBLE=YES
 CONTINUOUS_SCROLL_REQUIRED_FOR_CURRENT_CONTENT=NO
@@ -223,43 +233,64 @@ TEXT_INPUT_ALWAYS_WINS=YES
 SINGLE_KEY_SHORTCUTS_DISABLED_WHILE_TYPING=YES
 ```
 
-Proposed keys:
+Initial Sable semantic control map:
 
 ```text
-Space = shutter / start-stop video
-Enter = focus / confirm selected action
-J or Left = previous captured item in review
-K or Right = next captured item in review
-T = return to live viewfinder / today-latest gallery position
-Z = zoom mode
-F = focus mode
-E = exposure controls
-R = RAW / high-resolution related mode selector
-V = video / still mode toggle
-I = info / capture metadata
-D or Backspace = delete with confirmation
-/ or S = search / command when in review/gallery handoff
-Esc or Back = cancel / close panel
+Space / Enter / Camera key / Volume = shutter / start-stop video
+F                                      autofocus
+hold F                                 autofocus lock candidate
+E                                      exposure selection
+hold E                                 auto-exposure lock candidate
+I                                      ISO selector
+W                                      white-balance selector
+S                                      shutter-speed selector
++ / -                                  zoom
+Left / Right                           previous / next shooting mode
+Up / Down                              adjust active parameter
+C                                      switch camera
+R                                      RAW / RAW+JPEG candidate
+B                                      same-scene compare bracket
+G                                      last capture
+A                                      return selected Pro parameter to Auto
 ```
 
-No key may bypass safety, permission or destructive confirmation.
+Keyboard focus-point movement is required without touch; the exact chord remains
+physical-evidence-gated.
+
+Manual parameter state should appear in transient strips rather than permanent
+virtual DSLR controls. A keyboard/touch-dismissible control legend is required
+for discoverability.
+
+No key may bypass safety, permission or destructive confirmation. The first
+release should use a strong Sable default map rather than a large arbitrary
+per-key customization matrix.
 
 ## Viewfinder design
 
-Titan 2 has a square main display and physical keyboard. The viewfinder must avoid slab-phone assumptions.
+Titan 2 has a square main display and physical keyboard. The viewfinder must
+avoid slab-phone assumptions.
+
+Portrait remains a minimal conventional camera surface. Landscape should use the
+Camera Control Deck layout: maximize the preview, keep only compact capture
+state visible and rely on transient parameter strips for manual controls.
 
 ```text
 SQUARE_VIEWFINDER_SAFE=YES
 CUTOUT_ROUNDED_CORNER_AWARE=YES
+PORTRAIT_MINIMAL_UI=YES
+LANDSCAPE_CONTROL_DECK_UI=YES
 MODE_STRIP_KEYBOARD_REACHABLE=YES
-ZOOM_LADDER_VISIBLE=YES
+TRANSIENT_PARAMETER_STRIPS=YES
+CONTROL_LEGEND_REQUIRED=YES
+KEYBOARD_FOCUS_POINT_MOVE=REQUIRED
 FOCUS_EXPOSURE_STATE_VISIBLE=YES
 RAW_HIGH_RES_BADGES_VISIBLE=YES
 LAST_CAPTURE_THUMBNAIL_VISIBLE=YES
 SUBSCREEN_SELFIE_FLOW_CANDIDATE=YES
 ```
 
-The viewfinder should keep current capture controls visible. Advanced panels should overlay or dock without hiding shutter/focus state.
+Advanced panels should overlay or dock without hiding shutter/focus state or
+permanently consuming a large part of the preview.
 
 ## Quick review and compare
 
