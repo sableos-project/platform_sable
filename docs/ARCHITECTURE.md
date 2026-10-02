@@ -235,8 +235,8 @@ Required across launcher and first-party apps:
 
 ## Device roles
 
-Panther is REFERENCE_FROZEN. Titan 2 is active PORTABILITY/N0_A16 planning.
-Titan 2 Elite is an independent PORTABILITY/N0 candidate. Q27 remains RESEARCH.
+Panther is REFERENCE_FROZEN. Titan 2 is active N1D/C3B engineering integration.
+Titan 2 Elite remains an independent keyboard-first candidate requiring separate evidence. Q27 remains RESEARCH.
 
 No new PRIMARY device is currently declared.
 
