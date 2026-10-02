@@ -122,7 +122,7 @@ keyboard, pointer, SubScreen, critical-input or release evidence.
 Titan 2
   profile: square keyboard device + rear SubScreen candidate
   AOD: no by default
-  status: N0_A16 planning, no Sable artifact/boot yet
+  status: N1D/C3B engineering integration active; no public Sable artifact/boot claim yet
 
 Titan 2 Elite
   profile: compact AMOLED keyboard-device candidate
