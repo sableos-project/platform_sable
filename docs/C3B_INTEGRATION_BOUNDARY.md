@@ -38,10 +38,42 @@ SABLE_START_PRODUCT_SURFACE=YES
 STANDALONE_HOME_RUNTIME_REQUIRED=NO
 ANDROID_HOME_RUNTIME_OWNER=CANONICAL_INTEGRATION_DECISION
 CURRENT_CANONICAL_IMPLEMENTATION=LAUNCHER3_HOSTED_SABLE_START
+HOME_AUTHORITY_SCOPE=SABLE_FIRST_PARTY_CANONICAL
+THIRD_PARTY_HOME_SELECTION_ALLOWED=YES
+FORCE_SABLE_HOME_AFTER_USER_SELECTION=NO
 ```
 
 Reusable type-to-launch/search logic may be developed independently, but final
-runtime ownership belongs to the canonical integration repository.
+Sable first-party runtime ownership belongs to the canonical integration
+repository. Android user selection of an installed third-party HOME remains
+allowed; SableOS must not force Sable Start back after explicit user choice.
+
+## Sable Keyboard / third-party IME boundary
+
+The canonical lane may establish Sable Keyboard as the factory/default
+first-party IME for critical-entry qualification, but that does not remove
+Android's user-selectable IME model.
+
+```text
+SABLE_FIRST_PARTY_IME=SableKeyboard
+THIRD_PARTY_IME_INSTALL_ALLOWED=YES
+THIRD_PARTY_IME_ENABLE_ALLOWED=YES
+THIRD_PARTY_IME_SELECTION_ALLOWED=YES
+FORCE_SABLE_IME_AFTER_USER_SELECTION=NO
+```
+
+A third-party IME is not automatically covered by Sable's direct-boot,
+lockscreen, pairing or physical-keyboard acceptance evidence.
+
+## Camera Control Deck boundary
+
+The public product direction for keyboard devices is a Sable-owned Camera2
+application using a viewfinder-first **Camera Control Deck**. Portrait remains
+supported; landscape may optimize for physical controls; touch remains a full
+fallback; no global landscape lock is required.
+
+This is a product/interaction contract. Camera HAL, SYSTEM_CAMERA privilege and
+device-specific camera topology remain canonical/device evidence decisions.
 
 ## Titan 2 N1D/C3B product model
 

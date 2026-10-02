@@ -1,6 +1,6 @@
 # SableOS common architecture
 
-Status: **current normative architecture — 2026-09-26**
+Status: **current normative architecture — 2026-10-02**
 
 ## Product structure
 
@@ -69,9 +69,15 @@ is the Android HOME runtime and Recents/Overview/task/gesture substrate.
 SABLE_START_PRODUCT_SURFACE=YES
 STANDALONE_SABLELAUNCHER_RUNTIME_REQUIRED=NO
 CURRENT_CANONICAL_HOME_RUNTIME=Launcher3QuickStep
+HOME_AUTHORITY_SCOPE=SABLE_FIRST_PARTY_CANONICAL
+THIRD_PARTY_HOME_SELECTION_ALLOWED=YES
+FORCE_SABLE_HOME_AFTER_USER_SELECTION=NO
 ```
 
-See `C3B_INTEGRATION_BOUNDARY.md`.
+See `C3B_INTEGRATION_BOUNDARY.md`. Launcher3/Quickstep is the Sable-owned canonical
+HOME runtime; Android user selection of a third-party HOME remains supported.
+Third-party launchers do not automatically inherit Quickstep/SystemUI or Private
+Space integration.
 
 ## Appearance
 
@@ -117,17 +123,27 @@ old network translation/model-download design.
 
 ## Camera
 
-Sable Camera is a common system-image workstream.
+Sable Camera is a common system-image workstream. Keyboard-first devices use the
+accepted **Camera Control Deck** interaction model:
+
+> The screen is the viewfinder. The physical keyboard is the camera control
+> surface.
 
 Architecture:
 
 ```text
 camera-core
 camera-capabilities
+semantic camera actions
 device-profiles
-ui
+ui / Camera Control Deck
 platform-integration
 ```
+
+Portrait remains supported. Landscape emphasizes the viewfinder and physical
+keyboard, with transient parameter strips, keyboard focus-point movement,
+AF/AE lock candidates and a discoverable control legend. Touch remains a
+complete fallback and the app does not globally force landscape.
 
 Use normal Camera2/vendor HAL capability first. SYSTEM_CAMERA privilege is
 device-specific and only justified by physical evidence plus negative
@@ -150,6 +166,19 @@ device physical-keyboard adapter
 
 Device scan-code quirks do not belong in common IME or app code. Titan 2,
 Titan 2 Elite and Q27 require independent keyboard and pointer profiles.
+
+Sable Keyboard is the first-party/factory-default direction, subject to
+canonical integration, but Android user choice is preserved:
+
+```text
+THIRD_PARTY_IME_INSTALL_ALLOWED=YES
+THIRD_PARTY_IME_ENABLE_ALLOWED=YES
+THIRD_PARTY_IME_SELECTION_ALLOWED=YES
+FORCE_SABLE_IME_AFTER_USER_SELECTION=NO
+```
+
+Third-party IMEs are not automatically covered by Sable's direct-boot,
+lockscreen or physical-keyboard acceptance evidence.
 
 ## Critical text entry
 
@@ -206,8 +235,8 @@ Required across launcher and first-party apps:
 
 ## Device roles
 
-Panther is REFERENCE_FROZEN. Titan 2 is active PORTABILITY/N0_A16 planning.
-Titan 2 Elite is an independent PORTABILITY/N0 candidate. Q27 remains RESEARCH.
+Panther is REFERENCE_FROZEN. Titan 2 is active N1D/C3B engineering integration.
+Titan 2 Elite remains an independent keyboard-first candidate requiring separate evidence. Q27 remains RESEARCH.
 
 No new PRIMARY device is currently declared.
 

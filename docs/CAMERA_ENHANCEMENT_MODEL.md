@@ -1,6 +1,6 @@
 # Sable Camera architecture
 
-Status: **current cross-device camera direction — 2026-09-24**
+Status: **current cross-device camera direction — 2026-10-02**
 
 Sable Camera is a common system-image workstream for keyboard-first devices.
 Panther's frozen R9 image keeps its documented upstream/preprocessed Camera
@@ -43,19 +43,39 @@ A Sable Camera system app may receive `SYSTEM_CAMERA` only on a device where
 physical evidence proves useful system-only cameras and negative third-party
 discovery/access tests preserve the intended boundary.
 
-## Keyboard-first UI
+## Keyboard-first UI — Camera Control Deck
 
-Support square/near-square layouts and keyboard operation for:
+The accepted keyboard-device interaction principle is:
 
-- focus/shutter;
-- video start/stop;
+> **The screen is the viewfinder. The physical keyboard is the camera control
+> surface.**
+
+Portrait remains supported. Landscape should minimize persistent touch chrome
+and treat the keyboard as the primary control deck. Touch remains a complete
+fallback. The app must not globally force landscape.
+
+Required semantic actions include:
+
+- shutter / video start-stop;
+- autofocus;
+- autofocus lock;
+- auto-exposure lock;
+- keyboard focus-point movement;
 - zoom;
 - camera switch;
-- exposure adjustment where supported;
+- ISO / white balance / shutter / exposure adjustment where supported;
+- RAW / RAW+JPEG candidate;
+- compare bracket;
 - gallery/open-last-capture;
-- settings/mode navigation.
+- settings/mode navigation;
+- return selected Pro parameter to Auto.
 
-Bindings are device-profile aware rather than globally hard-coded.
+Manual parameters should use transient strips instead of permanent virtual
+camera dials. A control legend must make the physical layout discoverable.
+
+The first release should use a strong Sable default key map rather than an
+arbitrary full remapping UI. Raw device key codes are adapted into semantic
+camera actions instead of being scattered through capture logic.
 
 ## Titan 2
 
