@@ -56,6 +56,14 @@ Titan 2 and Titan 2 Elite should consume the same common app source/artifacts
 where substrate compatibility permits. Keyboard-first presentation changes
 focus/layout/input behavior, not application ownership.
 
+
+Sable Hub has an additional semantic portability floor: Panther-proven Connected
+Apps behavior must remain available on Titan-family products. See
+`SABLE_HUB_PORTABILITY_CONTRACT.md`. Device adaptation may change presentation,
+but must not remove generic notification/conversation ingestion, source-owned
+RemoteInput reply, Open-app fallback, package+user policy or bounded local
+history.
+
 ## Production signing
 
 Production signing/update lifecycle remains separate and deferred.
