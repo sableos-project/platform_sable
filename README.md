@@ -1,14 +1,14 @@
 # SableOS common platform contracts
 
-Status: **current common architecture — 2026-10-01**
+Status: **current common architecture — 2026-10-02**
 
 ```text
 Pixel 7 / panther   REFERENCE_FROZEN / R9 Hub V1 physical acceptance PASS
 R9 Hub V1           MERGED / PR #110
 Keyboard-first V1   MERGED / PR #108
 K1/K2               multi-device artifact/deployment foundation MERGED
-Titan 2             active keyboard-first PORTABILITY / N0_A16 strategy
-Titan 2 Elite       next independent keyboard-first PORTABILITY target
+Titan 2             active keyboard-first N1D/C3B engineering integration
+Titan 2 Elite       next independent keyboard-first target / separate evidence required
 Q27                 RESEARCH / future candidate
 Production signing  deferred
 ```
@@ -79,12 +79,13 @@ install closure proves or supersedes them.
 - [Portability rules](docs/PORTABILITY_RULES.md)
 - [Release model](docs/RELEASE_MODEL.md)
 - [Camera enhancement model](docs/CAMERA_ENHANCEMENT_MODEL.md)
+- [Camera capture / Control Deck UX](docs/design/CAMERA_CAPTURE_UX.md)
 - [Keyboard-device tools](docs/KEYBOARD_DEVICE_TOOLS.md)
 - [Keyboard-first device profile model](docs/KEYBOARD_FIRST_DEVICE_PROFILE_MODEL.md)
 - [Display and attention profile model](docs/DISPLAY_AND_ATTENTION_PROFILE_MODEL.md)
 - [Keyboard and pointer profile model](docs/KEYBOARD_AND_POINTER_PROFILE_MODEL.md)
 - [Critical text-entry gates](docs/CRITICAL_TEXT_ENTRY_GATES.md)
-- [Keyboard-first reference intake](docs/KEYBOARD_FIRST_REFERENCE_INTAKE.md)
+- [Keyboard-first reference intake](docs/KEYBOARD_FIRST_REFERENCE_INTAKE.md) — includes pinned Pastiera 0.86 behavior/product intake and D6 backlog boundaries
 - [Device capability matrix](docs/device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
 - [Keyboard-first Settings UX](docs/design/KEYBOARD_FIRST_SETTINGS_UX.md)
 - [Settings search UX](docs/design/SETTINGS_SEARCH_UX.md)
@@ -167,6 +168,9 @@ keyboard devices.
 ```text
 SABLE_START_HOME_PRODUCT_SURFACE=YES
 SABLE_START_STANDALONE_HOME_RUNTIME_REQUIRED=NO
+SABLE_FIRST_PARTY_HOME_OWNER=Launcher3QuickStep
+THIRD_PARTY_HOME_SELECTION_ALLOWED=YES
+FORCE_SABLE_HOME_AFTER_USER_SELECTION=NO
 ANDROID_HOME_MENTAL_MODEL=KEEP
 TYPE_TO_LAUNCH=YES
 COMMAND_SEARCH_ENTRY=YES
@@ -186,7 +190,8 @@ Functional inspirations are documented as behavior references only: Android
 Launcher/Pixel Launcher/Launcher3, Niagara-style vertical access, BlackBerry OS7
 keyboard shortcuts, BlackBerry OS10 Hub/Peek/Flow, Windows Phone/Metro/Zune visual
 structure, OpenMiniLaunch/Mink command-box ideas, Commander command overlay, and
-keyboard/pointer learnings from Pastiera/Plektra and q25toolbox.
+keyboard/pointer learnings from Pastiera 0.86/Plektra and q25toolbox. Pastiera
+is GPL-3.0 reference input only; Sable Keyboard remains independently owned.
 
 ## Sable Hub UX posture
 
