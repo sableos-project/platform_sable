@@ -12,7 +12,7 @@ This document records references that inform Sable keyboard-first design. It doe
 | --- | --- | --- | --- |
 | OpenMiniLaunch / MinkLauncher | keyboard-first launcher, command box, local conversations, provider handoff | Sable Start, Sable Hub, Sable Command | possible later after Apache-2.0 review; not required now |
 | Commander | global command overlay, notification hub, action aliases, quick controls, keyboard navigation | Sable Command, Sable Hub, Settings search | possible later after MIT review; not required now |
-| Pastiera / Plektra | physical-keyboard IME, layout JSON, modifier state, Nav Mode, SYM pages | Sable Keyboard/Profile model | no platform-core import; GPL/app-boundary review required |
+| Pastiera 0.86 / Plektra | physical-keyboard IME, modifiers, compact input, SYM/emoji/snippets, dictionaries, settings/deep links | Sable Keyboard/Profile model + D6 backlog | behavior/product reference only; GPL source import not authorized |
 | q25toolbox | per-app keyboard policy, auto-focus, display scaling, hardware workarounds | SableInputProfile, AppLayoutProfile, device adapters | no import until license/provenance clear; root/LSPosed model not Sable base |
 | Titan 2 stock research | Bluetooth pairing text-entry failure and SubScreen/keyboard evidence | CriticalTextEntryProfile, Titan adapter | evidence-derived requirements only |
 
@@ -48,7 +48,21 @@ feature-specific permissions
 
 Do not make Sable core dependent on Accessibility or third-party app hooks for platform behavior.
 
-## Pastiera / Plektra learnings
+## Pastiera 0.86 / Plektra learnings
+
+Reviewed checkpoint:
+
+```text
+repository=https://github.com/palsoftware/pastiera
+release=v0.86
+commit=e7d8f27ecc7253e61690b5d34f110b25dc68bb16
+release_date=2026-09-26
+license=GPL-3.0
+successor=https://github.com/pkb-rocks/plektra
+```
+
+Pastiera 0.86 is the final planned Pastiera feature release. Security maintenance
+continues there while active feature development moves to Plektra.
 
 Adopt as Sable-owned concepts:
 
@@ -56,13 +70,33 @@ Adopt as Sable-owned concepts:
 modifier state machine
 one-shot/lock/held modifiers
 Nav Mode
-SYM pages
+compact candidate/modifier/language strip
+configurable SYM and emoji surfaces
+local snippets / shortcodes
 JSON-backed keyboard layout/profile model
 user-visible layout import/export idea
+multiple local dictionaries
+optional local learned next-word behavior after privacy review
+searchable settings and stable deep links
+Titan 2 Elite rounded-display/inset test cases
 physical-keyboard regression tests
 ```
 
-GPL code must not be copied into platform/vendor core without a deliberate GPL-compatible app boundary and full compliance.
+Ownership remains explicit:
+
+```text
+QuickLauncher/app launch -> Launcher3-hosted Sable Start
+global/power shortcuts -> platform/Sable Start semantics
+IME -> text composition and bounded input UI
+```
+
+Do not adopt Shizuku as an input dependency. Do not enable persistent keyboard
+clipboard history by default. Do not add an automatic unverified remote
+dictionary/layout channel.
+
+GPL Pastiera/Plektra source must not be copied into Sable Keyboard or
+platform/vendor core without a separate explicit licensing decision and full
+compliance. This intake authorizes behavior/product learning only.
 
 ## q25toolbox learnings
 
