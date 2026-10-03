@@ -132,6 +132,18 @@ The integrated product should preserve the Sable Messages product direction.
 Stock/AOSP Messaging may be used temporarily for bring-up, but it is not a
 silent replacement for the Sable Messages product surface.
 
+## Sable Hub parity
+
+C3B must preserve the common Sable Hub behavior proven on Panther. The Hub is a
+separate canonical surface from Sable Messages and its Connected Apps semantics
+must not be removed by Messages reconciliation or device-specific work.
+
+See `SABLE_HUB_PORTABILITY_CONTRACT.md`. In particular, Titan profiles preserve
+generic package+user Connected Apps configuration, Android
+notification/conversation ingestion, source-authorized RemoteInput reply,
+Open-app fallback, bounded local derived history and dynamic provider discovery.
+Provider names are compatibility/evidence targets, not a hard-coded allowlist.
+
 ## Design-document interpretation
 
 Documents under `docs/design/` are normative for:
