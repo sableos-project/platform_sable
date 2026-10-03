@@ -131,6 +131,7 @@ install closure proves or supersedes them.
 - [Keyboard-first device profile model](docs/KEYBOARD_FIRST_DEVICE_PROFILE_MODEL.md)
 - [Display and attention profile model](docs/DISPLAY_AND_ATTENTION_PROFILE_MODEL.md)
 - [Keyboard and pointer profile model](docs/KEYBOARD_AND_POINTER_PROFILE_MODEL.md)
+- [Normalized keyboard input contract](docs/NORMALIZED_KEY_INPUT_CONTRACT.md)
 - [Critical text-entry gates](docs/CRITICAL_TEXT_ENTRY_GATES.md)
 - [Keyboard-first reference intake](docs/KEYBOARD_FIRST_REFERENCE_INTAKE.md) — includes pinned Pastiera 0.86 behavior/product intake and D6 backlog boundaries
 - [Device capability matrix](docs/device-capabilities/DEVICE_CAPABILITY_MATRIX.md)
