@@ -7,7 +7,7 @@ Pixel 7 / panther   REFERENCE_FROZEN / R9 Hub V1 physical acceptance PASS
 R9 Hub V1           MERGED / PR #110
 Keyboard-first V1   MERGED / PR #108
 K1/K2               multi-device artifact/deployment foundation MERGED
-Titan 2             active keyboard-first N1D/C3B engineering integration
+Titan 2             active N1D/C3B E3 engineering; P1-P4 product train in parallel
 Titan 2 Elite       next independent keyboard-first target / separate evidence required
 Q27                 RESEARCH / future candidate
 Production signing  deferred
@@ -49,6 +49,37 @@ Priority | Messages | Email | People
 Hub is an aggregator and interaction surface. Source applications/providers keep
 ownership of their accounts, credentials, private databases and protocol stacks.
 
+## Current Titan roadmap
+
+The current private canonical roadmap is N1D/C3B E3 onward:
+
+```text
+E3  first Sable-composed systemimage (running, not sealed)
+E4  artifact/deployment readiness
+E5  first physical C3B boot
+E6  runtime baseline qualification
+E7  evidence-driven compatibility
+E8  product-closure waves
+```
+
+Parallel product-source assignments are:
+
+```text
+P1  Sable Start keyboard-first handoff
+P2  Sable Keyboard provisioning readiness
+P3  SetupWizard2 keyboard/square-display integration preparation
+P4  Weather city-management + keyboard-first closure
+P5  Sable Reader v2 design/scope (implementation not yet assigned)
+```
+
+P1-P4 proceed without per-stage operator waits, but each stage is frozen and
+later receives exact-head ai-g732 qualification before admission.
+
+P5 direction expands common Sable Reader to keyboard-first ebooks, comics /
+manga / webtoons and audiobooks while keeping Sable Text Reader separate.
+Comics are local-first and may take product/UX inspiration from Mihon without
+adopting an unreviewed executable extension ecosystem.
+
 ## Accepted common application family
 
 The frozen Panther reference proves the current product family:
@@ -59,8 +90,8 @@ The frozen Panther reference proves the current product family:
 - Sable Minesweeper;
 - Sable 2048;
 - Sable Media;
-- Sable Reader;
-- Sable Text Reader;
+- Sable Reader (Reader v2 design: books + comics + audiobooks);
+- Sable Text Reader (separate lightweight text/TTS/accessibility product);
 - Sable Hub / Messages;
 - Sable Mail;
 - Sable Weather;
@@ -122,7 +153,7 @@ keyboard, pointer, SubScreen, critical-input or release evidence.
 Titan 2
   profile: square keyboard device + rear SubScreen candidate
   AOD: no by default
-  status: N1D/C3B engineering integration active; no public Sable artifact/boot claim yet
+  status: N1D/C3B E3 build running; no public Sable artifact/boot claim yet
 
 Titan 2 Elite
   profile: compact AMOLED keyboard-device candidate
