@@ -115,6 +115,10 @@ install closure proves or supersedes them.
 ## Current active architecture documents
 
 - [Sable Reader v2 architecture](docs/SABLE_READER_V2_ARCHITECTURE.md)
+- [DESIGN-KF-A — Notification Policy, Attention and Hub ownership](docs/design/NOTIFICATION_POLICY_ATTENTION_HUB_OWNERSHIP.md)
+- [DESIGN-KF-B — SystemUI visual convergence](docs/design/SYSTEMUI_VISUAL_CONVERGENCE_CONTRACT.md)
+- [DESIGN-KF-C — Sable Tools product consolidation](docs/design/SABLE_TOOLS_PRODUCT_CONSOLIDATION.md)
+- [DESIGN-KF-D — All Apps privacy row and responsive polish](docs/design/ALL_APPS_PRIVACY_RESPONSIVE_POLISH.md)
 - [SableScreens convergence baseline](docs/SABLESCREENS_REFERENCE_BASELINE.md)
 - [Titan 2 C3B integration boundary](docs/C3B_INTEGRATION_BOUNDARY.md) — clarifies Launcher3-hosted Sable Start runtime, N1D/C3B product authority, source-built handoff and canonical-integration ownership.
 - [Architecture](docs/ARCHITECTURE.md)
@@ -426,6 +430,22 @@ aimindseye/sableos
 Cross-repo references should not copy profile data as independent truth. They
 should link or cite the current platform_sable profile docs and keep release or
 flash gates fail-closed until evidence exists.
+
+## Keyboard-first design closure
+
+The bounded DESIGN-KF-A through DESIGN-KF-D contracts are accepted and ready for
+implementation assignment after the current P1-P5 developer trains complete.
+
+```text
+DESIGN_KF_A_NOTIFICATION_ATTENTION_HUB=ACCEPTED
+DESIGN_KF_B_SYSTEMUI_CONVERGENCE=ACCEPTED
+DESIGN_KF_C_SABLE_TOOLS_CONSOLIDATION=ACCEPTED
+DESIGN_KF_D_ALL_APPS_RESPONSIVE_POLISH=ACCEPTED
+KEYBOARD_FIRST_V1_FOUNDATIONAL_DESIGN=COMPLETE
+TITAN2_V1_PRODUCT_DESIGN=COMPLETE
+```
+
+Remaining work is implementation, runtime/device evidence and physical polish.
 
 ## Active design work
 
