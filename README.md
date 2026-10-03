@@ -69,16 +69,26 @@ P1  Sable Start keyboard-first handoff
 P2  Sable Keyboard provisioning readiness
 P3  SetupWizard2 keyboard/square-display integration preparation
 P4  Weather city-management + keyboard-first closure
-P5  Sable Reader v2 design/scope (implementation not yet assigned)
+P5  Sable Reader v2 architecture ACCEPTED / separate P5A-P5F implementation train
 ```
 
 P1-P4 proceed without per-stage operator waits, but each stage is frozen and
 later receives exact-head ai-g732 qualification before admission.
 
-P5 direction expands common Sable Reader to keyboard-first ebooks, comics /
-manga / webtoons and audiobooks while keeping Sable Text Reader separate.
-Comics are local-first and may take product/UX inspiration from Mihon without
-adopting an unreviewed executable extension ecosystem.
+P5 architecture is accepted: one keyboard-first local-first library over EPUB/PDF, comics/manga/webtoons and audiobooks while Sable Text Reader remains separate. Comics may take product/UX inspiration from Mihon without adopting its runtime or extension ecosystem. See `docs/SABLE_READER_V2_ARCHITECTURE.md`.
+
+## SableScreens design convergence
+
+The qualified 23-screen `aimindseye/titan2-temp/apps/titan2/screens` catalog is an explicit design/behavior reference baseline:
+
+```text
+SABLESCREENS_REFERENCE_BASELINE=YES
+SABLESCREENS_SCREEN_COUNT=23
+SABLESCREENS_SHIPPING_RUNTIME=NO
+RUNTIME_OWNER_REPLACEMENT=NO
+```
+
+Its focus, privacy, theme and capability-profile semantics should be consumed by P1-P5/E8 implementations, but the catalog never substitutes for Launcher3, SystemUI, Keyguard, Settings, Telecom, SetupWizard2 or other canonical runtime owners.
 
 ## Accepted common application family
 
@@ -104,6 +114,8 @@ install closure proves or supersedes them.
 
 ## Current active architecture documents
 
+- [Sable Reader v2 architecture](docs/SABLE_READER_V2_ARCHITECTURE.md)
+- [SableScreens convergence baseline](docs/SABLESCREENS_REFERENCE_BASELINE.md)
 - [Titan 2 C3B integration boundary](docs/C3B_INTEGRATION_BOUNDARY.md) — clarifies Launcher3-hosted Sable Start runtime, N1D/C3B product authority, source-built handoff and canonical-integration ownership.
 - [Architecture](docs/ARCHITECTURE.md)
 - [Device support levels](docs/DEVICE_SUPPORT_LEVELS.md)
