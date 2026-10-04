@@ -94,6 +94,43 @@ Dark
 Apps consume semantic roles rather than inventing independent theme stores.
 Panther physical acceptance proved Light/Dark propagation across Sable apps.
 
+
+## Battery usage, health and charging
+
+Battery remains an Android Settings capability, not a separate Sable launcher app.
+
+```text
+Settings -> Battery
+  overview
+  usage
+  health
+  charging & protection
+```
+
+The common product contract is availability-aware and profile-gated:
+
+- usage relies on Android platform accounting rather than a parallel Sable profiler;
+- health values such as maximum capacity and cycle count are shown only when a
+  trustworthy framework/Health/vendor source exists;
+- derived values must identify that they are estimates and expose confidence;
+- unsupported values render as unavailable rather than fabricated;
+- mutable charge-limit/adaptive-charging controls require a validated
+  device-specific backend;
+- common Settings UI does not directly write raw vendor sysfs/procfs nodes;
+- battery analytics/history remain local and bounded.
+
+The frozen historical S1.7 `PowerSnapshot` contract remains narrow and is not
+silently expanded for this feature.
+
+Keyboard-first Battery follows the normalized input and Settings focus contracts:
+deterministic focus, Up/Down traversal, Enter/Space activation, Settings
+type-ahead, and an explicit keyboard inspection mode for charts.
+
+Normative design:
+
+- [Battery usage, health and charging UX](design/BATTERY_HEALTH_USAGE_UX.md)
+- [Battery visual confirmation](design/BATTERY_HEALTH_USAGE_VISUAL_CONFIRMATION.md)
+
 ## Application boundaries
 
 Applications own capabilities; the Sable shell organizes people, attention and
