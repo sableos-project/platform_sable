@@ -174,6 +174,39 @@ SUBSCREEN_GENERAL_APP_SURFACE=NO_BY_DEFAULT
 SUBSCREEN_GLANCE_SURFACE=YES_CANDIDATE
 ```
 
+
+## Battery
+
+Battery keeps Android's familiar top-level location but gains Sable-owned usage,
+health and charging-protection presentation where the platform can support it.
+
+```text
+Battery
+  current level / charging state
+  Battery usage
+  Battery health
+  Charging & protection
+  Battery saver
+```
+
+Keyboard-first posture:
+
+- list-first on square/compact displays;
+- deterministic visible focus;
+- type-ahead aliases such as Usage / Health / Charging;
+- bounded charts with Enter-to-inspect and Left/Right bucket navigation;
+- Back/Escape exits chart inspection and restores row focus;
+- no gesture-only battery data.
+
+Health/control truthfulness is part of the UX contract. Capacity health, cycle
+count and charging controls are capability-gated per device profile; unavailable
+data remains explicitly unavailable.
+
+See:
+
+- `BATTERY_HEALTH_USAGE_UX.md`
+- `BATTERY_HEALTH_USAGE_VISUAL_CONFIRMATION.md`
+
 ## Apps
 
 Apps should retain Android's expected location and behavior, but Sable must add
