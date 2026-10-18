@@ -1,3 +1,5 @@
+> **2026-10-18 Titan 2 engineering status (newest):** [Dual-track clean-build handoff](docs/ENGINEERING_STATUS_2026-10-18.md). The operator retired the legacy N1D/C3B build workspaces, reverified sealed C3A/N1F images, and bootstrapped separate Track A V2 / Track B hosts. The local canonical checkouts are behind remote main; there has been **no new Android source sync, firmware build, or flash**. October 13 and earlier status notices below are dated history.
+
  > **2026-10-13 Titan 2 engineering status:** The October 13 M4 write completed but Android boot failed; new integration remains gated, with **no build/flash authority**. See [October 13 engineering status](docs/ENGINEERING_STATUS_2026-10-13.md). October 12 and older notices below are dated history; other device baselines remain unchanged.
 
 > **Current status (2026-10-12):** See [the reconciled engineering gate ledger](docs/ENGINEERING_STATUS_2026-10-12.md). Older milestone status below is retained as dated history. Titan 2 N1F/M4 full-image qualification and flash authorization remain OPEN.
