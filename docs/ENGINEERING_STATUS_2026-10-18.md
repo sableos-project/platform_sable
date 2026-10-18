@@ -20,6 +20,9 @@ Track B must not treat cosmetic PHH provider/connectivity indication as a succes
 
 ## Governance and boundaries
 
+- Canonical device-integration handoff is proposed in [aimindseye/sableos PR #344](https://github.com/aimindseye/sableos/pull/344); that PR is documentation-only and is **not yet merged**.
+
+
 - Canonical device-specific implementation plan is in `aimindseye/sableos`: `docs/titan2/TITAN2_DUAL_TRACK_FRESH_BUILD_HANDOFF_20261018.md`.
 - Private Track A source [PR #343](https://github.com/aimindseye/sableos/pull/343) was **closed unmerged**; its changes are not inherited by branch name. Private N1F/M4 recovery and IMS [PR #342](https://github.com/aimindseye/sableos/pull/342) remains **open draft**, not Track B flash authority.
 - Shared `sableos-project/platform_sable` repository owns common application semantics, UI contracts, capability profiles, portability and assurance standards; it does **not** own Titan 2 proprietary telephony, OEM signing keys, LP/AVB, recovery, or firmware source.
