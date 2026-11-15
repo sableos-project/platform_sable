@@ -3,6 +3,8 @@
 >
 > **Historical documentation notice:** The README content below is preserved for provenance. Any older statement naming Titan 2/Elite as ACTIVE, NEXT, or a current deployment target is superseded by the 2026-11-03 decision.
 
+> **SableOS EDITIONS — 2026-11-15:** SableOS now has an **Android edition** (LineageOS/AOSP, the repositories in this organization) and a **Native edition**, [SableOS Native](https://github.com/sableos-project/sableos-native): a Linux phone OS forked from Marathon OS with a BB10-style Qt/QML shell and Rust services, first targeting the Zinwa Q25. The semantic contracts in this repository (Hub, keyboard input, device profiles, portability, support levels) are edition-neutral and are implemented by both; Android adapters here apply only to the Android edition. The 2026-11-03 device decision is unchanged. [Editions decision](docs/SABLEOS_EDITIONS_2026-11-15.md).
+
 ---
 
  > **2026-10-13 Titan 2 engineering status:** The October 13 M4 write completed but Android boot failed; new integration remains gated, with **no build/flash authority**. See [October 13 engineering status](docs/ENGINEERING_STATUS_2026-10-13.md). October 12 and older notices below are dated history; other device baselines remain unchanged.
